@@ -1,0 +1,49 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/ROM_form.vhd" in Library work.
+ERROR:HDLParsers:163 - "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/ROM_form.vhd" Line 20. Unexpected symbol read: {.
+ERROR:HDLParsers:163 - "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/ROM_form.vhd" Line 20. Unexpected symbol read: }.
+ERROR:HDLParsers:163 - "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/ROM_form.vhd" Line 24. Unexpected symbol read: {.
+ERROR:HDLParsers:163 - "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/ROM_form.vhd" Line 24. Unexpected symbol read: }.
+ERROR:HDLParsers:163 - "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/ROM_form.vhd" Line 26. Unexpected symbol read: {.
+ERROR:HDLParsers:163 - "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/ROM_form.vhd" Line 26. Unexpected symbol read: }.
+ERROR:HDLParsers:3010 - "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/ROM_form.vhd" Line 26. Entity name does not exist.
+ERROR:HDLParsers:3312 - "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/ROM_form.vhd" Line 258. Undefined symbol 'RAMB16_S18'.
+ERROR:HDLParsers:3312 - "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/ROM_form.vhd" Line 263. Undefined symbol 'clk'.
+ERROR:HDLParsers:1209 - "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/ROM_form.vhd" Line 263. clk: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/ROM_form.vhd" Line 264. Undefined symbol 'address'.
+ERROR:HDLParsers:1209 - "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/ROM_form.vhd" Line 264. address: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/ROM_form.vhd" Line 265. Undefined symbol 'instruction'.
+ERROR:HDLParsers:1209 - "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/ROM_form.vhd" Line 265. instruction: Undefined symbol (last report in this block)
+ERROR:HDLParsers:900 - "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/ROM_form.vhd" Line 268. The label ram_1024_x_18 is not declared.
+WARNING:HDLParsers:3481 - Library work has no units. Did not save reference file "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/xst/work/hdllib.ref" for it.
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.41 secs
+ 
+--> 
+
+Total memory usage is 232140 kilobytes
+
+Number of errors   :   15 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

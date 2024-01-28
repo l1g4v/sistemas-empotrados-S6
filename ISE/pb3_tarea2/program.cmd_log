@@ -1,0 +1,2 @@
+vhdtdtfi -lib work program.vhdl -prj pb3_ejemplo -o program.spl -module program -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e program.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/program.sym 

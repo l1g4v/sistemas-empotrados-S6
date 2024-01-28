@@ -1,0 +1,8 @@
+[Inputs]
+enable
+rst
+=input_v[7:0]=
+=dir[7:0]=
+[Outputs]
+=output_v[7:0]=
+[BiDir]

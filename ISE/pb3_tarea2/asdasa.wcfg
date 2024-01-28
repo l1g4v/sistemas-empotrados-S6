@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/todo_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="textio" />
+            <top_module name="todo" />
+            <top_module name="vcomponents" />
+            <top_module name="vital_primitives" />
+            <top_module name="vital_timing" />
+            <top_module name="vpkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/todo/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/inputs" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inputs[7:0]</obj_property>
+      <obj_property name="ObjectShortName">inputs[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/inter" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">inter</obj_property>
+      <obj_property name="ObjectShortName">inter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/leds" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">leds[7:0]</obj_property>
+      <obj_property name="ObjectShortName">leds[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_1[17:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_1[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_2[9:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_2[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_3[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_4[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_6" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_6</obj_property>
+      <obj_property name="ObjectShortName">xlxn_6</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_14" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_14</obj_property>
+      <obj_property name="ObjectShortName">xlxn_14</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_21" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_21[7:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_21[7:0]</obj_property>
+   </wvobject>
+</wave_config>

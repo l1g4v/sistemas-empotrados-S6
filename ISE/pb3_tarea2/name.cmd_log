@@ -1,0 +1,3 @@
+vhdtdtfi -lib work ROM_form.vhd -prj pb3_ejemplo -o name.spl -module name -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -lib work ROM_form.vhd -prj pb3_ejemplo -o name.spl -module name -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -lib work ROM_form.vhd -prj pb3_ejemplo -o name.spl -module name -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 

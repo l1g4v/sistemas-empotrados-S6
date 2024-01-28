@@ -1,0 +1,5 @@
+vhdl work "tecpinino.vhd"
+vhdl work "kcpsm3.vhd"
+vhdl work "io_porto.vhd"
+vhdl work "io_port.vhd"
+vhdl work "todo.vhf"

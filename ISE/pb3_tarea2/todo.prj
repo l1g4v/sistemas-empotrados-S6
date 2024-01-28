@@ -1,0 +1,4 @@
+vhdl work "program.vhdl"
+vhdl work "kcpsm3.vhd"
+vhdl work "io_port.vhd"
+vhdl work "todo.vhf"

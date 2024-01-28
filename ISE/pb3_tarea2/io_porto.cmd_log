@@ -1,0 +1,3 @@
+vhdtdtfi -lib work io_porto.vhd -prj pb3_ejemplo -o io_porto.spl -module io_porto -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -lib work io_porto.vhd -prj pb3_ejemplo -o io_porto.spl -module io_porto -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e io_porto.spl /home/leon/Documents/ISE/pb3_ejemplo/io_porto.sym 

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/leon/Documents/ISE/pb3_ejemplo/todo_isim_beh.exe" -prj "/home/leon/Documents/ISE/pb3_ejemplo/todo_beh.prj" "work.todo" 

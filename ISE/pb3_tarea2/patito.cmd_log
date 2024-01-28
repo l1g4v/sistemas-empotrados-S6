@@ -1,0 +1,2 @@
+vhdtdtfi -lib work tecpinino.vhd -prj pb3_ejemplo -o patito.spl -module patito -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e patito.spl {C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/patito.sym} 

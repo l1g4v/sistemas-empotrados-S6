@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Arely/Desktop/Proyectos Empotrados/ISE/pb3_ejemplo/xst"
+elaborate
+-ifn name.prj
+-ifmt mixed

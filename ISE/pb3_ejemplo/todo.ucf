@@ -1,0 +1,23 @@
+NET "clk" 	LOC = "C9" | IOSTANDARD = LVCMOS33;
+NET "reset" LOC="V16"  | IOSTANDARD = LVCMOS33 | PULLDOWN;
+
+# PlanAhead Generate IO constraints
+NET "leds[7]" LOC="F9" 	| IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+NET "leds[6]" LOC="E9" 	| IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+NET "leds[5]" LOC="D11" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+NET "leds[4]" LOC="C11" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+NET "leds[3]" LOC="F11" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+NET "leds[2]" LOC="E11" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+NET "leds[1]" LOC="E12" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+NET "leds[0]" LOC="F12" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 12;
+
+# PlanAhead Generate physical constraints
+NET "inputs[7]" LOC="V4";
+NET "inputs[6]" LOC="H13";
+NET "inputs[5]" LOC="K17";
+NET "inputs[4]" LOC="D18";
+NET "inputs[3]" LOC="N17";
+NET "inputs[2]" LOC="H18";
+NET "inputs[1]" LOC="L14";
+NET "inputs[0]" LOC="E13";
+

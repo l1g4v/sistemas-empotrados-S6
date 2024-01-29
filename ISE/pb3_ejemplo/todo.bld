@@ -4,7 +4,8 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
 ise -dd _ngo -nt timestamp -uc todo.ucf -p xc3s500e-fg320-4 todo.ngc todo.ngd
 
-Reading NGO file "/home/leon/Documents/ISE/pb3_ejemplo/todo.ngc" ...
+Reading NGO file
+"/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_ejemplo/todo.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -26,7 +27,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 376820 kilobytes
+Total memory usage is 376816 kilobytes
 
 Writing NGD file "todo.ngd" ...
 Total REAL time to NGDBUILD completion:  1 sec

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2024-01-24T09:24:11</DateModified>
+  <DateModified>2024-01-29T07:10:28</DateModified>
   <ModuleName>todo</ModuleName>
   <SummaryTimeStamp>2024-01-22T20:48:43</SummaryTimeStamp>
-  <SavedFilePath>/home/leon/Documents/ISE/pb3_ejemplo/iseconfig/todo.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/leon/Documents/ISE/pb3_ejemplo/</ImplementationReportsDirectory>
+  <SavedFilePath>/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_ejemplo/iseconfig/todo.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_ejemplo/</ImplementationReportsDirectory>
   <DateInitialized>2024-01-22T20:34:47</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

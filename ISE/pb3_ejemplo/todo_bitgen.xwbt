@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=/home/leon/Documents/ISE/pb3_ejemplo/todo.ncd
-OUTFILE=/home/leon/Documents/ISE/pb3_ejemplo/todo.bit
+INFILE=/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_ejemplo/todo.ncd
+OUTFILE=/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_ejemplo/todo.bit
 FAMILY=Spartan3E
 PART=xc3s500e-4fg320
-WORKINGDIR=/home/leon/Documents/ISE/pb3_ejemplo
+WORKINGDIR=/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_ejemplo
 LICENSE=WebPack
 USER_INFO=212586746_0_0_458

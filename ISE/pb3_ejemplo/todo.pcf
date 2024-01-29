@@ -1,9 +1,9 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Jan 28 19:20:35 2024
+// Written by: Map P.20131013 on Mon Jan 29 07:41:35 2024
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "inputs<0>" LOCATE = SITE "E13" LEVEL 1;
+COMP "inputs<0>" LOCATE = SITE "L13" LEVEL 1;
 COMP "inputs<1>" LOCATE = SITE "L14" LEVEL 1;
 COMP "inputs<2>" LOCATE = SITE "H18" LEVEL 1;
 COMP "inputs<3>" LOCATE = SITE "N17" LEVEL 1;

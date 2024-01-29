@@ -1,39 +1,39 @@
 V3 50
 FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/io_port.vhd 2024/01/22.20:43:37 P.20131013
-EN work/io_port 1706387929 \
+EN work/io_port 1706538874 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/io_port.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/io_port/Behavioral 1706387930 \
+AR work/io_port/Behavioral 1706538875 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/io_port.vhd \
-      EN work/io_port 1706387929
+      EN work/io_port 1706538874
 FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/kcpsm3.vhd 2024/01/22.14:05:00 P.20131013
-EN work/kcpsm3 1706387927 \
+EN work/kcpsm3 1706538872 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/kcpsm3.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179 LB unisim PH unisim/VCOMPONENTS 1381692182
-AR work/kcpsm3/low_level_definition 1706387928 \
+AR work/kcpsm3/low_level_definition 1706538873 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/kcpsm3.vhd \
-      EN work/kcpsm3 1706387927 CP LUT1 CP FDR CP FDS CP LUT4 CP FD CP FDE CP LUT3 \
+      EN work/kcpsm3 1706538872 CP LUT1 CP FDR CP FDS CP LUT4 CP FD CP FDE CP LUT3 \
       CP FDRE CP LUT2 CP MUXCY CP XORCY CP INV CP string CP label CP FDRSE CP RAM16X1D \
       CP RAM64X1S CP MUXF5 CP RAM32X1S
-FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/program.vhdl 2024/01/27.14:37:50 P.20131013
-PH work/program_pkg 1706387931 \
+FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/program.vhdl 2024/01/29.08:29:26 P.20131013
+PH work/program_pkg 1706538876 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/program.vhdl \
       PB ieee/std_logic_1164 1381692176 CD program
-EN work/program 1706387932 \
+EN work/program 1706538877 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/program.vhdl \
       PB ieee/std_logic_1164 1381692176 LB unisim PH unisim/VCOMPONENTS 1381692182
-AR work/program/structure 1706387933 \
+AR work/program/structure 1706538878 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/program.vhdl \
-      EN work/program 1706387932 CP RAMB16_S18
-FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/todo.vhf 2024/01/27.14:33:00 P.20131013
-EN work/todo 1706387934 \
+      EN work/program 1706538877 CP RAMB16_S18
+FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/todo.vhf 2024/01/27.15:51:07 P.20131013
+EN work/todo 1706538879 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/todo.vhf \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB unisim \
       PH unisim/VCOMPONENTS 1381692182
-AR work/todo/BEHAVIORAL 1706387935 \
+AR work/todo/BEHAVIORAL 1706538880 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/todo.vhf \
-      EN work/todo 1706387934 CP kcpsm3 CP io_port CP program
+      EN work/todo 1706538879 CP kcpsm3 CP io_port CP program
 FL /home/leon/Documents/ISE/pb3_ejemplo/io_port.vhd 2024/01/22.20:43:37 P.20131013
 FL /home/leon/Documents/ISE/pb3_ejemplo/io_porto.vhd 2024/01/22.21:40:24 P.20131013
 EN work/io_porto 1706109877 FL /home/leon/Documents/ISE/pb3_ejemplo/io_porto.vhd \

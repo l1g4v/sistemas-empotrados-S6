@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Reading design: todo.prj
@@ -112,9 +112,7 @@ Architecture low_level_definition of Entity kcpsm3 is up to date.
 Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/io_port.vhd" in Library work.
 Architecture behavioral of Entity io_port is up to date.
 Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/program.vhdl" in Library work.
-Package <program_pkg> compiled.
-Entity <program> compiled.
-Entity <program> (Architecture <structure>) compiled.
+Architecture structure of Entity program is up to date.
 Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea2/todo.vhf" in Library work.
 Architecture behavioral of Entity todo is up to date.
 
@@ -396,7 +394,7 @@ Entity <io_port> analyzed. Unit <io_port> generated.
 
 Analyzing Entity <program> in library <work> (Architecture <structure>).
     Set user-defined property "INIT =  00000" for instance <rom_1024_x_18> in unit <program>.
-    Set user-defined property "INITP_00 =  0000000000000000000000000000000000000000000000000000003F7750B933" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INITP_00 =  0000000000000000000000000000000000000000000000000000000F7740B933" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
@@ -404,8 +402,8 @@ Analyzing Entity <program> in library <work> (Architecture <structure>).
     Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INITP_07 =  C000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
-    Set user-defined property "INIT_00 =  C101540AC201500BC301C3FF02A7010FC4004003C000800340004003040FC001" for instance <rom_1024_x_18> in unit <program>.
-    Set user-defined property "INIT_01 =  0000000000000000000000000000000000000000000000000000800140095012" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_00 =  C101540AC201540BC30103FF02FF013AC4004003C000800340004003040FC001" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_01 =  0000000000000000000000000000000000000000000000000000000080015409" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
@@ -765,7 +763,7 @@ Offset:              4.283ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.29 secs
+Total CPU time to Xst completion: 3.28 secs
  
 --> 
 

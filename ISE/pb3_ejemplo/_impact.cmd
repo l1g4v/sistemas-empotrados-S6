@@ -1,11 +1,4 @@
 setMode -bs
-setMode -bs
-setMode -bs
-setMode -bs
-setCable -port auto
-setMode -bs
-setMode -bs
-setMode -bs
 setMode -ss
 setMode -sm
 setMode -hw140

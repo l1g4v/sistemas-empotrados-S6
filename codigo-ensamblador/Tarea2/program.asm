@@ -1,7 +1,7 @@
 ;Tarea 2
 ;use_clock(50)
 enable interrupt
-load s5, 0F
+load s4, 0F
 jump main
 
 main:

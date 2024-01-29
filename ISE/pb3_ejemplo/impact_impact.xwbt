@@ -1,8 +1,8 @@
 INTSTYLE=impact
 INFILE=/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_ejemplo/impact.xsl
 OUTFILE=/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_ejemplo/impact.xsl
-FAMILY=None
-PART=None
+FAMILY=Multiple
+PART=Multiple
 WORKINGDIR=/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_ejemplo
 LICENSE=iMPACT
 USER_INFO=iMPACT

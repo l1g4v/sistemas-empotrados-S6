@@ -1,0 +1,19 @@
+vhdtdtfi -lib work io_port.vhd -prj pb3-tarea3 -o io_port.spl -module io_port -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e io_port.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.sym 
+vhdtdtfi -lib work io_port.vhd -prj pb3-tarea3 -o io_port.spl -module io_port -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e io_port.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.sym 
+vhdtdtfi -lib work io_port.vhd -prj pb3-tarea3 -o io_port.spl -module io_port -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e io_port.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.sym 
+vhdtdtfi -lib work io_port.vhd -prj pb3-tarea3 -o io_port.spl -module io_port -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e io_port.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.sym 
+vhdtdtfi -lib work io_port.vhd -prj pb3-tarea3 -o io_port.spl -module io_port -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e io_port.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.sym 
+vhdtdtfi -lib work io_port.vhd -prj pb3-tarea3 -o io_port.spl -module io_port -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e io_port.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.sym 
+vhdtdtfi -lib work io_port.vhd -prj pb3-tarea3 -o io_port.spl -module io_port -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e io_port.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.sym 
+vhdtdtfi -lib work io_port.vhd -prj pb3-tarea3 -o io_port.spl -module io_port -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w io_port.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.sym 
+vhdtdtfi -lib work io_port.vhd -prj pb3-tarea3 -o io_port.spl -module io_port -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w io_port.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.sym 
+vhdtdtfi -lib work io_port.vhd -prj pb3-tarea3 -o io_port.spl -module io_port -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 

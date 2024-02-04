@@ -1,0 +1,7 @@
+MODULE todo
+	SUBMODULE kcpsm3
+		INSTANCE pb3
+	SUBMODULE out_port
+		INSTANCE oport
+	SUBMODULE input_port
+		INSTANCE inport

@@ -1,0 +1,17 @@
+[Inputs]
+enable
+rst
+=port_id[7:0]=
+=input_00[7:0]=
+=input_01[7:0]=
+=input_02[7:0]=
+=input_03[7:0]=
+=input_04[7:0]=
+=input_05[7:0]=
+=input_06[7:0]=
+=input_07[7:0]=
+=input_08[7:0]=
+=input_09[7:0]=
+[Outputs]
+=output_v[7:0]=
+[BiDir]

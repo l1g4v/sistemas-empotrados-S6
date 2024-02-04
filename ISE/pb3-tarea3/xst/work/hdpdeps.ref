@@ -1,0 +1,15 @@
+V3 6
+FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd 2024/02/03.15:23:06 P.20131013
+EN work/input_port 1706995392 \
+      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/input_port/Behavioral 1706995393 \
+      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd \
+      EN work/input_port 1706995392
+FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.vhd 2024/02/03.15:10:21 P.20131013
+EN work/io_port 1706994629 \
+      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/io_port/Behavioral 1706994630 \
+      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.vhd \
+      EN work/io_port 1706994629

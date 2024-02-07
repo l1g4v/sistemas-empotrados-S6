@@ -1,4 +1,10 @@
 EN io_port NULL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.vhd sub00/vhpl00 1706994629
-EN input_port NULL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd sub00/vhpl02 1706995392
+AR todo behavioral /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf sub00/vhpl09 1707338996
+EN input_port NULL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd sub00/vhpl02 1707338989
 AR io_port behavioral /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.vhd sub00/vhpl01 1706994630
-AR input_port behavioral /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd sub00/vhpl03 1706995393
+AR out_port behavioral /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd sub00/vhpl05 1707338992
+EN out_port NULL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd sub00/vhpl04 1707338991
+EN kcpsm3 NULL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd sub00/vhpl06 1707338993
+EN todo NULL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf sub00/vhpl08 1707338995
+AR input_port behavioral /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd sub00/vhpl03 1707338990
+AR kcpsm3 low_level_definition /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd sub00/vhpl07 1707338994

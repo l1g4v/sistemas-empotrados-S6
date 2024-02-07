@@ -1,11 +1,11 @@
-V3 6
-FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd 2024/02/03.15:23:06 P.20131013
-EN work/input_port 1706995392 \
+V3 38
+FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd 2024/02/03.16:21:14 P.20131013
+EN work/input_port 1707338989 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/input_port/Behavioral 1706995393 \
+AR work/input_port/Behavioral 1707338990 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd \
-      EN work/input_port 1706995392
+      EN work/input_port 1707338989
 FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.vhd 2024/02/03.15:10:21 P.20131013
 EN work/io_port 1706994629 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.vhd \
@@ -13,3 +13,28 @@ EN work/io_port 1706994629 \
 AR work/io_port/Behavioral 1706994630 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.vhd \
       EN work/io_port 1706994629
+FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd 2024/01/22.14:05:00 P.20131013
+EN work/kcpsm3 1707338993 \
+      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/kcpsm3/low_level_definition 1707338994 \
+      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd \
+      EN work/kcpsm3 1707338993 CP LUT1 CP FDR CP FDS CP LUT4 CP FD CP FDE CP LUT3 \
+      CP FDRE CP LUT2 CP MUXCY CP XORCY CP INV CP string CP label CP FDRSE CP RAM16X1D \
+      CP RAM64X1S CP MUXF5 CP RAM32X1S
+FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd 2024/02/03.16:21:01 P.20131013
+EN work/out_port 1707338991 \
+      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/out_port/Behavioral 1707338992 \
+      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd \
+      EN work/out_port 1707338991
+FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf 2024/02/07.14:49:46 P.20131013
+EN work/todo 1707338995 \
+      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/todo/BEHAVIORAL 1707338996 \
+      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf \
+      EN work/todo 1707338995 CP input_port CP out_port CP kcpsm3

@@ -1,0 +1,105 @@
+                      include "../utils/delay.asm"
+                      ;Tarea 3 lcd
+                      ;constants
+
+                      constant LCD_PORT, 01
+
+
+                      jump MAIN
+
+                      ; 7 6 5  4  3  2  1  0
+                      ; X E RS RW D7 D6 D5 D4
+
+                      ;from here everything will use s5 register up to sF
+                      ;s5 will hold the data to be sent
+         LCD_E_PULSE: xor s5, 40
+                      output s5, LCD_PORT
+                      call delay_1us
+                      xor s5, 40
+                      output s5, LCD_PORT
+                      return
+
+             LCD_CMD: and s5, DF
+                      output s5, LCD_PORT
+                      call LCD_E_PULSE
+                      return
+
+            LCD_INIT: load s5, 00
+                      output s5, LCD_PORT
+                      call delay_20ms
+
+                      load s5, 03                    ;Send 3 and wait > 4.1ms
+                      call LCD_CMD
+                      call delay_5ms
+
+                      load s5, 03                    ;Send 3 and wait > 100us
+                      call LCD_CMD
+                      call delay_40us
+                      call delay_40us
+                      call delay_40us
+
+                      load s5, 03                    ;Send 3 and wait > 40us
+                      call LCD_CMD
+                      call delay_40us
+
+                      load s5, 02                    ;Send 2 and wait > 40us
+                      call LCD_CMD
+                      call delay_40us
+
+                      ;FUNCTION SET
+
+                      load s5, 02                    ;high nibble 0x28
+                      call LCD_CMD
+                      call delay_1us
+                      load s5, 08                    ;lower nibble 0x28
+                      call LCD_CMD
+                      call delay_40us
+
+                      load s5, 00                    ;high nibble 0x0C
+                      call LCD_CMD
+                      call delay_1us
+                      load s5, 06                    ;lower nibble 0x06
+                      call LCD_CMD
+                      call delay_40us
+
+                      load s5, 00                    ;high nibble 0x0C
+                      call LCD_CMD
+                      call delay_1us
+                      load s5, 0C                    ;lower nibble 0x0C
+                      call LCD_CMD
+                      call delay_40us
+
+           LCD_CLEAR: load s5, 00                    ;high nibble 0x01
+                      call LCD_CMD
+                      call delay_1us
+                      load s5, 01                    ;lower nibble 0x01
+                      call LCD_CMD
+                      call delay_1ms                 ;wait > 1.64ms
+                      call delay_1ms
+                      return
+
+      LCD_WRITE_CHAR: load s6, s5                    ; s6 is X, s7 is Y
+                      load s7, s5
+                      and s6, 0x0F
+                      and s7, 0xF0
+                      xor s6, 20
+                      xor s7, 20
+
+                      sr0 s6                         ; s6>>4
+                      sr0 s6
+                      sr0 s6
+                      sr0 s6
+
+                      load s6, s5
+                      call LCD_CMD
+                      call delay_1us
+
+                      load s7, s5
+                      call LCD_CMD
+                      call delay_40us
+                      return
+
+                MAIN: call LCD_INIT
+
+
+

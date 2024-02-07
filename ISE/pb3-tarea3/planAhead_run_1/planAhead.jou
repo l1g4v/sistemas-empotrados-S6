@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Wed Feb  7 14:49:55 2024
+# Process ID: 5179
+# Log file: /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/planAhead_run_1/planAhead.log
+# Journal file: /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/pa.fromNetlist.tcl

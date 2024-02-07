@@ -2,7 +2,8 @@ INCLUDE "../utils/delay.asm"
 ;Tarea 3 lcd
 ;constants
 
-CONSTANT LCD_PORT, 01
+constant LCD_PORT, 01 
+
 
 JUMP MAIN
 
@@ -99,5 +100,6 @@ LCD_WRITE_CHAR:     LOAD s6, s5 ; s6 is X, s7 is Y
                     RETURN
 
 MAIN:       CALL LCD_INIT
+
 
 

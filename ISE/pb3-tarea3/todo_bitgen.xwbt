@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.ncd
+OUTFILE=/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3
+LICENSE=WebPack
+USER_INFO=212586746_0_0_458

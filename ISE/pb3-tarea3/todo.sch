@@ -11,18 +11,20 @@
         <signal name="XLXN_3(7:0)" />
         <signal name="XLXN_4(7:0)" />
         <signal name="XLXN_5" />
-        <signal name="XLXN_6(7:0)" />
         <signal name="CLK" />
         <signal name="RST" />
         <signal name="INT" />
-        <signal name="output00(7:0)" />
-        <signal name="input00(7:0)" />
-        <signal name="XLXN_12" />
+        <signal name="leds(7:0)" />
+        <signal name="inputs(7:0)" />
+        <signal name="LCD(7:0)" />
+        <signal name="SF_CE0" />
         <port polarity="Input" name="CLK" />
         <port polarity="Input" name="RST" />
         <port polarity="Input" name="INT" />
-        <port polarity="Output" name="output00(7:0)" />
-        <port polarity="Input" name="input00(7:0)" />
+        <port polarity="Output" name="leds(7:0)" />
+        <port polarity="Input" name="inputs(7:0)" />
+        <port polarity="Output" name="LCD(7:0)" />
+        <port polarity="Output" name="SF_CE0" />
         <blockdef name="kcpsm3">
             <timestamp>2024-2-3T20:59:22</timestamp>
             <rect width="320" x="64" y="-384" height="384" />
@@ -103,6 +105,11 @@
             <rect width="64" x="352" y="-812" height="24" />
             <line x2="416" y1="-800" y2="-800" x1="352" />
         </blockdef>
+        <blockdef name="strataoff">
+            <timestamp>2024-2-7T23:37:16</timestamp>
+            <rect width="256" x="64" y="-64" height="64" />
+            <line x2="384" y1="-32" y2="-32" x1="320" />
+        </blockdef>
         <block symbolname="kcpsm3" name="pb3">
             <blockpin signalname="INT" name="interrupt" />
             <blockpin signalname="RST" name="reset" />
@@ -121,8 +128,8 @@
             <blockpin signalname="RST" name="rst" />
             <blockpin signalname="XLXN_3(7:0)" name="input_v(7:0)" />
             <blockpin signalname="XLXN_4(7:0)" name="port_id(7:0)" />
-            <blockpin signalname="output00(7:0)" name="output_00(7:0)" />
-            <blockpin name="output_01(7:0)" />
+            <blockpin signalname="leds(7:0)" name="output_00(7:0)" />
+            <blockpin signalname="LCD(7:0)" name="output_01(7:0)" />
             <blockpin name="output_02(7:0)" />
             <blockpin name="output_03(7:0)" />
             <blockpin name="output_04(7:0)" />
@@ -136,7 +143,7 @@
             <blockpin signalname="XLXN_2" name="enable" />
             <blockpin signalname="RST" name="rst" />
             <blockpin signalname="XLXN_4(7:0)" name="port_id(7:0)" />
-            <blockpin signalname="input00(7:0)" name="input_00(7:0)" />
+            <blockpin signalname="inputs(7:0)" name="input_00(7:0)" />
             <blockpin name="input_01(7:0)" />
             <blockpin name="input_02(7:0)" />
             <blockpin name="input_03(7:0)" />
@@ -147,6 +154,9 @@
             <blockpin name="input_08(7:0)" />
             <blockpin name="input_09(7:0)" />
             <blockpin signalname="XLXN_1(7:0)" name="output_v(7:0)" />
+        </block>
+        <block symbolname="strataoff" name="XLXI_1">
+            <blockpin signalname="SF_CE0" name="op" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -209,16 +219,26 @@
             <wire x2="1728" y1="1536" y2="1536" x1="1600" />
             <wire x2="1744" y1="1536" y2="1536" x1="1728" />
         </branch>
-        <branch name="output00(7:0)">
+        <branch name="leds(7:0)">
             <wire x2="2928" y1="1328" y2="1328" x1="2896" />
         </branch>
-        <iomarker fontsize="28" x="2928" y="1328" name="output00(7:0)" orien="R0" />
-        <branch name="input00(7:0)">
+        <iomarker fontsize="28" x="2928" y="1328" name="leds(7:0)" orien="R0" />
+        <branch name="inputs(7:0)">
             <wire x2="1104" y1="1520" y2="1520" x1="1072" />
         </branch>
-        <iomarker fontsize="28" x="1072" y="1520" name="input00(7:0)" orien="R180" />
+        <iomarker fontsize="28" x="1072" y="1520" name="inputs(7:0)" orien="R180" />
         <iomarker fontsize="28" x="1600" y="1696" name="CLK" orien="R180" />
         <iomarker fontsize="28" x="1600" y="1616" name="RST" orien="R180" />
         <iomarker fontsize="28" x="1600" y="1536" name="INT" orien="R180" />
+        <branch name="LCD(7:0)">
+            <wire x2="2928" y1="1392" y2="1392" x1="2896" />
+        </branch>
+        <iomarker fontsize="28" x="2928" y="1392" name="LCD(7:0)" orien="R0" />
+        <instance x="1664" y="2384" name="XLXI_1" orien="R0">
+        </instance>
+        <branch name="SF_CE0">
+            <wire x2="2080" y1="2352" y2="2352" x1="2048" />
+        </branch>
+        <iomarker fontsize="28" x="2080" y="2352" name="SF_CE0" orien="R0" />
     </sheet>
 </drawing>

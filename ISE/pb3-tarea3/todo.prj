@@ -1,3 +1,4 @@
+vhdl work "strataoff.vhd"
 vhdl work "out_port.vhd"
 vhdl work "kcpsm3.vhd"
 vhdl work "input_port.vhd"

@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : todo.vhf
--- /___/   /\     Timestamp : 02/07/2024 14:49:46
+-- /___/   /\     Timestamp : 02/07/2024 17:39:10
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -26,11 +26,13 @@ library UNISIM;
 use UNISIM.Vcomponents.ALL;
 
 entity todo is
-   port ( CLK      : in    std_logic; 
-          input00  : in    std_logic_vector (7 downto 0); 
-          INT      : in    std_logic; 
-          RST      : in    std_logic; 
-          output00 : out   std_logic_vector (7 downto 0));
+   port ( CLK    : in    std_logic; 
+          inputs : in    std_logic_vector (7 downto 0); 
+          INT    : in    std_logic; 
+          RST    : in    std_logic; 
+          LCD    : out   std_logic_vector (7 downto 0); 
+          leds   : out   std_logic_vector (7 downto 0); 
+          SF_CE0 : out   std_logic);
 end todo;
 
 architecture BEHAVIORAL of todo is
@@ -97,10 +99,14 @@ architecture BEHAVIORAL of todo is
              out_port      : out   std_logic_vector (7 downto 0));
    end component;
    
+   component strataoff
+      port ( op : out   std_logic);
+   end component;
+   
 begin
    inport : input_port
       port map (enable=>XLXN_2,
-                input_00(7 downto 0)=>input00(7 downto 0),
+                input_00(7 downto 0)=>inputs(7 downto 0),
                 input_01(7 downto 0)=>inport_input_01_openSignal(7 downto 0),
                 input_02(7 downto 0)=>inport_input_02_openSignal(7 downto 0),
                 input_03(7 downto 0)=>inport_input_03_openSignal(7 downto 0),
@@ -119,8 +125,8 @@ begin
                 input_v(7 downto 0)=>XLXN_3(7 downto 0),
                 port_id(7 downto 0)=>XLXN_4(7 downto 0),
                 rst=>RST,
-                output_00(7 downto 0)=>output00(7 downto 0),
-                output_01=>open,
+                output_00(7 downto 0)=>leds(7 downto 0),
+                output_01(7 downto 0)=>LCD(7 downto 0),
                 output_02=>open,
                 output_03=>open,
                 output_04=>open,
@@ -143,6 +149,9 @@ begin
                 port_id(7 downto 0)=>XLXN_4(7 downto 0),
                 read_strobe=>XLXN_2,
                 write_strobe=>XLXN_5);
+   
+   XLXI_1 : strataoff
+      port map (op=>SF_CE0);
    
 end BEHAVIORAL;
 

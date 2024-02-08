@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Reading design: todo.prj
@@ -108,28 +108,29 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd" in Library work.
-Entity <input_port> compiled.
-Entity <input_port> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity input_port is up to date.
 Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd" in Library work.
-Entity <out_port> compiled.
-Entity <out_port> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity out_port is up to date.
 Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" in Library work.
-Entity <kcpsm3> compiled.
-Entity <kcpsm3> (Architecture <low_level_definition>) compiled.
+Architecture low_level_definition of Entity kcpsm3 is up to date.
+Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/strataoff.vhd" in Library work.
+Architecture behavioral of Entity strataoff is up to date.
 Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" in Library work.
 Entity <todo> compiled.
-Entity <todo> (Architecture <BEHAVIORAL>) compiled.
+Entity <todo> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <todo> in library <work> (architecture <BEHAVIORAL>).
+Analyzing hierarchy for entity <todo> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <input_port> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <out_port> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <out_port> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <kcpsm3> in library <work> (architecture <low_level_definition>).
+
+Analyzing hierarchy for entity <strataoff> in library <work> (architecture <behavioral>).
 
 WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 289: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
 WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1200: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
@@ -174,24 +175,23 @@ WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tar
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <todo> in library <work> (Architecture <BEHAVIORAL>).
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 117: Unconnected output port 'output_01' of component 'out_port'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 117: Unconnected output port 'output_02' of component 'out_port'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 117: Unconnected output port 'output_03' of component 'out_port'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 117: Unconnected output port 'output_04' of component 'out_port'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 117: Unconnected output port 'output_05' of component 'out_port'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 117: Unconnected output port 'output_06' of component 'out_port'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 117: Unconnected output port 'output_07' of component 'out_port'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 117: Unconnected output port 'output_08' of component 'out_port'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 117: Unconnected output port 'output_09' of component 'out_port'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 133: Unconnected output port 'interrupt_ack' of component 'kcpsm3'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 133: Unconnected output port 'address' of component 'kcpsm3'.
+Analyzing Entity <todo> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 123: Unconnected output port 'output_02' of component 'out_port'.
+WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 123: Unconnected output port 'output_03' of component 'out_port'.
+WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 123: Unconnected output port 'output_04' of component 'out_port'.
+WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 123: Unconnected output port 'output_05' of component 'out_port'.
+WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 123: Unconnected output port 'output_06' of component 'out_port'.
+WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 123: Unconnected output port 'output_07' of component 'out_port'.
+WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 123: Unconnected output port 'output_08' of component 'out_port'.
+WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 123: Unconnected output port 'output_09' of component 'out_port'.
+WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 139: Unconnected output port 'interrupt_ack' of component 'kcpsm3'.
+WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 139: Unconnected output port 'address' of component 'kcpsm3'.
 Entity <todo> analyzed. Unit <todo> generated.
 
 Analyzing Entity <input_port> in library <work> (Architecture <behavioral>).
 Entity <input_port> analyzed. Unit <input_port> generated.
 
-Analyzing Entity <out_port> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <out_port> in library <work> (Architecture <behavioral>).
 Entity <out_port> analyzed. Unit <out_port> generated.
 
 Analyzing Entity <kcpsm3> in library <work> (Architecture <low_level_definition>).
@@ -409,6 +409,9 @@ WARNING:Xst:1961 - The length of the hex value for the attribute INIT on instanc
     Set user-defined property "INIT =  A999" for instance <stack_count_loop[4].msb_stack_count.count_lut> in unit <kcpsm3>.
 Entity <kcpsm3> analyzed. Unit <kcpsm3> generated.
 
+Analyzing Entity <strataoff> in library <work> (Architecture <behavioral>).
+Entity <strataoff> analyzed. Unit <strataoff> generated.
+
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -439,6 +442,11 @@ Synthesizing Unit <out_port>.
     Summary:
 	inferred  80 D-type flip-flop(s).
 Unit <out_port> synthesized.
+
+
+Synthesizing Unit <strataoff>.
+    Related source file is "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/strataoff.vhd".
+Unit <strataoff> synthesized.
 
 
 Synthesizing Unit <kcpsm3>.
@@ -551,14 +559,6 @@ WARNING:Xst:2677 - Node <oport/output_03_3> of sequential type is unconnected in
 WARNING:Xst:2677 - Node <oport/output_03_2> of sequential type is unconnected in block <todo>.
 WARNING:Xst:2677 - Node <oport/output_03_1> of sequential type is unconnected in block <todo>.
 WARNING:Xst:2677 - Node <oport/output_03_0> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_01_7> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_01_6> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_01_5> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_01_4> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_01_3> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_01_2> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_01_1> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_01_0> of sequential type is unconnected in block <todo>.
 WARNING:Xst:2677 - Node <oport/output_02_7> of sequential type is unconnected in block <todo>.
 WARNING:Xst:2677 - Node <oport/output_02_6> of sequential type is unconnected in block <todo>.
 WARNING:Xst:2677 - Node <oport/output_02_5> of sequential type is unconnected in block <todo>.
@@ -578,8 +578,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 92
- Flip-Flops                                            : 92
+# Registers                                            : 100
+ Flip-Flops                                            : 100
 
 =========================================================================
 
@@ -605,24 +605,24 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 19
+# IOs                              : 28
 
 Cell Usage :
-# BELS                             : 213
+# BELS                             : 217
 #      GND                         : 1
 #      INV                         : 4
 #      LUT1                        : 2
 #      LUT2                        : 6
 #      LUT3                        : 69
-#      LUT4                        : 45
+#      LUT4                        : 48
 #      MUXCY                       : 39
-#      MUXF5                       : 9
+#      MUXF5                       : 10
 #      VCC                         : 1
 #      XORCY                       : 37
-# FlipFlops/Latches                : 92
+# FlipFlops/Latches                : 100
 #      FD                          : 24
 #      FDC                         : 8
-#      FDCE                        : 8
+#      FDCE                        : 16
 #      FDE                         : 2
 #      FDR                         : 30
 #      FDRE                        : 8
@@ -634,9 +634,9 @@ Cell Usage :
 #      RAM64X1S                    : 8
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 18
+# IO Buffers                       : 27
 #      IBUF                        : 10
-#      OBUF                        : 8
+#      OBUF                        : 17
 =========================================================================
 
 Device utilization summary:
@@ -644,14 +644,14 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                       99  out of   4656     2%  
+ Number of Slices:                      101  out of   4656     2%  
  Number of Slice Flip Flops:             84  out of   9312     0%  
- Number of 4 input LUTs:                194  out of   9312     2%  
-    Number used as logic:               126
+ Number of 4 input LUTs:                197  out of   9312     2%  
+    Number used as logic:               129
     Number used as RAMs:                 68
- Number of IOs:                          19
- Number of bonded IOBs:                  19  out of    232     8%  
-    IOB Flip Flops:                       8
+ Number of IOs:                          28
+ Number of bonded IOBs:                  28  out of    232    12%  
+    IOB Flip Flops:                      16
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -676,7 +676,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 XLXN_2                             | NONE(inport/output_v_7)| 8     |
-XLXN_5                             | NONE(oport/output_00_7)| 8     |
+XLXN_5                             | NONE(oport/output_01_7)| 16    |
 CLK                                | BUFGP                  | 102   |
 -----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -686,7 +686,7 @@ Asynchronous Control Signals Information:
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-RST                                | IBUF                   | 16    |
+RST                                | IBUF                   | 24    |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
@@ -694,7 +694,7 @@ Timing Summary:
 Speed Grade: -4
 
    Minimum period: 7.147ns (Maximum Frequency: 139.919MHz)
-   Minimum input arrival time before clock: 3.197ns
+   Minimum input arrival time before clock: 3.389ns
    Maximum output required time after clock: 4.283ns
    Maximum combinational path delay: No path found
 
@@ -763,15 +763,15 @@ Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXN_2'
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
 Offset:              2.685ns (Levels of Logic = 2)
-  Source:            input00<7> (PAD)
+  Source:            inputs<7> (PAD)
   Destination:       inport/output_v_7 (FF)
   Destination Clock: XLXN_2 rising
 
-  Data Path: input00<7> to inport/output_v_7
+  Data Path: inputs<7> to inport/output_v_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.218   0.455  input00_7_IBUF (input00_7_IBUF)
+     IBUF:I->O             1   1.218   0.455  inputs_7_IBUF (inputs_7_IBUF)
      LUT4:I2->O            1   0.704   0.000  inport/output_v_mux0000<7>1 (inport/output_v_mux0000<7>)
      FDC:D                     0.308          inport/output_v_7
     ----------------------------------------
@@ -782,7 +782,7 @@ Offset:              2.685ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
   Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
-Offset:              3.197ns (Levels of Logic = 1)
+Offset:              3.389ns (Levels of Logic = 1)
   Source:            RST (PAD)
   Destination:       pb3/reset_flop2 (FF)
   Destination Clock: CLK rising
@@ -791,27 +791,27 @@ Offset:              3.197ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            18   1.218   1.068  RST_IBUF (RST_IBUF)
+     IBUF:I->O            26   1.218   1.260  RST_IBUF (RST_IBUF)
      FDS:S                     0.911          pb3/reset_flop1
     ----------------------------------------
-    Total                      3.197ns (2.129ns logic, 1.068ns route)
-                                       (66.6% logic, 33.4% route)
+    Total                      3.389ns (2.129ns logic, 1.260ns route)
+                                       (62.8% logic, 37.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXN_5'
-  Total number of paths / destination ports: 8 / 8
+  Total number of paths / destination ports: 16 / 16
 -------------------------------------------------------------------------
 Offset:              4.283ns (Levels of Logic = 1)
   Source:            oport/output_00_7 (FF)
-  Destination:       output00<7> (PAD)
+  Destination:       leds<7> (PAD)
   Source Clock:      XLXN_5 rising
 
-  Data Path: oport/output_00_7 to output00<7>
+  Data Path: oport/output_00_7 to leds<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q             1   0.591   0.420  oport/output_00_7 (oport/output_00_7)
-     OBUF:I->O                 3.272          output00_7_OBUF (output00<7>)
+     OBUF:I->O                 3.272          leds_7_OBUF (leds<7>)
     ----------------------------------------
     Total                      4.283ns (3.863ns logic, 0.420ns route)
                                        (90.2% logic, 9.8% route)
@@ -819,15 +819,15 @@ Offset:              4.283ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.29 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.32 secs
  
 --> 
 
 
-Total memory usage is 527896 kilobytes
+Total memory usage is 528184 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  133 (   0 filtered)
+Number of warnings :  124 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

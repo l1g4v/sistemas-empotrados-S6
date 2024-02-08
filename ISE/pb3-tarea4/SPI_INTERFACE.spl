@@ -1,0 +1,10 @@
+[Inputs]
+CLK
+CLR
+=PACKET[7:0]=
+[Outputs]
+MOSI
+SCLK
+CS
+SRST
+[BiDir]

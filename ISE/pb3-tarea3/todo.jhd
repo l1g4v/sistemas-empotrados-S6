@@ -5,3 +5,5 @@ MODULE todo
 		INSTANCE oport
 	SUBMODULE input_port
 		INSTANCE inport
+	SUBMODULE strataoff
+		INSTANCE XLXI_1

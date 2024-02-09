@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/xst"
+elaborate
+-ifn out_port.prj
+-ifmt mixed

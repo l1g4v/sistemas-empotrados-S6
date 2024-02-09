@@ -1,7 +1,7 @@
-Release 14.7 Drc P.20131013 (lin64)
+Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed Feb  7 17:40:39 2024
+Fri Feb 09 07:46:36 2024
 
 drc -z todo.ncd todo.pcf
 

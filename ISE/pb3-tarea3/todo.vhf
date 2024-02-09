@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : todo.vhf
--- /___/   /\     Timestamp : 02/08/2024 20:52:43
+-- /___/   /\     Timestamp : 02/09/2024 07:45:46
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -30,19 +30,18 @@ entity todo is
           inputs : in    std_logic_vector (7 downto 0); 
           INT    : in    std_logic; 
           RST    : in    std_logic; 
-          LCD    : out   std_logic_vector (7 downto 0); 
-          leds   : out   std_logic_vector (7 downto 0); 
+          LCD1   : out   std_logic_vector (7 downto 0); 
           SF_CE0 : out   std_logic);
 end todo;
 
 architecture BEHAVIORAL of todo is
    signal XLXN_1                     : std_logic_vector (7 downto 0);
    signal XLXN_2                     : std_logic;
-   signal XLXN_3                     : std_logic_vector (7 downto 0);
    signal XLXN_4                     : std_logic_vector (7 downto 0);
    signal XLXN_5                     : std_logic;
    signal XLXN_8                     : std_logic_vector (17 downto 0);
    signal XLXN_9                     : std_logic_vector (9 downto 0);
+   signal XLXN_10                    : std_logic_vector (7 downto 0);
    signal inport_input_01_openSignal : std_logic_vector (7 downto 0);
    signal inport_input_02_openSignal : std_logic_vector (7 downto 0);
    signal inport_input_03_openSignal : std_logic_vector (7 downto 0);
@@ -69,23 +68,6 @@ architecture BEHAVIORAL of todo is
              output_v : out   std_logic_vector (7 downto 0));
    end component;
    
-   component out_port
-      port ( enable    : in    std_logic; 
-             rst       : in    std_logic; 
-             input_v   : in    std_logic_vector (7 downto 0); 
-             port_id   : in    std_logic_vector (7 downto 0); 
-             output_00 : out   std_logic_vector (7 downto 0); 
-             output_01 : out   std_logic_vector (7 downto 0); 
-             output_02 : out   std_logic_vector (7 downto 0); 
-             output_03 : out   std_logic_vector (7 downto 0); 
-             output_04 : out   std_logic_vector (7 downto 0); 
-             output_05 : out   std_logic_vector (7 downto 0); 
-             output_06 : out   std_logic_vector (7 downto 0); 
-             output_07 : out   std_logic_vector (7 downto 0); 
-             output_08 : out   std_logic_vector (7 downto 0); 
-             output_09 : out   std_logic_vector (7 downto 0));
-   end component;
-   
    component kcpsm3
       port ( interrupt     : in    std_logic; 
              reset         : in    std_logic; 
@@ -110,6 +92,14 @@ architecture BEHAVIORAL of todo is
              Instruction : out   std_logic_vector (17 downto 0));
    end component;
    
+   component io_port
+      port ( enable   : in    std_logic; 
+             rst      : in    std_logic; 
+             input_v  : in    std_logic_vector (7 downto 0); 
+             dir      : in    std_logic_vector (7 downto 0); 
+             output_v : out   std_logic_vector (7 downto 0));
+   end component;
+   
 begin
    inport : input_port
       port map (enable=>XLXN_2,
@@ -127,22 +117,6 @@ begin
                 rst=>RST,
                 output_v(7 downto 0)=>XLXN_1(7 downto 0));
    
-   oport : out_port
-      port map (enable=>XLXN_5,
-                input_v(7 downto 0)=>XLXN_3(7 downto 0),
-                port_id(7 downto 0)=>XLXN_4(7 downto 0),
-                rst=>RST,
-                output_00(7 downto 0)=>leds(7 downto 0),
-                output_01(7 downto 0)=>LCD(7 downto 0),
-                output_02=>open,
-                output_03=>open,
-                output_04=>open,
-                output_05=>open,
-                output_06=>open,
-                output_07=>open,
-                output_08=>open,
-                output_09=>open);
-   
    pb3 : kcpsm3
       port map (clk=>CLK,
                 instruction(17 downto 0)=>XLXN_8(17 downto 0),
@@ -151,7 +125,7 @@ begin
                 reset=>RST,
                 address(9 downto 0)=>XLXN_9(9 downto 0),
                 interrupt_ack=>open,
-                out_port(7 downto 0)=>XLXN_3(7 downto 0),
+                out_port(7 downto 0)=>XLXN_10(7 downto 0),
                 port_id(7 downto 0)=>XLXN_4(7 downto 0),
                 read_strobe=>XLXN_2,
                 write_strobe=>XLXN_5);
@@ -163,6 +137,13 @@ begin
       port map (Address(9 downto 0)=>XLXN_9(9 downto 0),
                 Clk=>CLK,
                 Instruction(17 downto 0)=>XLXN_8(17 downto 0));
+   
+   XLXI_3 : io_port
+      port map (dir(7 downto 0)=>XLXN_4(7 downto 0),
+                enable=>XLXN_5,
+                input_v(7 downto 0)=>XLXN_10(7 downto 0),
+                rst=>RST,
+                output_v(7 downto 0)=>LCD1(7 downto 0));
    
 end BEHAVIORAL;
 

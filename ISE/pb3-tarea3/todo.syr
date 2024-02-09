@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.30 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.31 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: todo.prj
 
@@ -106,14 +106,16 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Compiling vhdl file "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd" in Library work.
 Architecture behavioral of Entity input_port is up to date.
-Compiling vhdl file "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd" in Library work.
-Architecture behavioral of Entity out_port is up to date.
 Compiling vhdl file "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" in Library work.
 Architecture low_level_definition of Entity kcpsm3 is up to date.
 Compiling vhdl file "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/strataoff.vhd" in Library work.
 Architecture behavioral of Entity strataoff is up to date.
 Compiling vhdl file "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/program.vhdl" in Library work.
-Architecture structure of Entity program is up to date.
+Package <program_pkg> compiled.
+Entity <program> compiled.
+Entity <program> (Architecture <structure>) compiled.
+Compiling vhdl file "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.vhd" in Library work.
+Architecture behavioral of Entity io_port is up to date.
 Compiling vhdl file "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" in Library work.
 Architecture behavioral of Entity todo is up to date.
 
@@ -124,13 +126,13 @@ Analyzing hierarchy for entity <todo> in library <work> (architecture <behaviora
 
 Analyzing hierarchy for entity <input_port> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <out_port> in library <work> (architecture <behavioral>).
-
 Analyzing hierarchy for entity <kcpsm3> in library <work> (architecture <low_level_definition>).
 
 Analyzing hierarchy for entity <strataoff> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <program> in library <work> (architecture <structure>).
+
+Analyzing hierarchy for entity <io_port> in library <work> (architecture <behavioral>).
 
 WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 289: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
 WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1200: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
@@ -176,22 +178,11 @@ WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/IS
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <todo> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 130: Unconnected output port 'output_02' of component 'out_port'.
-WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 130: Unconnected output port 'output_03' of component 'out_port'.
-WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 130: Unconnected output port 'output_04' of component 'out_port'.
-WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 130: Unconnected output port 'output_05' of component 'out_port'.
-WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 130: Unconnected output port 'output_06' of component 'out_port'.
-WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 130: Unconnected output port 'output_07' of component 'out_port'.
-WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 130: Unconnected output port 'output_08' of component 'out_port'.
-WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 130: Unconnected output port 'output_09' of component 'out_port'.
-WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 146: Unconnected output port 'interrupt_ack' of component 'kcpsm3'.
+WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 120: Unconnected output port 'interrupt_ack' of component 'kcpsm3'.
 Entity <todo> analyzed. Unit <todo> generated.
 
 Analyzing Entity <input_port> in library <work> (Architecture <behavioral>).
 Entity <input_port> analyzed. Unit <input_port> generated.
-
-Analyzing Entity <out_port> in library <work> (Architecture <behavioral>).
-Entity <out_port> analyzed. Unit <out_port> generated.
 
 Analyzing Entity <kcpsm3> in library <work> (Architecture <low_level_definition>).
     Set user-defined property "INIT =  1" for instance <t_state_lut> in unit <kcpsm3>.
@@ -413,23 +404,23 @@ Entity <strataoff> analyzed. Unit <strataoff> generated.
 
 Analyzing Entity <program> in library <work> (Architecture <structure>).
     Set user-defined property "INIT =  00000" for instance <rom_1024_x_18> in unit <program>.
-    Set user-defined property "INITP_00 =  F3CF3CF3CF3CF3BCF2A8002FCF3CF3CF3CF3CF3FCF38B8A38EDCB72DCB72DCB4" for instance <rom_1024_x_18> in unit <program>.
-    Set user-defined property "INITP_01 =  000000000000000000000000000000000000000000000000000000000003CF3C" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INITP_00 =  3CF3CF3CF3CF38BCF2A8002FCF3CF3CF3CF3CF3FCF38B8A38B72DCB72DCB72D3" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INITP_01 =  00000000000000000000000000000000000000000000000000000000003CF3CF" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
-    Set user-defined property "INIT_00 =  0004027DA000540AC20100040219A0005405C10100000128A0005401C001000B" for instance <rom_1024_x_18> in unit <program>.
-    Set user-defined property "INIT_01 =  C501E5404064A0005419C40100130432A0005414C30100090314A000540FC201" for instance <rom_1024_x_18> in unit <program>.
-    Set user-defined property "INIT_02 =  00240503000E002405030013C5010500A000001EC501A5DFA000C501E5400000" for instance <rom_1024_x_18> in unit <program>.
-    Set user-defined property "INIT_03 =  0500000400240508000000240502000400240502000400240503000400040004" for instance <rom_1024_x_18> in unit <program>.
-    Set user-defined property "INIT_04 =  0024050100000024050000040024050C00000024050000040024050600000024" for instance <rom_1024_x_18> in unit <program>.
-    Set user-defined property "INIT_05 =  000000241650060E060E060E060EE720E620A7F0A60F17501650A00000090009" for instance <rom_1024_x_18> in unit <program>.
-    Set user-defined property "INIT_06 =  0024050E00000024050500040024050A0000002405080028A000000400241750" for instance <rom_1024_x_18> in unit <program>.
-    Set user-defined property "INIT_07 =  0000002405080004002405010000002405080004002405020000002405030004" for instance <rom_1024_x_18> in unit <program>.
-    Set user-defined property "INIT_08 =  000000000000000000000000000000040024050800000024050C000400240508" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_00 =  027DA000540BC20100050219A0005406C10100010128A0005402C001000B4064" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_01 =  C500E540A000541AC40100140432A0005415C301000A0314A0005410C2010005" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_02 =  00240503000F002405030014C5000500A000001EC500A5DFA000C500E5400001" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_03 =  0500000500240508000100240502000500240502000500240503000500050005" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_04 =  0024050100010024050000050024050C00010024050000050024050600010024" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_05 =  000100241650060E060E060E060EE720E620A7F0A60F17501650A000000A000A" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_06 =  00010024050500050024050A0001002405080028C5000580A000000500241750" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_07 =  050800050024050100010024050800050024050200010024050300050024050E" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_08 =  0000000000000000000000050024050800010024050C00050024050800010024" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_09 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_0A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_0B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
@@ -489,6 +480,9 @@ Analyzing Entity <program> in library <work> (Architecture <structure>).
     Set user-defined property "WRITE_MODE =  WRITE_FIRST" for instance <rom_1024_x_18> in unit <program>.
 Entity <program> analyzed. Unit <program> generated.
 
+Analyzing Entity <io_port> in library <work> (Architecture <behavioral>).
+Entity <io_port> analyzed. Unit <io_port> generated.
+
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -504,26 +498,17 @@ Synthesizing Unit <input_port>.
 Unit <input_port> synthesized.
 
 
-Synthesizing Unit <out_port>.
-    Related source file is "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd".
-    Found 8-bit register for signal <output_00>.
-    Found 8-bit register for signal <output_01>.
-    Found 8-bit register for signal <output_02>.
-    Found 8-bit register for signal <output_03>.
-    Found 8-bit register for signal <output_04>.
-    Found 8-bit register for signal <output_05>.
-    Found 8-bit register for signal <output_06>.
-    Found 8-bit register for signal <output_07>.
-    Found 8-bit register for signal <output_08>.
-    Found 8-bit register for signal <output_09>.
-    Summary:
-	inferred  80 D-type flip-flop(s).
-Unit <out_port> synthesized.
-
-
 Synthesizing Unit <strataoff>.
     Related source file is "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/strataoff.vhd".
 Unit <strataoff> synthesized.
+
+
+Synthesizing Unit <io_port>.
+    Related source file is "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.vhd".
+    Found 8-bit register for signal <output_v>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <io_port> synthesized.
 
 
 Synthesizing Unit <kcpsm3>.
@@ -554,8 +539,8 @@ Unit <todo> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 11
- 8-bit register                                        : 11
+# Registers                                            : 2
+ 8-bit register                                        : 2
 
 =========================================================================
 
@@ -568,8 +553,8 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 164
- Flip-Flops                                            : 164
+# Registers                                            : 92
+ Flip-Flops                                            : 92
 
 =========================================================================
 
@@ -581,73 +566,9 @@ Optimizing unit <todo> ...
 
 Optimizing unit <input_port> ...
 
-Optimizing unit <out_port> ...
+Optimizing unit <io_port> ...
 
 Optimizing unit <kcpsm3> ...
-WARNING:Xst:2677 - Node <oport/output_09_7> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_09_6> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_09_5> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_09_4> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_09_3> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_09_2> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_09_1> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_09_0> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_08_7> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_08_6> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_08_5> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_08_4> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_08_3> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_08_2> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_08_1> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_08_0> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_06_7> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_06_6> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_06_5> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_06_4> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_06_3> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_06_2> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_06_1> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_06_0> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_05_7> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_05_6> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_05_5> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_05_4> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_05_3> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_05_2> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_05_1> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_05_0> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_07_7> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_07_6> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_07_5> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_07_4> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_07_3> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_07_2> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_07_1> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_07_0> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_04_7> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_04_6> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_04_5> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_04_4> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_04_3> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_04_2> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_04_1> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_04_0> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_03_7> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_03_6> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_03_5> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_03_4> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_03_3> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_03_2> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_03_1> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_03_0> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_02_7> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_02_6> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_02_5> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_02_4> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_02_3> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_02_2> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_02_1> of sequential type is unconnected in block <todo>.
-WARNING:Xst:2677 - Node <oport/output_02_0> of sequential type is unconnected in block <todo>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -659,8 +580,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 100
- Flip-Flops                                            : 100
+# Registers                                            : 92
+ Flip-Flops                                            : 92
 
 =========================================================================
 
@@ -686,24 +607,24 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 28
+# IOs                              : 20
 
 Cell Usage :
-# BELS                             : 217
+# BELS                             : 214
 #      GND                         : 1
 #      INV                         : 4
 #      LUT1                        : 2
-#      LUT2                        : 6
+#      LUT2                        : 5
 #      LUT3                        : 69
-#      LUT4                        : 48
+#      LUT4                        : 45
 #      MUXCY                       : 39
-#      MUXF5                       : 10
+#      MUXF5                       : 11
 #      VCC                         : 1
 #      XORCY                       : 37
-# FlipFlops/Latches                : 100
+# FlipFlops/Latches                : 92
 #      FD                          : 24
 #      FDC                         : 8
-#      FDCE                        : 16
+#      FDCE                        : 8
 #      FDE                         : 2
 #      FDR                         : 30
 #      FDRE                        : 8
@@ -716,9 +637,9 @@ Cell Usage :
 #      RAMB16_S18                  : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 27
+# IO Buffers                       : 19
 #      IBUF                        : 10
-#      OBUF                        : 17
+#      OBUF                        : 9
 =========================================================================
 
 Device utilization summary:
@@ -726,14 +647,14 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                      109  out of   4656     2%  
+ Number of Slices:                      107  out of   4656     2%  
  Number of Slice Flip Flops:             84  out of   9312     0%  
- Number of 4 input LUTs:                197  out of   9312     2%  
-    Number used as logic:               129
+ Number of 4 input LUTs:                193  out of   9312     2%  
+    Number used as logic:               125
     Number used as RAMs:                 68
- Number of IOs:                          28
- Number of bonded IOBs:                  28  out of    232    12%  
-    IOB Flip Flops:                      16
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of    232     8%  
+    IOB Flip Flops:                       8
  Number of BRAMs:                         1  out of     20     5%  
  Number of GCLKs:                         1  out of     24     4%  
 
@@ -759,7 +680,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 XLXN_2                             | NONE(inport/output_v_7)| 8     |
-XLXN_5                             | NONE(oport/output_01_7)| 16    |
+XLXN_5                             | NONE(XLXI_3/output_v_7)| 8     |
 CLK                                | BUFGP                  | 103   |
 -----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -769,7 +690,7 @@ Asynchronous Control Signals Information:
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-RST                                | IBUF                   | 24    |
+RST                                | IBUF                   | 16    |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
@@ -777,7 +698,7 @@ Timing Summary:
 Speed Grade: -4
 
    Minimum period: 9.959ns (Maximum Frequency: 100.415MHz)
-   Minimum input arrival time before clock: 3.389ns
+   Minimum input arrival time before clock: 3.197ns
    Maximum output required time after clock: 4.283ns
    Maximum combinational path delay: No path found
 
@@ -865,7 +786,7 @@ Offset:              2.685ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
   Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
-Offset:              3.389ns (Levels of Logic = 1)
+Offset:              3.197ns (Levels of Logic = 1)
   Source:            RST (PAD)
   Destination:       pb3/reset_flop2 (FF)
   Destination Clock: CLK rising
@@ -874,27 +795,27 @@ Offset:              3.389ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            26   1.218   1.260  RST_IBUF (RST_IBUF)
+     IBUF:I->O            18   1.218   1.068  RST_IBUF (RST_IBUF)
      FDS:S                     0.911          pb3/reset_flop1
     ----------------------------------------
-    Total                      3.389ns (2.129ns logic, 1.260ns route)
-                                       (62.8% logic, 37.2% route)
+    Total                      3.197ns (2.129ns logic, 1.068ns route)
+                                       (66.6% logic, 33.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXN_5'
-  Total number of paths / destination ports: 16 / 16
+  Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
 Offset:              4.283ns (Levels of Logic = 1)
-  Source:            oport/output_00_7 (FF)
-  Destination:       leds<7> (PAD)
+  Source:            XLXI_3/output_v_7 (FF)
+  Destination:       LCD1<7> (PAD)
   Source Clock:      XLXN_5 rising
 
-  Data Path: oport/output_00_7 to leds<7>
+  Data Path: XLXI_3/output_v_7 to LCD1<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             1   0.591   0.420  oport/output_00_7 (oport/output_00_7)
-     OBUF:I->O                 3.272          leds_7_OBUF (leds<7>)
+     FDCE:C->Q             1   0.591   0.420  XLXI_3/output_v_7 (XLXI_3/output_v_7)
+     OBUF:I->O                 3.272          LCD1_7_OBUF (LCD1<7>)
     ----------------------------------------
     Total                      4.283ns (3.863ns logic, 0.420ns route)
                                        (90.2% logic, 9.8% route)
@@ -902,14 +823,14 @@ Offset:              4.283ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 16.00 secs
-Total CPU time to Xst completion: 15.95 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.08 secs
  
 --> 
 
-Total memory usage is 4530952 kilobytes
+Total memory usage is 4530904 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  122 (   0 filtered)
+Number of warnings :   50 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

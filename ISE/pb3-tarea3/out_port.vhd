@@ -51,18 +51,7 @@ architecture Behavioral of out_port is
 begin
 process(enable,rst)
 	begin
-	if (rst='1') then 
-		output_00 <= x"00";
-		output_01 <= x"00";
-		output_02 <= x"00";
-		output_03 <= x"00";
-		output_04 <= x"00";
-		output_05 <= x"00";
-		output_06 <= x"00";
-		output_07 <= x"00";
-		output_08 <= x"00";
-		output_09 <= x"00";
-	elsif rising_edge(enable) then
+	if rising_edge(enable) then
 		if port_id = x"00" then
 			output_00 <= input_v;
 		elsif port_id = x"01" then

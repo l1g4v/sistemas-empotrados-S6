@@ -3,14 +3,14 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
 Project Information
 --------------------
-ProjectID=4C495371AD42DD21821972C19A317095
+ProjectID=9930dcea9f8f4aeaa3f1f3fe17f31c95
 ProjectIteration=1
 
 WebTalk Summary
 ----------------
-INFO:WebTalk:1 - WebTalk is enabled because you are using a WebPACK license.
+INFO:WebTalk:2 - WebTalk is enabled.
 
 INFO:WebTalk:8 - WebTalk Install setting is ON.
 INFO:WebTalk:6 - WebTalk User setting is ON.
 
-INFO:WebTalk:5 - /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/usage_statistics_webtalk.html WebTalk report has not been sent to Xilinx.  Please check your network and proxy settings.  For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html
+INFO:WebTalk:5 - C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/usage_statistics_webtalk.html WebTalk report has not been sent to Xilinx.  Please check your network and proxy settings.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html

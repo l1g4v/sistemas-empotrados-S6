@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (lin64)
+Release 14.7 Map P.20131013 (nt64)
 Xilinx Mapping Report File for Design 'todo'
 
 Design Information
@@ -9,36 +9,41 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Wed Feb  7 17:39:23 2024
+Mapped Date    : Thu Feb 08 20:53:29 2024
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    9
+Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:            19 out of   9,312    1%
-  Number of 4 input LUTs:                16 out of   9,312    1%
+  Number of Slice Flip Flops:            84 out of   9,312    1%
+  Number of 4 input LUTs:               193 out of   9,312    2%
 Logic Distribution:
-  Number of occupied Slices:             28 out of   4,656    1%
-    Number of Slices containing only related logic:      28 out of      28 100%
-    Number of Slices containing unrelated logic:          0 out of      28   0%
+  Number of occupied Slices:            107 out of   4,656    2%
+    Number of Slices containing only related logic:     107 out of     107 100%
+    Number of Slices containing unrelated logic:          0 out of     107   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:          23 out of   9,312    1%
-    Number used as logic:                 8
-    Number used as a route-thru:          7
-    Number used as 16x1 RAMs:             8
+  Total Number of 4 input LUTs:         195 out of   9,312    2%
+    Number used as logic:               125
+    Number used as a route-thru:          2
+    Number used for Dual Port RAMs:      16
+      (Two LUTs used per Dual Port RAM)
+    Number used for 32x1 RAMs:           52
+      (Two LUTs used per 32x1 RAM)
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 19 out of     232    8%
+  Number of bonded IOBs:                 28 out of     232   12%
+    IOB Flip Flops:                      16
+  Number of RAMB16s:                      1 out of      20    5%
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                1.20
+Average Fanout of Non-Clock Nets:                4.15
 
-Peak Memory Usage:  565 MB
-Total REAL time to MAP completion:  1 secs 
-Total CPU time to MAP completion:   1 secs 
+Peak Memory Usage:  4404 MB
+Total REAL time to MAP completion:  7 secs 
+Total CPU time to MAP completion:   2 secs 
 
 NOTES:
 
@@ -79,24 +84,6 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:MapLib:701 - Signal INT connected to top level port INT has been
-   removed.
-WARNING:MapLib:701 - Signal inputs<7> connected to top level port inputs<7> has
-   been removed.
-WARNING:MapLib:701 - Signal inputs<6> connected to top level port inputs<6> has
-   been removed.
-WARNING:MapLib:701 - Signal inputs<5> connected to top level port inputs<5> has
-   been removed.
-WARNING:MapLib:701 - Signal inputs<4> connected to top level port inputs<4> has
-   been removed.
-WARNING:MapLib:701 - Signal inputs<3> connected to top level port inputs<3> has
-   been removed.
-WARNING:MapLib:701 - Signal inputs<2> connected to top level port inputs<2> has
-   been removed.
-WARNING:MapLib:701 - Signal inputs<1> connected to top level port inputs<1> has
-   been removed.
-WARNING:MapLib:701 - Signal inputs<0> connected to top level port inputs<0> has
-   been removed.
 
 Section 3 - Informational
 -------------------------
@@ -107,632 +94,15 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
- 198 block(s) removed
-  88 block(s) optimized away
- 239 signal(s) removed
+   2 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
-
-The trimmed logic reported below is either:
-   1. part of a cycle
-   2. part of disabled logic
-   3. a side-effect of other trimmed logic
-
-The signal "INT" is unused and has been removed.
- Unused block "INT" (PAD) removed.
-The signal "INT_IBUF" is unused and has been removed.
- Unused block "INT_IBUF" (BUF) removed.
-The signal "N4" is unused and has been removed.
- Unused block "inport/output_v_mux0000<0>1_SW0" (ROM) removed.
-The signal "XLXN_2" is unused and has been removed.
-The signal "XLXN_5" is unused and has been removed.
-The signal "inport/N01" is unused and has been removed.
- Unused block "inport/output_v_mux0000<0>1" (ROM) removed.
-The signal "inport/N11" is unused and has been removed.
- Unused block "inport/output_v_mux0000<0>226" (ROM) removed.
-  The signal "inport/output_v_mux0000<0>212" is unused and has been removed.
-   Unused block "inport/output_v_mux0000<0>212" (ROM) removed.
-  The signal "inport/output_v_mux0000<0>225" is unused and has been removed.
-   Unused block "inport/output_v_mux0000<0>225" (ROM) removed.
-The signal "inport/output_v_mux0000<0>" is unused and has been removed.
- Unused block "inport/output_v_mux0000<0>2" (ROM) removed.
-  The signal "inputs_0_IBUF" is unused and has been removed.
-   Unused block "inputs_0_IBUF" (BUF) removed.
-    The signal "inputs<0>" is unused and has been removed.
-     Unused block "inputs<0>" (PAD) removed.
-The signal "inport/output_v_mux0000<1>" is unused and has been removed.
- Unused block "inport/output_v_mux0000<1>1" (ROM) removed.
-  The signal "inputs_1_IBUF" is unused and has been removed.
-   Unused block "inputs_1_IBUF" (BUF) removed.
-    The signal "inputs<1>" is unused and has been removed.
-     Unused block "inputs<1>" (PAD) removed.
-The signal "inport/output_v_mux0000<2>" is unused and has been removed.
- Unused block "inport/output_v_mux0000<2>1" (ROM) removed.
-  The signal "inputs_2_IBUF" is unused and has been removed.
-   Unused block "inputs_2_IBUF" (BUF) removed.
-    The signal "inputs<2>" is unused and has been removed.
-     Unused block "inputs<2>" (PAD) removed.
-The signal "inport/output_v_mux0000<3>" is unused and has been removed.
- Unused block "inport/output_v_mux0000<3>1" (ROM) removed.
-  The signal "inputs_3_IBUF" is unused and has been removed.
-   Unused block "inputs_3_IBUF" (BUF) removed.
-    The signal "inputs<3>" is unused and has been removed.
-     Unused block "inputs<3>" (PAD) removed.
-The signal "inport/output_v_mux0000<4>" is unused and has been removed.
- Unused block "inport/output_v_mux0000<4>1" (ROM) removed.
-  The signal "inputs_4_IBUF" is unused and has been removed.
-   Unused block "inputs_4_IBUF" (BUF) removed.
-    The signal "inputs<4>" is unused and has been removed.
-     Unused block "inputs<4>" (PAD) removed.
-The signal "inport/output_v_mux0000<5>" is unused and has been removed.
- Unused block "inport/output_v_mux0000<5>1" (ROM) removed.
-  The signal "inputs_5_IBUF" is unused and has been removed.
-   Unused block "inputs_5_IBUF" (BUF) removed.
-    The signal "inputs<5>" is unused and has been removed.
-     Unused block "inputs<5>" (PAD) removed.
-The signal "inport/output_v_mux0000<6>" is unused and has been removed.
- Unused block "inport/output_v_mux0000<6>1" (ROM) removed.
-  The signal "inputs_6_IBUF" is unused and has been removed.
-   Unused block "inputs_6_IBUF" (BUF) removed.
-    The signal "inputs<6>" is unused and has been removed.
-     Unused block "inputs<6>" (PAD) removed.
-The signal "inport/output_v_mux0000<7>" is unused and has been removed.
- Unused block "inport/output_v_mux0000<7>1" (ROM) removed.
-  The signal "inputs_7_IBUF" is unused and has been removed.
-   Unused block "inputs_7_IBUF" (BUF) removed.
-    The signal "inputs<7>" is unused and has been removed.
-     Unused block "inputs<7>" (PAD) removed.
-The signal "oport/output_00_cmp_eq00001" is unused and has been removed.
-The signal "oport/output_00_not0001_inv" is unused and has been removed.
-The signal "oport/output_01_cmp_eq0000" is unused and has been removed.
-The signal "pb3/arith_carry" is unused and has been removed.
- Unused block "pb3/arith_loop[7].msb_arith.arith_carry_flop" (SFF) removed.
-  The signal "pb3/arith_carry_out" is unused and has been removed.
-   Unused block "pb3/arith_loop[7].msb_arith.arith_carry_out_xor" (XOR) removed.
-    The signal "pb3/arith_internal_carry<7>" is unused and has been removed.
-     Unused block "pb3/arith_loop[7].msb_arith.arith_muxcy" (MUX) removed.
-    The signal "pb3/invert_arith_carry" is unused and has been removed.
-     Unused block "pb3/arith_loop[7].msb_arith.arith_carry_out_lut" (ROM) removed.
-The signal "pb3/call_type" is unused and has been removed.
- Unused block "pb3/call_type_lut" (ROM) removed.
-The signal "pb3/carry_fast_route" is unused and has been removed.
- Unused block "pb3/carry_xor" (XOR) removed.
-  The signal "pb3/sel_carry<3>" is unused and has been removed.
-   Unused block "pb3/sel_parity_muxcy" (MUX) removed.
-    The signal "pb3/sel_carry<2>" is unused and has been removed.
-     Unused block "pb3/sel_arith_muxcy" (MUX) removed.
-      The signal "pb3/sel_carry<1>" is unused and has been removed.
-       Unused block "pb3/sel_shift_muxcy" (MUX) removed.
-        The signal "pb3/sel_carry<0>" is unused and has been removed.
-         Unused block "pb3/sel_shadow_muxcy" (MUX) removed.
-          The signal "pb3/shadow_carry" is unused and has been removed.
-           Unused block "pb3/shadow_carry_flop" (FF) removed.
-          The signal "pb3/sel_shadow_carry" is unused and has been removed.
-           Unused block "pb3/sel_shadow_carry_lut" (ROM) removed.
-        The signal "pb3/shift_carry" is unused and has been removed.
-         Unused block "pb3/pipeline_bit" (FF) removed.
-          The signal "pb3/shift_carry_value" is unused and has been removed.
-           Unused block "pb3/shift_carry_lut" (ROM) removed.
-        The signal "pb3/sel_shift_carry" is unused and has been removed.
-         Unused block "pb3/sel_shift_carry_lut" (ROM) removed.
-      The signal "pb3/sel_arith_carry" is unused and has been removed.
-       Unused block "pb3/sel_arith_carry_lut" (ROM) removed.
-    The signal "pb3/parity" is unused and has been removed.
-     Unused block "pb3/parity_xor" (XOR) removed.
-      The signal "pb3/parity_carry" is unused and has been removed.
-       Unused block "pb3/parity_muxcy" (MUX) removed.
-        The signal "pb3/low_parity" is unused and has been removed.
-         Unused block "pb3/low_parity_lut" (ROM) removed.
-      The signal "pb3/high_parity" is unused and has been removed.
-       Unused block "pb3/high_parity_lut" (ROM) removed.
-    The signal "pb3/sel_parity" is unused and has been removed.
-     Unused block "pb3/sel_parity_lut" (ROM) removed.
-The signal "pb3/clean_int" is unused and has been removed.
- Unused block "pb3/int_capture_flop" (SFF) removed.
-The signal "pb3/condition_met" is unused and has been removed.
- Unused block "pb3/condition_met_lut" (ROM) removed.
-  The signal "pb3/zero_flag" is unused and has been removed.
-   Unused block "pb3/zero_flag_flop" (SFF) removed.
-    The signal "pb3/flag_enable" is unused and has been removed.
-    The signal "pb3/zero_fast_route" is unused and has been removed.
-     Unused block "pb3/zero_xor" (XOR) removed.
-      The signal "pb3/zero_carry" is unused and has been removed.
-       Unused block "pb3/zero_cymux" (MUX) removed.
-        The signal "pb3/high_zero_carry" is unused and has been removed.
-         Unused block "pb3/high_zero_cymux" (MUX) removed.
-          The signal "pb3/low_zero_carry" is unused and has been removed.
-           Unused block "pb3/low_zero_muxcy" (MUX) removed.
-            The signal "pb3/low_zero" is unused and has been removed.
-             Unused block "pb3/low_zero_lut" (ROM) removed.
-          The signal "pb3/high_zero" is unused and has been removed.
-           Unused block "pb3/high_zero_lut" (ROM) removed.
-        The signal "pb3/shadow_zero" is unused and has been removed.
-         Unused block "pb3/shadow_zero_flop" (FF) removed.
-        The signal "pb3/sel_shadow_zero" is unused and has been removed.
-         Unused block "pb3/sel_shadow_zero_lut" (ROM) removed.
-The signal "pb3/flag_type" is unused and has been removed.
-The signal "pb3/half_stack_address<0>" is unused and has been removed.
- Unused block "pb3/stack_count_loop[0].lsb_stack_count.count_lut" (ROM) removed.
-  The signal "pb3/stack_address<0>" is unused and has been removed.
-   Unused block "pb3/stack_count_loop[0].register_bit" (SFF) removed.
-    The signal "pb3/not_active_interrupt" is unused and has been removed.
-     Unused block "pb3/stack_count_inv" (BUF) removed.
-    The signal "pb3/next_stack_address<0>" is unused and has been removed.
-     Unused block "pb3/stack_count_loop[0].lsb_stack_count.count_xor" (XOR) removed.
-  The signal "pb3/valid_to_move" is unused and has been removed.
-   Unused block "pb3/valid_move_lut" (ROM) removed.
-  The signal "pb3/push_or_pop_type" is unused and has been removed.
-   Unused block "pb3/push_pop_lut" (ROM) removed.
-The signal "pb3/half_stack_address<1>" is unused and has been removed.
- Unused block "pb3/stack_count_loop[1].mid_stack_count.count_lut" (ROM) removed.
-  The signal "pb3/stack_address<1>" is unused and has been removed.
-   Unused block "pb3/stack_count_loop[1].register_bit" (SFF) removed.
-    The signal "pb3/next_stack_address<1>" is unused and has been removed.
-     Unused block "pb3/stack_count_loop[1].mid_stack_count.count_xor" (XOR) removed.
-      The signal "pb3/stack_address_carry<0>" is unused and has been removed.
-       Unused block "pb3/stack_count_loop[0].lsb_stack_count.count_muxcy" (MUX)
-removed.
-The signal "pb3/half_stack_address<2>" is unused and has been removed.
- Unused block "pb3/stack_count_loop[2].mid_stack_count.count_lut" (ROM) removed.
-  The signal "pb3/stack_address<2>" is unused and has been removed.
-   Unused block "pb3/stack_count_loop[2].register_bit" (SFF) removed.
-    The signal "pb3/next_stack_address<2>" is unused and has been removed.
-     Unused block "pb3/stack_count_loop[2].mid_stack_count.count_xor" (XOR) removed.
-      The signal "pb3/stack_address_carry<1>" is unused and has been removed.
-       Unused block "pb3/stack_count_loop[1].mid_stack_count.count_muxcy" (MUX)
-removed.
-The signal "pb3/half_stack_address<3>" is unused and has been removed.
- Unused block "pb3/stack_count_loop[3].mid_stack_count.count_lut" (ROM) removed.
-  The signal "pb3/stack_address<3>" is unused and has been removed.
-   Unused block "pb3/stack_count_loop[3].register_bit" (SFF) removed.
-    The signal "pb3/next_stack_address<3>" is unused and has been removed.
-     Unused block "pb3/stack_count_loop[3].mid_stack_count.count_xor" (XOR) removed.
-      The signal "pb3/stack_address_carry<2>" is unused and has been removed.
-       Unused block "pb3/stack_count_loop[2].mid_stack_count.count_muxcy" (MUX)
-removed.
-The signal "pb3/half_stack_address<4>" is unused and has been removed.
- Unused block "pb3/stack_count_loop[4].msb_stack_count.count_lut" (ROM) removed.
-  The signal "pb3/stack_address<4>" is unused and has been removed.
-   Unused block "pb3/stack_count_loop[4].register_bit" (SFF) removed.
-    The signal "pb3/next_stack_address<4>" is unused and has been removed.
-     Unused block "pb3/stack_count_loop[4].msb_stack_count.count_xor" (XOR) removed.
-      The signal "pb3/stack_address_carry<3>" is unused and has been removed.
-       Unused block "pb3/stack_count_loop[3].mid_stack_count.count_muxcy" (MUX)
-removed.
-The signal "pb3/high_shift_in" is unused and has been removed.
- Unused block "pb3/high_shift_in_lut" (ROM) removed.
-The signal "pb3/inc_pc_value<0>" is unused and has been removed.
- Unused block "pb3/pc_loop[0].pc_lsb_carry.pc_value_xor" (XOR) removed.
-  The signal "pb3/normal_count" is unused and has been removed.
-   Unused block "pb3/normal_count_lut" (ROM) removed.
-    The signal "pb3/move_group" is unused and has been removed.
-     Unused block "pb3/move_group_lut" (ROM) removed.
-  The signal "pb3/pc_value<0>" is unused and has been removed.
-   Unused block "pb3/pc_loop[0].value_select_mux" (ROM) removed.
-    The signal "pb3/inc_pc_vector<0>" is unused and has been removed.
-     Unused block "pb3/pc_loop[0].pc_lsb_carry.pc_vector_xor" (XOR) removed.
-      The signal "pb3/pc_vector<0>" is unused and has been removed.
-       Unused block "pb3/pc_loop[0].vector_select_mux" (ROM) removed.
-        The signal "pb3/stack_pop_data<0>" is unused and has been removed.
-         Unused block "pb3/stack_ram_loop[0].stack_flop" (FF) removed.
-          The signal "pb3/stack_ram_data<0>" is unused and has been removed.
-           Unused block "pb3/stack_ram_loop[0].stack_bit" (RAMS) removed.
-            The signal "pb3/pc<0>" is unused and has been removed.
-             Unused block "pb3/pc_loop[0].register_bit" (SFF) removed.
-              The signal "pb3/pc_enable" is unused and has been removed.
-               Unused block "pb3/invert_enable" (BUF) removed.
-            The signal "pb3/stack_write_enable" is unused and has been removed.
-             Unused block "pb3/stack_ram_inv" (BUF) removed.
-The signal "pb3/inc_pc_value<1>" is unused and has been removed.
- Unused block "pb3/pc_loop[1].pc_mid_carry.pc_value_xor" (XOR) removed.
-  The signal "pb3/pc_value_carry<0>" is unused and has been removed.
-   Unused block "pb3/pc_loop[0].pc_lsb_carry.pc_value_muxcy" (MUX) removed.
-  The signal "pb3/pc_value<1>" is unused and has been removed.
-   Unused block "pb3/pc_loop[1].value_select_mux" (ROM) removed.
-    The signal "pb3/inc_pc_vector<1>" is unused and has been removed.
-     Unused block "pb3/pc_loop[1].pc_mid_carry.pc_vector_xor" (XOR) removed.
-      The signal "pb3/pc_vector_carry<0>" is unused and has been removed.
-       Unused block "pb3/pc_loop[0].pc_lsb_carry.pc_vector_muxcy" (MUX) removed.
-      The signal "pb3/pc_vector<1>" is unused and has been removed.
-       Unused block "pb3/pc_loop[1].vector_select_mux" (ROM) removed.
-        The signal "pb3/stack_pop_data<1>" is unused and has been removed.
-         Unused block "pb3/stack_ram_loop[1].stack_flop" (FF) removed.
-          The signal "pb3/stack_ram_data<1>" is unused and has been removed.
-           Unused block "pb3/stack_ram_loop[1].stack_bit" (RAMS) removed.
-            The signal "pb3/pc<1>" is unused and has been removed.
-             Unused block "pb3/pc_loop[1].register_bit" (SFF) removed.
-The signal "pb3/inc_pc_value<2>" is unused and has been removed.
- Unused block "pb3/pc_loop[2].pc_mid_carry.pc_value_xor" (XOR) removed.
-  The signal "pb3/pc_value_carry<1>" is unused and has been removed.
-   Unused block "pb3/pc_loop[1].pc_mid_carry.pc_value_muxcy" (MUX) removed.
-  The signal "pb3/pc_value<2>" is unused and has been removed.
-   Unused block "pb3/pc_loop[2].value_select_mux" (ROM) removed.
-    The signal "pb3/inc_pc_vector<2>" is unused and has been removed.
-     Unused block "pb3/pc_loop[2].pc_mid_carry.pc_vector_xor" (XOR) removed.
-      The signal "pb3/pc_vector_carry<1>" is unused and has been removed.
-       Unused block "pb3/pc_loop[1].pc_mid_carry.pc_vector_muxcy" (MUX) removed.
-      The signal "pb3/pc_vector<2>" is unused and has been removed.
-       Unused block "pb3/pc_loop[2].vector_select_mux" (ROM) removed.
-        The signal "pb3/stack_pop_data<2>" is unused and has been removed.
-         Unused block "pb3/stack_ram_loop[2].stack_flop" (FF) removed.
-          The signal "pb3/stack_ram_data<2>" is unused and has been removed.
-           Unused block "pb3/stack_ram_loop[2].stack_bit" (RAMS) removed.
-            The signal "pb3/pc<2>" is unused and has been removed.
-             Unused block "pb3/pc_loop[2].register_bit" (SFF) removed.
-The signal "pb3/inc_pc_value<3>" is unused and has been removed.
- Unused block "pb3/pc_loop[3].pc_mid_carry.pc_value_xor" (XOR) removed.
-  The signal "pb3/pc_value_carry<2>" is unused and has been removed.
-   Unused block "pb3/pc_loop[2].pc_mid_carry.pc_value_muxcy" (MUX) removed.
-  The signal "pb3/pc_value<3>" is unused and has been removed.
-   Unused block "pb3/pc_loop[3].value_select_mux" (ROM) removed.
-    The signal "pb3/inc_pc_vector<3>" is unused and has been removed.
-     Unused block "pb3/pc_loop[3].pc_mid_carry.pc_vector_xor" (XOR) removed.
-      The signal "pb3/pc_vector_carry<2>" is unused and has been removed.
-       Unused block "pb3/pc_loop[2].pc_mid_carry.pc_vector_muxcy" (MUX) removed.
-      The signal "pb3/pc_vector<3>" is unused and has been removed.
-       Unused block "pb3/pc_loop[3].vector_select_mux" (ROM) removed.
-        The signal "pb3/stack_pop_data<3>" is unused and has been removed.
-         Unused block "pb3/stack_ram_loop[3].stack_flop" (FF) removed.
-          The signal "pb3/stack_ram_data<3>" is unused and has been removed.
-           Unused block "pb3/stack_ram_loop[3].stack_bit" (RAMS) removed.
-            The signal "pb3/pc<3>" is unused and has been removed.
-             Unused block "pb3/pc_loop[3].register_bit" (SFF) removed.
-The signal "pb3/inc_pc_value<4>" is unused and has been removed.
- Unused block "pb3/pc_loop[4].pc_mid_carry.pc_value_xor" (XOR) removed.
-  The signal "pb3/pc_value_carry<3>" is unused and has been removed.
-   Unused block "pb3/pc_loop[3].pc_mid_carry.pc_value_muxcy" (MUX) removed.
-  The signal "pb3/pc_value<4>" is unused and has been removed.
-   Unused block "pb3/pc_loop[4].value_select_mux" (ROM) removed.
-    The signal "pb3/inc_pc_vector<4>" is unused and has been removed.
-     Unused block "pb3/pc_loop[4].pc_mid_carry.pc_vector_xor" (XOR) removed.
-      The signal "pb3/pc_vector_carry<3>" is unused and has been removed.
-       Unused block "pb3/pc_loop[3].pc_mid_carry.pc_vector_muxcy" (MUX) removed.
-      The signal "pb3/pc_vector<4>" is unused and has been removed.
-       Unused block "pb3/pc_loop[4].vector_select_mux" (ROM) removed.
-        The signal "pb3/stack_pop_data<4>" is unused and has been removed.
-         Unused block "pb3/stack_ram_loop[4].stack_flop" (FF) removed.
-          The signal "pb3/stack_ram_data<4>" is unused and has been removed.
-           Unused block "pb3/stack_ram_loop[4].stack_bit" (RAMS) removed.
-            The signal "pb3/pc<4>" is unused and has been removed.
-             Unused block "pb3/pc_loop[4].register_bit" (SFF) removed.
-The signal "pb3/inc_pc_value<5>" is unused and has been removed.
- Unused block "pb3/pc_loop[5].pc_mid_carry.pc_value_xor" (XOR) removed.
-  The signal "pb3/pc_value_carry<4>" is unused and has been removed.
-   Unused block "pb3/pc_loop[4].pc_mid_carry.pc_value_muxcy" (MUX) removed.
-  The signal "pb3/pc_value<5>" is unused and has been removed.
-   Unused block "pb3/pc_loop[5].value_select_mux" (ROM) removed.
-    The signal "pb3/inc_pc_vector<5>" is unused and has been removed.
-     Unused block "pb3/pc_loop[5].pc_mid_carry.pc_vector_xor" (XOR) removed.
-      The signal "pb3/pc_vector_carry<4>" is unused and has been removed.
-       Unused block "pb3/pc_loop[4].pc_mid_carry.pc_vector_muxcy" (MUX) removed.
-      The signal "pb3/pc_vector<5>" is unused and has been removed.
-       Unused block "pb3/pc_loop[5].vector_select_mux" (ROM) removed.
-        The signal "pb3/stack_pop_data<5>" is unused and has been removed.
-         Unused block "pb3/stack_ram_loop[5].stack_flop" (FF) removed.
-          The signal "pb3/stack_ram_data<5>" is unused and has been removed.
-           Unused block "pb3/stack_ram_loop[5].stack_bit" (RAMS) removed.
-            The signal "pb3/pc<5>" is unused and has been removed.
-             Unused block "pb3/pc_loop[5].register_bit" (SFF) removed.
-The signal "pb3/inc_pc_value<6>" is unused and has been removed.
- Unused block "pb3/pc_loop[6].pc_mid_carry.pc_value_xor" (XOR) removed.
-  The signal "pb3/pc_value_carry<5>" is unused and has been removed.
-   Unused block "pb3/pc_loop[5].pc_mid_carry.pc_value_muxcy" (MUX) removed.
-  The signal "pb3/pc_value<6>" is unused and has been removed.
-   Unused block "pb3/pc_loop[6].value_select_mux" (ROM) removed.
-    The signal "pb3/inc_pc_vector<6>" is unused and has been removed.
-     Unused block "pb3/pc_loop[6].pc_mid_carry.pc_vector_xor" (XOR) removed.
-      The signal "pb3/pc_vector_carry<5>" is unused and has been removed.
-       Unused block "pb3/pc_loop[5].pc_mid_carry.pc_vector_muxcy" (MUX) removed.
-      The signal "pb3/pc_vector<6>" is unused and has been removed.
-       Unused block "pb3/pc_loop[6].vector_select_mux" (ROM) removed.
-        The signal "pb3/stack_pop_data<6>" is unused and has been removed.
-         Unused block "pb3/stack_ram_loop[6].stack_flop" (FF) removed.
-          The signal "pb3/stack_ram_data<6>" is unused and has been removed.
-           Unused block "pb3/stack_ram_loop[6].stack_bit" (RAMS) removed.
-            The signal "pb3/pc<6>" is unused and has been removed.
-             Unused block "pb3/pc_loop[6].register_bit" (SFF) removed.
-The signal "pb3/inc_pc_value<7>" is unused and has been removed.
- Unused block "pb3/pc_loop[7].pc_mid_carry.pc_value_xor" (XOR) removed.
-  The signal "pb3/pc_value_carry<6>" is unused and has been removed.
-   Unused block "pb3/pc_loop[6].pc_mid_carry.pc_value_muxcy" (MUX) removed.
-  The signal "pb3/pc_value<7>" is unused and has been removed.
-   Unused block "pb3/pc_loop[7].value_select_mux" (ROM) removed.
-    The signal "pb3/inc_pc_vector<7>" is unused and has been removed.
-     Unused block "pb3/pc_loop[7].pc_mid_carry.pc_vector_xor" (XOR) removed.
-      The signal "pb3/pc_vector_carry<6>" is unused and has been removed.
-       Unused block "pb3/pc_loop[6].pc_mid_carry.pc_vector_muxcy" (MUX) removed.
-      The signal "pb3/pc_vector<7>" is unused and has been removed.
-       Unused block "pb3/pc_loop[7].vector_select_mux" (ROM) removed.
-        The signal "pb3/stack_pop_data<7>" is unused and has been removed.
-         Unused block "pb3/stack_ram_loop[7].stack_flop" (FF) removed.
-          The signal "pb3/stack_ram_data<7>" is unused and has been removed.
-           Unused block "pb3/stack_ram_loop[7].stack_bit" (RAMS) removed.
-            The signal "pb3/pc<7>" is unused and has been removed.
-             Unused block "pb3/pc_loop[7].register_bit" (SFF) removed.
-The signal "pb3/inc_pc_value<8>" is unused and has been removed.
- Unused block "pb3/pc_loop[8].pc_mid_carry.pc_value_xor" (XOR) removed.
-  The signal "pb3/pc_value_carry<7>" is unused and has been removed.
-   Unused block "pb3/pc_loop[7].pc_mid_carry.pc_value_muxcy" (MUX) removed.
-  The signal "pb3/pc_value<8>" is unused and has been removed.
-   Unused block "pb3/pc_loop[8].value_select_mux" (ROM) removed.
-    The signal "pb3/inc_pc_vector<8>" is unused and has been removed.
-     Unused block "pb3/pc_loop[8].pc_mid_carry.pc_vector_xor" (XOR) removed.
-      The signal "pb3/pc_vector_carry<7>" is unused and has been removed.
-       Unused block "pb3/pc_loop[7].pc_mid_carry.pc_vector_muxcy" (MUX) removed.
-      The signal "pb3/pc_vector<8>" is unused and has been removed.
-       Unused block "pb3/pc_loop[8].vector_select_mux" (ROM) removed.
-        The signal "pb3/stack_pop_data<8>" is unused and has been removed.
-         Unused block "pb3/stack_ram_loop[8].stack_flop" (FF) removed.
-          The signal "pb3/stack_ram_data<8>" is unused and has been removed.
-           Unused block "pb3/stack_ram_loop[8].stack_bit" (RAMS) removed.
-            The signal "pb3/pc<8>" is unused and has been removed.
-             Unused block "pb3/pc_loop[8].register_bit" (SFF) removed.
-The signal "pb3/inc_pc_value<9>" is unused and has been removed.
- Unused block "pb3/pc_loop[9].pc_msb_carry.pc_value_xor" (XOR) removed.
-  The signal "pb3/pc_value_carry<8>" is unused and has been removed.
-   Unused block "pb3/pc_loop[8].pc_mid_carry.pc_value_muxcy" (MUX) removed.
-  The signal "pb3/pc_value<9>" is unused and has been removed.
-   Unused block "pb3/pc_loop[9].value_select_mux" (ROM) removed.
-    The signal "pb3/inc_pc_vector<9>" is unused and has been removed.
-     Unused block "pb3/pc_loop[9].pc_msb_carry.pc_vector_xor" (XOR) removed.
-      The signal "pb3/pc_vector_carry<8>" is unused and has been removed.
-       Unused block "pb3/pc_loop[8].pc_mid_carry.pc_vector_muxcy" (MUX) removed.
-      The signal "pb3/pc_vector<9>" is unused and has been removed.
-       Unused block "pb3/pc_loop[9].vector_select_mux" (ROM) removed.
-        The signal "pb3/stack_pop_data<9>" is unused and has been removed.
-         Unused block "pb3/stack_ram_loop[9].stack_flop" (FF) removed.
-          The signal "pb3/stack_ram_data<9>" is unused and has been removed.
-           Unused block "pb3/stack_ram_loop[9].stack_bit" (RAMS) removed.
-            The signal "pb3/pc<9>" is unused and has been removed.
-             Unused block "pb3/pc_loop[9].register_bit" (SFF) removed.
-The signal "pb3/input_fetch_type" is unused and has been removed.
-The signal "pb3/input_group<0>" is unused and has been removed.
-The signal "pb3/input_group<1>" is unused and has been removed.
-The signal "pb3/input_group<2>" is unused and has been removed.
-The signal "pb3/input_group<3>" is unused and has been removed.
-The signal "pb3/input_group<4>" is unused and has been removed.
-The signal "pb3/input_group<5>" is unused and has been removed.
-The signal "pb3/input_group<6>" is unused and has been removed.
-The signal "pb3/input_group<7>" is unused and has been removed.
-The signal "pb3/int_enable_value" is unused and has been removed.
-The signal "pb3/int_pulse" is unused and has been removed.
-The signal "pb3/int_update_enable" is unused and has been removed.
- Unused block "pb3/int_update_lut" (ROM) removed.
-The signal "pb3/logical_value<0>" is unused and has been removed.
-The signal "pb3/logical_value<1>" is unused and has been removed.
-The signal "pb3/logical_value<2>" is unused and has been removed.
-The signal "pb3/logical_value<3>" is unused and has been removed.
-The signal "pb3/logical_value<4>" is unused and has been removed.
-The signal "pb3/logical_value<5>" is unused and has been removed.
-The signal "pb3/logical_value<6>" is unused and has been removed.
-The signal "pb3/logical_value<7>" is unused and has been removed.
-The signal "pb3/low_shift_in" is unused and has been removed.
-The signal "pb3/memory_data<0>" is unused and has been removed.
- Unused block "pb3/store_loop[0].memory_bit" (RAMS) removed.
-  The signal "pb3/memory_enable" is unused and has been removed.
-   Unused block "pb3/memory_enable_lut" (ROM) removed.
-    The signal "pb3/memory_write" is unused and has been removed.
-     Unused block "pb3/memory_write_flop" (FF) removed.
-      The signal "pb3/memory_type" is unused and has been removed.
-       Unused block "pb3/memory_type_lut" (ROM) removed.
-The signal "pb3/memory_data<1>" is unused and has been removed.
- Unused block "pb3/store_loop[1].memory_bit" (RAMS) removed.
-The signal "pb3/memory_data<2>" is unused and has been removed.
- Unused block "pb3/store_loop[2].memory_bit" (RAMS) removed.
-The signal "pb3/memory_data<3>" is unused and has been removed.
- Unused block "pb3/store_loop[3].memory_bit" (RAMS) removed.
-The signal "pb3/memory_data<4>" is unused and has been removed.
- Unused block "pb3/store_loop[4].memory_bit" (RAMS) removed.
-The signal "pb3/memory_data<5>" is unused and has been removed.
- Unused block "pb3/store_loop[5].memory_bit" (RAMS) removed.
-The signal "pb3/memory_data<6>" is unused and has been removed.
- Unused block "pb3/store_loop[6].memory_bit" (RAMS) removed.
-The signal "pb3/memory_data<7>" is unused and has been removed.
- Unused block "pb3/store_loop[7].memory_bit" (RAMS) removed.
-The signal "pb3/read_active" is unused and has been removed.
-The signal "pb3/sel_arith_carry_in" is unused and has been removed.
-The signal "pb3/sel_group" is unused and has been removed.
-The signal "pb3/sel_logical" is unused and has been removed.
-The signal "pb3/shift_value<0>" is unused and has been removed.
-The signal "pb3/store_data<0>" is unused and has been removed.
- Unused block "pb3/store_loop[0].store_flop" (FF) removed.
-The signal "pb3/store_data<1>" is unused and has been removed.
- Unused block "pb3/store_loop[1].store_flop" (FF) removed.
-The signal "pb3/store_data<2>" is unused and has been removed.
- Unused block "pb3/store_loop[2].store_flop" (FF) removed.
-The signal "pb3/store_data<3>" is unused and has been removed.
- Unused block "pb3/store_loop[3].store_flop" (FF) removed.
-The signal "pb3/store_data<4>" is unused and has been removed.
- Unused block "pb3/store_loop[4].store_flop" (FF) removed.
-The signal "pb3/store_data<5>" is unused and has been removed.
- Unused block "pb3/store_loop[5].store_flop" (FF) removed.
-The signal "pb3/store_data<6>" is unused and has been removed.
- Unused block "pb3/store_loop[6].store_flop" (FF) removed.
-The signal "pb3/store_data<7>" is unused and has been removed.
- Unused block "pb3/store_loop[7].store_flop" (FF) removed.
-The signal "pb3/sy<0>" is unused and has been removed.
-The signal "pb3/sy<1>" is unused and has been removed.
-The signal "pb3/sy<2>" is unused and has been removed.
-The signal "pb3/sy<3>" is unused and has been removed.
-The signal "pb3/sy<4>" is unused and has been removed.
-The signal "pb3/sy<5>" is unused and has been removed.
-The signal "pb3/sy<6>" is unused and has been removed.
-The signal "pb3/sy<7>" is unused and has been removed.
-The signal "pb3/write_active" is unused and has been removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
-FDC 		inport/output_v_0
-   optimized to 0
-FDC 		inport/output_v_1
-   optimized to 0
-FDC 		inport/output_v_2
-   optimized to 0
-FDC 		inport/output_v_3
-   optimized to 0
-FDC 		inport/output_v_4
-   optimized to 0
-FDC 		inport/output_v_5
-   optimized to 0
-FDC 		inport/output_v_6
-   optimized to 0
-FDC 		inport/output_v_7
-   optimized to 0
-FDCE 		oport/output_00_0
-   optimized to 0
-FDCE 		oport/output_00_1
-   optimized to 0
-FDCE 		oport/output_00_2
-   optimized to 0
-FDCE 		oport/output_00_3
-   optimized to 0
-FDCE 		oport/output_00_4
-   optimized to 0
-FDCE 		oport/output_00_5
-   optimized to 0
-FDCE 		oport/output_00_6
-   optimized to 0
-FDCE 		oport/output_00_7
-   optimized to 0
-LUT4 		oport/output_00_cmp_eq000011
-   optimized to 1
-MUXF5 		oport/output_00_cmp_eq00001_f5
-LUT4 		oport/output_00_cmp_eq00002
-   optimized to 1
-FDCE 		oport/output_01_0
-   optimized to 0
-FDCE 		oport/output_01_1
-   optimized to 0
-FDCE 		oport/output_01_2
-   optimized to 0
-FDCE 		oport/output_01_3
-   optimized to 0
-FDCE 		oport/output_01_4
-   optimized to 0
-FDCE 		oport/output_01_5
-   optimized to 0
-FDCE 		oport/output_01_6
-   optimized to 0
-FDCE 		oport/output_01_7
-   optimized to 0
-LUT4 		oport/output_01_cmp_eq00001
-   optimized to 0
-FD 		pb3/ack_flop
-   optimized to 0
-LUT3 		pb3/alu_mux_loop[0].mux_lut
-   optimized to 0
-LUT3 		pb3/alu_mux_loop[1].mux_lut
-   optimized to 0
-LUT3 		pb3/alu_mux_loop[2].mux_lut
-   optimized to 0
-LUT3 		pb3/alu_mux_loop[3].mux_lut
-   optimized to 0
-LUT3 		pb3/alu_mux_loop[4].mux_lut
-   optimized to 0
-LUT3 		pb3/alu_mux_loop[5].mux_lut
-   optimized to 0
-LUT3 		pb3/alu_mux_loop[6].mux_lut
-   optimized to 0
-LUT3 		pb3/alu_mux_loop[7].mux_lut
-   optimized to 0
-LUT3 		pb3/arith_loop[0].lsb_arith.arith_carry_in_lut
-   optimized to 0
-FDRE 		pb3/carry_flag_flop
-   optimized to 0
-LUT2 		pb3/flag_enable_lut
-   optimized to 0
-LUT4 		pb3/flag_type_lut
-   optimized to 0
-FD 		pb3/flag_write_flop
-   optimized to 0
-LUT4 		pb3/input_fetch_type_lut
-   optimized to 0
-FDRE 		pb3/int_enable_flop
-   optimized to 0
-FDR 		pb3/int_flop
-   optimized to 0
-LUT4 		pb3/int_pulse_lut
-   optimized to 0
-LUT3 		pb3/int_value_lut
-   optimized to 0
-LUT4 		pb3/io_decode_lut
-   optimized to 0
-FDR 		pb3/logical_loop[0].logical_flop
-   optimized to 0
-LUT4 		pb3/logical_loop[0].logical_lut
-   optimized to 0
-FDR 		pb3/logical_loop[1].logical_flop
-   optimized to 0
-LUT4 		pb3/logical_loop[1].logical_lut
-   optimized to 0
-FDR 		pb3/logical_loop[2].logical_flop
-   optimized to 0
-LUT4 		pb3/logical_loop[2].logical_lut
-   optimized to 0
-FDR 		pb3/logical_loop[3].logical_flop
-   optimized to 0
-LUT4 		pb3/logical_loop[3].logical_lut
-   optimized to 0
-FDR 		pb3/logical_loop[4].logical_flop
-   optimized to 0
-LUT4 		pb3/logical_loop[4].logical_lut
-   optimized to 0
-FDR 		pb3/logical_loop[5].logical_flop
-   optimized to 0
-LUT4 		pb3/logical_loop[5].logical_lut
-   optimized to 0
-FDR 		pb3/logical_loop[6].logical_flop
-   optimized to 0
-LUT4 		pb3/logical_loop[6].logical_lut
-   optimized to 0
-FDR 		pb3/logical_loop[7].logical_flop
-   optimized to 0
-LUT4 		pb3/logical_loop[7].logical_lut
-   optimized to 0
-LUT3 		pb3/low_shift_in_lut
-   optimized to 0
-LUT4 		pb3/read_active_lut
-   optimized to 0
-FDR 		pb3/read_strobe_flop
-   optimized to 0
-LUT3 		pb3/reg_loop[0].operand_select_mux
-   optimized to 0
-LUT3 		pb3/reg_loop[1].operand_select_mux
-   optimized to 0
-LUT3 		pb3/reg_loop[2].operand_select_mux
-   optimized to 0
-LUT3 		pb3/reg_loop[3].operand_select_mux
-   optimized to 0
-LUT3 		pb3/reg_loop[4].operand_select_mux
-   optimized to 0
-LUT3 		pb3/reg_loop[5].operand_select_mux
-   optimized to 0
-LUT3 		pb3/reg_loop[6].operand_select_mux
-   optimized to 0
-LUT3 		pb3/reg_loop[7].operand_select_mux
-   optimized to 0
-LUT4 		pb3/register_type_lut
-   optimized to 1
-LUT3 		pb3/sel_arith_lut
-   optimized to 1
-FD 		pb3/sel_group_flop
-   optimized to 0
-LUT4 		pb3/sel_logical_lut
-   optimized to 0
-INV 		pb3/sel_shift_inv
-MUXF5 		pb3/shift_in_muxf5
-LUT3 		pb3/shift_loop[0].lsb_shift.shift_mux_lut
-   optimized to 0
-FDR 		pb3/shift_loop[0].shift_flop
-   optimized to 0
-LUT4 		pb3/write_active_lut
-   optimized to 0
-FDR 		pb3/write_strobe_flop
-   optimized to 0
-MUXCY 		pb3/arith_loop[0].lsb_arith.arith_carry_in_muxcy
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
@@ -745,24 +115,33 @@ Section 6 - IOB Properties
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | CLK                                | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
-| LCD<0>                             | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
-| LCD<1>                             | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
-| LCD<2>                             | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
-| LCD<3>                             | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
-| LCD<4>                             | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
-| LCD<5>                             | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
-| LCD<6>                             | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
-| LCD<7>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| INT                                | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| LCD<0>                             | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW | OFF1         |          | 0 / 0    |
+| LCD<1>                             | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW | OFF1         |          | 0 / 0    |
+| LCD<2>                             | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW | OFF1         |          | 0 / 0    |
+| LCD<3>                             | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW | OFF1         |          | 0 / 0    |
+| LCD<4>                             | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW | OFF1         |          | 0 / 0    |
+| LCD<5>                             | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW | OFF1         |          | 0 / 0    |
+| LCD<6>                             | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW | OFF1         |          | 0 / 0    |
+| LCD<7>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
 | RST                                | IBUF             | INPUT     | LVCMOS33             |       |          |      |              | PULLDOWN | 0 / 0    |
 | SF_CE0                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
-| leds<0>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
-| leds<1>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
-| leds<2>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
-| leds<3>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
-| leds<4>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
-| leds<5>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
-| leds<6>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
-| leds<7>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          | 0 / 0    |
+| inputs<0>                          | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| inputs<1>                          | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| inputs<2>                          | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| inputs<3>                          | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| inputs<4>                          | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| inputs<5>                          | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| inputs<6>                          | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| inputs<7>                          | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| leds<0>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| leds<1>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| leds<2>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| leds<3>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| leds<4>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| leds<5>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| leds<6>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| leds<7>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

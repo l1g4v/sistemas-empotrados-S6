@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="textio" />
+            <top_module name="todo" />
+            <top_module name="vcomponents" />
+            <top_module name="vital_primitives" />
+            <top_module name="vital_timing" />
+            <top_module name="vpkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="23" />
+   <wvobject fp_name="/todo/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/inputs" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inputs[7:0]</obj_property>
+      <obj_property name="ObjectShortName">inputs[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/int" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">int</obj_property>
+      <obj_property name="ObjectShortName">int</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/lcd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">lcd[7:0]</obj_property>
+      <obj_property name="ObjectShortName">lcd[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/leds" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">leds[7:0]</obj_property>
+      <obj_property name="ObjectShortName">leds[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/sf_ce0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sf_ce0</obj_property>
+      <obj_property name="ObjectShortName">sf_ce0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_2</obj_property>
+      <obj_property name="ObjectShortName">xlxn_2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_3[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_4[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_5" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_5</obj_property>
+      <obj_property name="ObjectShortName">xlxn_5</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_8" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_8[17:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_8[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_9" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_9[9:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_9[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/inport_input_01_opensignal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inport_input_01_opensignal[7:0]</obj_property>
+      <obj_property name="ObjectShortName">inport_input_01_opensignal[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/inport_input_02_opensignal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inport_input_02_opensignal[7:0]</obj_property>
+      <obj_property name="ObjectShortName">inport_input_02_opensignal[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/inport_input_03_opensignal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inport_input_03_opensignal[7:0]</obj_property>
+      <obj_property name="ObjectShortName">inport_input_03_opensignal[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/inport_input_04_opensignal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inport_input_04_opensignal[7:0]</obj_property>
+      <obj_property name="ObjectShortName">inport_input_04_opensignal[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/inport_input_05_opensignal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inport_input_05_opensignal[7:0]</obj_property>
+      <obj_property name="ObjectShortName">inport_input_05_opensignal[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/inport_input_06_opensignal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inport_input_06_opensignal[7:0]</obj_property>
+      <obj_property name="ObjectShortName">inport_input_06_opensignal[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/inport_input_07_opensignal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inport_input_07_opensignal[7:0]</obj_property>
+      <obj_property name="ObjectShortName">inport_input_07_opensignal[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/inport_input_08_opensignal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inport_input_08_opensignal[7:0]</obj_property>
+      <obj_property name="ObjectShortName">inport_input_08_opensignal[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/inport_input_09_opensignal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inport_input_09_opensignal[7:0]</obj_property>
+      <obj_property name="ObjectShortName">inport_input_09_opensignal[7:0]</obj_property>
+   </wvobject>
+</wave_config>

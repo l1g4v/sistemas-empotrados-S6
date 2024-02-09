@@ -1,21 +1,18 @@
-Release 14.7 - xst P.20131013 (lin64)
+Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> 
-Parameter TMPDIR set to xst/projnav.tmp
+--> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.30 secs
  
---> 
-Parameter xsthdpdir set to xst
+--> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.31 secs
  
---> 
-Reading design: todo.prj
+--> Reading design: todo.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -107,17 +104,18 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd" in Library work.
+Compiling vhdl file "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd" in Library work.
 Architecture behavioral of Entity input_port is up to date.
-Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd" in Library work.
+Compiling vhdl file "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd" in Library work.
 Architecture behavioral of Entity out_port is up to date.
-Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" in Library work.
+Compiling vhdl file "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" in Library work.
 Architecture low_level_definition of Entity kcpsm3 is up to date.
-Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/strataoff.vhd" in Library work.
+Compiling vhdl file "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/strataoff.vhd" in Library work.
 Architecture behavioral of Entity strataoff is up to date.
-Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" in Library work.
-Entity <todo> compiled.
-Entity <todo> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/program.vhdl" in Library work.
+Architecture structure of Entity program is up to date.
+Compiling vhdl file "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" in Library work.
+Architecture behavioral of Entity todo is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -132,60 +130,61 @@ Analyzing hierarchy for entity <kcpsm3> in library <work> (architecture <low_lev
 
 Analyzing hierarchy for entity <strataoff> in library <work> (architecture <behavioral>).
 
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 289: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1200: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 452: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 483: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 606: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 614: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 381: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 423: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 525: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 597: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 682: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1109: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1136: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1220: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1269: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 332: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 371: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 403: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 413: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 432: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 442: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 468: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 493: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 554: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 587: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 794: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 871: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 886: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 937: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 956: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1244: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1301: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1311: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1327: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1415: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1448: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 828: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1368: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 906: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+Analyzing hierarchy for entity <program> in library <work> (architecture <structure>).
+
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 289: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1200: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 452: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 483: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 606: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 614: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 381: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 423: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 525: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 597: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 682: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1109: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1136: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1220: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1269: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 332: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 371: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 403: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 413: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 432: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 442: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 468: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 493: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 554: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 587: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 794: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 871: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 886: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 937: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 956: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1244: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1301: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1311: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1327: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1415: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1448: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 828: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 1368: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd" line 906: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <todo> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 123: Unconnected output port 'output_02' of component 'out_port'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 123: Unconnected output port 'output_03' of component 'out_port'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 123: Unconnected output port 'output_04' of component 'out_port'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 123: Unconnected output port 'output_05' of component 'out_port'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 123: Unconnected output port 'output_06' of component 'out_port'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 123: Unconnected output port 'output_07' of component 'out_port'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 123: Unconnected output port 'output_08' of component 'out_port'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 123: Unconnected output port 'output_09' of component 'out_port'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 139: Unconnected output port 'interrupt_ack' of component 'kcpsm3'.
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 139: Unconnected output port 'address' of component 'kcpsm3'.
+WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 130: Unconnected output port 'output_02' of component 'out_port'.
+WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 130: Unconnected output port 'output_03' of component 'out_port'.
+WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 130: Unconnected output port 'output_04' of component 'out_port'.
+WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 130: Unconnected output port 'output_05' of component 'out_port'.
+WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 130: Unconnected output port 'output_06' of component 'out_port'.
+WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 130: Unconnected output port 'output_07' of component 'out_port'.
+WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 130: Unconnected output port 'output_08' of component 'out_port'.
+WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 130: Unconnected output port 'output_09' of component 'out_port'.
+WARNING:Xst:753 - "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf" line 146: Unconnected output port 'interrupt_ack' of component 'kcpsm3'.
 Entity <todo> analyzed. Unit <todo> generated.
 
 Analyzing Entity <input_port> in library <work> (Architecture <behavioral>).
@@ -412,6 +411,84 @@ Entity <kcpsm3> analyzed. Unit <kcpsm3> generated.
 Analyzing Entity <strataoff> in library <work> (Architecture <behavioral>).
 Entity <strataoff> analyzed. Unit <strataoff> generated.
 
+Analyzing Entity <program> in library <work> (Architecture <structure>).
+    Set user-defined property "INIT =  00000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INITP_00 =  F3CF3CF3CF3CF3BCF2A8002FCF3CF3CF3CF3CF3FCF38B8A38EDCB72DCB72DCB4" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INITP_01 =  000000000000000000000000000000000000000000000000000000000003CF3C" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_00 =  0004027DA000540AC20100040219A0005405C10100000128A0005401C001000B" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_01 =  C501E5404064A0005419C40100130432A0005414C30100090314A000540FC201" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_02 =  00240503000E002405030013C5010500A000001EC501A5DFA000C501E5400000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_03 =  0500000400240508000000240502000400240502000400240503000400040004" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_04 =  0024050100000024050000040024050C00000024050000040024050600000024" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_05 =  000000241650060E060E060E060EE720E620A7F0A60F17501650A00000090009" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_06 =  0024050E00000024050500040024050A0000002405080028A000000400241750" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_07 =  0000002405080004002405010000002405080004002405020000002405030004" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_08 =  000000000000000000000000000000040024050800000024050C000400240508" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_09 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_0A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_0B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_0C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_0D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_0E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_0F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_10 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_11 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_12 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_13 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_14 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_15 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_16 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_17 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_18 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_19 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_1A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_1B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_1C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_1D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_1E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_1F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_20 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_21 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_3F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "SRVAL =  00000" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "WRITE_MODE =  WRITE_FIRST" for instance <rom_1024_x_18> in unit <program>.
+Entity <program> analyzed. Unit <program> generated.
+
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -420,7 +497,7 @@ Entity <strataoff> analyzed. Unit <strataoff> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <input_port>.
-    Related source file is "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd".
+    Related source file is "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd".
     Found 8-bit register for signal <output_v>.
     Summary:
 	inferred   8 D-type flip-flop(s).
@@ -428,7 +505,7 @@ Unit <input_port> synthesized.
 
 
 Synthesizing Unit <out_port>.
-    Related source file is "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd".
+    Related source file is "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd".
     Found 8-bit register for signal <output_00>.
     Found 8-bit register for signal <output_01>.
     Found 8-bit register for signal <output_02>.
@@ -445,18 +522,22 @@ Unit <out_port> synthesized.
 
 
 Synthesizing Unit <strataoff>.
-    Related source file is "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/strataoff.vhd".
+    Related source file is "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/strataoff.vhd".
 Unit <strataoff> synthesized.
 
 
 Synthesizing Unit <kcpsm3>.
-    Related source file is "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd".
+    Related source file is "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd".
 Unit <kcpsm3> synthesized.
 
 
+Synthesizing Unit <program>.
+    Related source file is "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/program.vhdl".
+Unit <program> synthesized.
+
+
 Synthesizing Unit <todo>.
-    Related source file is "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf".
-WARNING:Xst:653 - Signal <pb3_instruction_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000000000.
+    Related source file is "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf".
 WARNING:Xst:653 - Signal <inport_input_09_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
 WARNING:Xst:653 - Signal <inport_input_08_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
 WARNING:Xst:653 - Signal <inport_input_07_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
@@ -628,10 +709,11 @@ Cell Usage :
 #      FDRE                        : 8
 #      FDRSE                       : 10
 #      FDS                         : 2
-# RAMS                             : 26
+# RAMS                             : 27
 #      RAM16X1D                    : 8
 #      RAM32X1S                    : 10
 #      RAM64X1S                    : 8
+#      RAMB16_S18                  : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 27
@@ -644,7 +726,7 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                      101  out of   4656     2%  
+ Number of Slices:                      109  out of   4656     2%  
  Number of Slice Flip Flops:             84  out of   9312     0%  
  Number of 4 input LUTs:                197  out of   9312     2%  
     Number used as logic:               129
@@ -652,6 +734,7 @@ Selected Device : 3s500efg320-4
  Number of IOs:                          28
  Number of bonded IOBs:                  28  out of    232    12%  
     IOB Flip Flops:                      16
+ Number of BRAMs:                         1  out of     20     5%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -677,7 +760,7 @@ Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 XLXN_2                             | NONE(inport/output_v_7)| 8     |
 XLXN_5                             | NONE(oport/output_01_7)| 16    |
-CLK                                | BUFGP                  | 102   |
+CLK                                | BUFGP                  | 103   |
 -----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -693,7 +776,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 7.147ns (Maximum Frequency: 139.919MHz)
+   Minimum period: 9.959ns (Maximum Frequency: 100.415MHz)
    Minimum input arrival time before clock: 3.389ns
    Maximum output required time after clock: 4.283ns
    Maximum combinational path delay: No path found
@@ -726,22 +809,22 @@ Delay:               2.129ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 7.147ns (frequency: 139.919MHz)
-  Total number of paths / destination ports: 1096 / 275
+  Clock period: 9.959ns (frequency: 100.415MHz)
+  Total number of paths / destination ports: 3809 / 376
 -------------------------------------------------------------------------
-Delay:               7.147ns (Levels of Logic = 13)
-  Source:            pb3/carry_flag_flop (FF)
+Delay:               9.959ns (Levels of Logic = 13)
+  Source:            XLXI_2/rom_1024_x_18 (RAM)
   Destination:       pb3/pc_loop[9].register_bit (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: pb3/carry_flag_flop to pb3/pc_loop[9].register_bit
+  Data Path: XLXI_2/rom_1024_x_18 to pb3/pc_loop[9].register_bit
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             4   0.591   0.762  pb3/carry_flag_flop (pb3/carry_flag)
-     LUT4:I0->O            2   0.704   0.526  pb3/condition_met_lut (pb3/condition_met)
-     LUT3:I1->O           11   0.704   1.108  pb3/normal_count_lut (pb3/normal_count)
+     RAMB16_S18:CLK->DO14   27   2.800   1.436  XLXI_2/rom_1024_x_18 (XLXN_8<14>)
+     LUT4:I0->O            1   0.704   0.455  pb3/move_group_lut (pb3/move_group)
+     LUT3:I2->O           11   0.704   1.108  pb3/normal_count_lut (pb3/normal_count)
      LUT3:I0->O            1   0.704   0.000  pb3/pc_loop[0].value_select_mux (pb3/pc_value<0>)
      MUXCY:S->O            1   0.464   0.000  pb3/pc_loop[0].pc_lsb_carry.pc_value_muxcy (pb3/pc_value_carry<0>)
      MUXCY:CI->O           1   0.059   0.000  pb3/pc_loop[1].pc_mid_carry.pc_value_muxcy (pb3/pc_value_carry<1>)
@@ -755,8 +838,8 @@ Delay:               7.147ns (Levels of Logic = 13)
      XORCY:CI->O           1   0.804   0.000  pb3/pc_loop[9].pc_msb_carry.pc_value_xor (pb3/inc_pc_value<9>)
      FDRSE:D                   0.308          pb3/pc_loop[9].register_bit
     ----------------------------------------
-    Total                      7.147ns (4.751ns logic, 2.396ns route)
-                                       (66.5% logic, 33.5% route)
+    Total                      9.959ns (6.960ns logic, 2.999ns route)
+                                       (69.9% logic, 30.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXN_2'
@@ -819,15 +902,14 @@ Offset:              4.283ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.32 secs
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 15.95 secs
  
 --> 
 
-
-Total memory usage is 528184 kilobytes
+Total memory usage is 4530952 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  124 (   0 filtered)
+Number of warnings :  122 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

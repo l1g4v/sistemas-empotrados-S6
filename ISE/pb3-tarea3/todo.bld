@@ -1,11 +1,13 @@
-Release 14.7 ngdbuild P.20131013 (lin64)
+Release 14.7 ngdbuild P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
-ise -dd _ngo -nt timestamp -uc todo.ucf -p xc3s500e-fg320-4 todo.ngc todo.ngd
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -uc todo.ucf -p xc3s500e-fg320-4 todo.ngc
+todo.ngd
 
 Reading NGO file
-"/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.ngc" ...
+"C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.n
+gc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -27,10 +29,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 376912 kilobytes
+Total memory usage is 4398000 kilobytes
 
 Writing NGD file "todo.ngd" ...
-Total REAL time to NGDBUILD completion:  1 sec
-Total CPU time to NGDBUILD completion:   1 sec
+Total REAL time to NGDBUILD completion:  9 sec
+Total CPU time to NGDBUILD completion:   6 sec
 
 Writing NGDBUILD log file "todo.bld"...

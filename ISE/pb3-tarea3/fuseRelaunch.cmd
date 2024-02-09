@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo_isim_beh.exe" -prj "C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo_beh.prj" "work.todo" 

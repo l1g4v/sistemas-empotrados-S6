@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
-Release 14.7 Trace  (lin64)
+Release 14.7 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 4 -n
-3 -fastpaths -xml todo.twx todo.ncd -o todo.twr todo.pcf -ucf todo.ucf
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml todo.twx todo.ncd -o todo.twr todo.pcf -ucf todo.ucf
 
 Design file:              todo.ncd
 Physical constraint file: todo.pcf
@@ -44,7 +44,8 @@ Setup/Hold to clock CLK
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-RST         |    1.645(R)|   -0.021(R)|CLK_BUFGP         |   0.000|
+INT         |    1.462(R)|    0.040(R)|CLK_BUFGP         |   0.000|
+RST         |    4.669(R)|   -2.042(R)|CLK_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK
@@ -52,18 +53,18 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    5.278|         |         |         |
+CLK            |    8.639|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Wed Feb  7 17:39:34 2024 
+Analysis completed Thu Feb 08 20:54:12 2024 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 335 MB
+Peak Memory Usage: 4509 MB
 
 
 

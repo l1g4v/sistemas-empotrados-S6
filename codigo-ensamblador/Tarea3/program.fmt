@@ -102,4 +102,47 @@
                 MAIN: call LCD_INIT
 
 
+                      load s5, 08                    ;high nibble 0x28
+                      call LCD_CMD
+                      call delay_1us
+                      load s5, 0A                    ;lower nibble 0x28
+                      call LCD_CMD
+                      call delay_40us
+
+                      load s5, 05                    ;high nibble 0x0C
+                      call LCD_CMD
+                      call delay_1us
+                      load s5, 0E                    ;lower nibble 0x06
+                      call LCD_CMD
+                      call delay_40us
+
+                      load s5, 03                    ;high nibble 0x0C
+                      call LCD_CMD
+                      call delay_1us
+                      load s5, 02                    ;lower nibble 0x0C
+                      call LCD_CMD
+                      call delay_40us
+
+                      load s5, 08                    ;high nibble 0x0C
+                      call LCD_CMD
+                      call delay_1us
+                      load s5, 01                    ;lower nibble 0x0C
+                      call LCD_CMD
+                      call delay_40us
+
+                      load s5, 08                    ;high nibble 0x0C
+                      call LCD_CMD
+                      call delay_1us
+                      load s5, 08                    ;lower nibble 0x0C
+                      call LCD_CMD
+                      call delay_40us
+
+                      load s5, 0C                    ;high nibble 0x0C
+                      call LCD_CMD
+                      call delay_1us
+                      load s5, 08                    ;lower nibble 0x0C
+                      call LCD_CMD
+                      call delay_40us
+
+
 

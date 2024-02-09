@@ -101,3 +101,46 @@ LCD_WRITE_CHAR:     LOAD s6, s5 ; s6 is X, s7 is Y
 MAIN:       CALL LCD_INIT
 
 
+            LOAD s5, 08 ;high nibble 0x28
+            CALL LCD_CMD
+            CALL delay_1us
+            LOAD s5, 0A ;lower nibble 0x28
+            CALL LCD_CMD
+            CALL delay_40us
+
+            LOAD s5, 05 ;high nibble 0x0C
+            CALL LCD_CMD
+            CALL delay_1us
+            LOAD s5, 0E ;lower nibble 0x06
+            CALL LCD_CMD
+            CALL delay_40us
+
+            LOAD s5, 03 ;high nibble 0x0C
+            CALL LCD_CMD
+            CALL delay_1us
+            LOAD s5, 02 ;lower nibble 0x0C
+            CALL LCD_CMD
+            CALL delay_40us
+
+            LOAD s5, 08 ;high nibble 0x0C
+            CALL LCD_CMD
+            CALL delay_1us
+            LOAD s5, 01 ;lower nibble 0x0C
+            CALL LCD_CMD
+            CALL delay_40us
+
+            LOAD s5, 08 ;high nibble 0x0C
+            CALL LCD_CMD
+            CALL delay_1us
+            LOAD s5, 08 ;lower nibble 0x0C
+            CALL LCD_CMD
+            CALL delay_40us
+
+            LOAD s5, 0C ;high nibble 0x0C
+            CALL LCD_CMD
+            CALL delay_1us
+            LOAD s5, 08 ;lower nibble 0x0C
+            CALL LCD_CMD
+            CALL delay_40us
+
+

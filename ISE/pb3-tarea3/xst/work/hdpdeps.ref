@@ -1,11 +1,5 @@
-V3 42
+V3 54
 FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd 2024/02/03.16:21:14 P.20131013
-EN work/input_port 1707349153 \
-      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd \
-      PB ieee/std_logic_1164 1381692176
-AR work/input_port/Behavioral 1707349154 \
-      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd \
-      EN work/input_port 1707349153
 FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.vhd 2024/02/03.15:10:21 P.20131013
 EN work/io_port 1706994629 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.vhd \
@@ -14,34 +8,56 @@ AR work/io_port/Behavioral 1706994630 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/io_port.vhd \
       EN work/io_port 1706994629
 FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd 2024/01/22.14:05:00 P.20131013
-EN work/kcpsm3 1707349157 \
-      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd \
+FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd 2024/02/03.16:21:01 P.20131013
+FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/strataoff.vhd 2024/02/07.17:37:02 P.20131013
+FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf 2024/02/07.17:39:10 P.20131013
+FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd 2024/02/06.20:07:44 P.20131013
+EN work/input_port 1707447279 \
+      FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/input_port/Behavioral 1707447280 \
+      FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.vhd \
+      EN work/input_port 1707447279
+FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd 2024/02/06.20:07:44 P.20131013
+EN work/kcpsm3 1707447283 \
+      FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179 LB UNISIM PH unisim/VCOMPONENTS 1381692182
-AR work/kcpsm3/low_level_definition 1707349158 \
-      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd \
-      EN work/kcpsm3 1707349157 CP LUT1 CP FDR CP FDS CP LUT4 CP FD CP FDE CP LUT3 \
+AR work/kcpsm3/low_level_definition 1707447284 \
+      FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/kcpsm3.vhd \
+      EN work/kcpsm3 1707447283 CP LUT1 CP FDR CP FDS CP LUT4 CP FD CP FDE CP LUT3 \
       CP FDRE CP LUT2 CP MUXCY CP XORCY CP INV CP string CP label CP FDRSE CP RAM16X1D \
       CP RAM64X1S CP MUXF5 CP RAM32X1S
-FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd 2024/02/03.16:21:01 P.20131013
-EN work/out_port 1707349155 \
-      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd \
+FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd 2024/02/06.20:07:44 P.20131013
+EN work/out_port 1707447281 \
+      FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/out_port/Behavioral 1707349156 \
-      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd \
-      EN work/out_port 1707349155
-FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/strataoff.vhd 2024/02/07.17:37:02 P.20131013
-EN work/strataoff 1707349159 \
-      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/strataoff.vhd \
+AR work/out_port/Behavioral 1707447282 \
+      FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/out_port.vhd \
+      EN work/out_port 1707447281
+FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/program.vhdl 2024/02/08.20:48:39 P.20131013
+PH work/program_pkg 1707447287 \
+      FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/program.vhdl \
+      PB ieee/std_logic_1164 1381692176 CD program
+EN work/program 1707447288 \
+      FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/program.vhdl \
+      PB ieee/std_logic_1164 1381692176 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/program/structure 1707447289 \
+      FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/program.vhdl \
+      EN work/program 1707447288 CP RAMB16_S18
+FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/strataoff.vhd 2024/02/08.20:06:13 P.20131013
+EN work/strataoff 1707447285 \
+      FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/strataoff.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/strataoff/Behavioral 1707349160 \
-      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/strataoff.vhd \
-      EN work/strataoff 1707349159
-FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf 2024/02/07.17:39:10 P.20131013
-EN work/todo 1707349161 \
-      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf \
+AR work/strataoff/Behavioral 1707447286 \
+      FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/strataoff.vhd \
+      EN work/strataoff 1707447285
+FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf 2024/02/08.20:52:43 P.20131013
+EN work/todo 1707447290 \
+      FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/todo/BEHAVIORAL 1707349162 \
-      FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf \
-      EN work/todo 1707349161 CP input_port CP out_port CP kcpsm3 CP strataoff
+AR work/todo/BEHAVIORAL 1707447291 \
+      FL C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf \
+      EN work/todo 1707447290 CP input_port CP out_port CP kcpsm3 CP strataoff \
+      CP program

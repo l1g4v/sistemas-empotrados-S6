@@ -18,6 +18,8 @@
         <signal name="inputs(7:0)" />
         <signal name="LCD(7:0)" />
         <signal name="SF_CE0" />
+        <signal name="XLXN_8(17:0)" />
+        <signal name="XLXN_9(9:0)" />
         <port polarity="Input" name="CLK" />
         <port polarity="Input" name="RST" />
         <port polarity="Input" name="INT" />
@@ -110,16 +112,25 @@
             <rect width="256" x="64" y="-64" height="64" />
             <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
+        <blockdef name="program">
+            <timestamp>2024-2-9T2:50:9</timestamp>
+            <rect width="320" x="64" y="-128" height="128" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <rect width="64" x="0" y="-44" height="24" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <rect width="64" x="384" y="-108" height="24" />
+            <line x2="448" y1="-96" y2="-96" x1="384" />
+        </blockdef>
         <block symbolname="kcpsm3" name="pb3">
             <blockpin signalname="INT" name="interrupt" />
             <blockpin signalname="RST" name="reset" />
             <blockpin signalname="CLK" name="clk" />
-            <blockpin name="instruction(17:0)" />
+            <blockpin signalname="XLXN_8(17:0)" name="instruction(17:0)" />
             <blockpin signalname="XLXN_1(7:0)" name="in_port(7:0)" />
             <blockpin signalname="XLXN_5" name="write_strobe" />
             <blockpin signalname="XLXN_2" name="read_strobe" />
             <blockpin name="interrupt_ack" />
-            <blockpin name="address(9:0)" />
+            <blockpin signalname="XLXN_9(9:0)" name="address(9:0)" />
             <blockpin signalname="XLXN_4(7:0)" name="port_id(7:0)" />
             <blockpin signalname="XLXN_3(7:0)" name="out_port(7:0)" />
         </block>
@@ -157,6 +168,11 @@
         </block>
         <block symbolname="strataoff" name="XLXI_1">
             <blockpin signalname="SF_CE0" name="op" />
+        </block>
+        <block symbolname="program" name="XLXI_2">
+            <blockpin signalname="CLK" name="Clk" />
+            <blockpin signalname="XLXN_9(9:0)" name="Address(9:0)" />
+            <blockpin signalname="XLXN_8(17:0)" name="Instruction(17:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -198,8 +214,14 @@
             <wire x2="2480" y1="1328" y2="1328" x1="2336" />
         </branch>
         <branch name="CLK">
-            <wire x2="1728" y1="1696" y2="1696" x1="1600" />
+            <wire x2="304" y1="1760" y2="2144" x1="304" />
+            <wire x2="304" y1="2144" y2="2176" x1="304" />
+            <wire x2="1712" y1="2176" y2="2176" x1="304" />
+            <wire x2="368" y1="1760" y2="1760" x1="304" />
+            <wire x2="1712" y1="1696" y2="1696" x1="1600" />
+            <wire x2="1728" y1="1696" y2="1696" x1="1712" />
             <wire x2="1744" y1="1696" y2="1696" x1="1728" />
+            <wire x2="1712" y1="1696" y2="2176" x1="1712" />
         </branch>
         <branch name="RST">
             <wire x2="1072" y1="1216" y2="1392" x1="1072" />
@@ -240,5 +262,21 @@
             <wire x2="2080" y1="2352" y2="2352" x1="2048" />
         </branch>
         <iomarker fontsize="28" x="2080" y="2352" name="SF_CE0" orien="R0" />
+        <instance x="368" y="1856" name="XLXI_2" orien="R0">
+        </instance>
+        <branch name="XLXN_8(17:0)">
+            <wire x2="832" y1="1760" y2="1760" x1="816" />
+            <wire x2="832" y1="1232" y2="1760" x1="832" />
+            <wire x2="1696" y1="1232" y2="1232" x1="832" />
+            <wire x2="1696" y1="1232" y2="1776" x1="1696" />
+            <wire x2="1744" y1="1776" y2="1776" x1="1696" />
+        </branch>
+        <branch name="XLXN_9(9:0)">
+            <wire x2="368" y1="1824" y2="1824" x1="352" />
+            <wire x2="352" y1="1824" y2="2144" x1="352" />
+            <wire x2="2256" y1="2144" y2="2144" x1="352" />
+            <wire x2="2256" y1="1728" y2="1728" x1="2192" />
+            <wire x2="2256" y1="1728" y2="2144" x1="2256" />
+        </branch>
     </sheet>
 </drawing>

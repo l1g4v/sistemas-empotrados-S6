@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : todo.vhf
--- /___/   /\     Timestamp : 02/07/2024 17:39:10
+-- /___/   /\     Timestamp : 02/08/2024 20:52:43
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf -w /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.vhf -w C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/todo.sch
 --Design Name: todo
 --Device: spartan3e
 --Purpose:
@@ -41,6 +41,8 @@ architecture BEHAVIORAL of todo is
    signal XLXN_3                     : std_logic_vector (7 downto 0);
    signal XLXN_4                     : std_logic_vector (7 downto 0);
    signal XLXN_5                     : std_logic;
+   signal XLXN_8                     : std_logic_vector (17 downto 0);
+   signal XLXN_9                     : std_logic_vector (9 downto 0);
    signal inport_input_01_openSignal : std_logic_vector (7 downto 0);
    signal inport_input_02_openSignal : std_logic_vector (7 downto 0);
    signal inport_input_03_openSignal : std_logic_vector (7 downto 0);
@@ -50,7 +52,6 @@ architecture BEHAVIORAL of todo is
    signal inport_input_07_openSignal : std_logic_vector (7 downto 0);
    signal inport_input_08_openSignal : std_logic_vector (7 downto 0);
    signal inport_input_09_openSignal : std_logic_vector (7 downto 0);
-   signal pb3_instruction_openSignal : std_logic_vector (17 downto 0);
    component input_port
       port ( enable   : in    std_logic; 
              rst      : in    std_logic; 
@@ -103,6 +104,12 @@ architecture BEHAVIORAL of todo is
       port ( op : out   std_logic);
    end component;
    
+   component program
+      port ( Clk         : in    std_logic; 
+             Address     : in    std_logic_vector (9 downto 0); 
+             Instruction : out   std_logic_vector (17 downto 0));
+   end component;
+   
 begin
    inport : input_port
       port map (enable=>XLXN_2,
@@ -138,12 +145,11 @@ begin
    
    pb3 : kcpsm3
       port map (clk=>CLK,
-                instruction(17 downto 0)=>pb3_instruction_openSignal(17 downto 
-            0),
+                instruction(17 downto 0)=>XLXN_8(17 downto 0),
                 interrupt=>INT,
                 in_port(7 downto 0)=>XLXN_1(7 downto 0),
                 reset=>RST,
-                address=>open,
+                address(9 downto 0)=>XLXN_9(9 downto 0),
                 interrupt_ack=>open,
                 out_port(7 downto 0)=>XLXN_3(7 downto 0),
                 port_id(7 downto 0)=>XLXN_4(7 downto 0),
@@ -152,6 +158,11 @@ begin
    
    XLXI_1 : strataoff
       port map (op=>SF_CE0);
+   
+   XLXI_2 : program
+      port map (Address(9 downto 0)=>XLXN_9(9 downto 0),
+                Clk=>CLK,
+                Instruction(17 downto 0)=>XLXN_8(17 downto 0));
    
 end BEHAVIORAL;
 

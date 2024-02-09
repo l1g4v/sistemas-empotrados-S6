@@ -7,3 +7,5 @@ MODULE todo
 		INSTANCE inport
 	SUBMODULE strataoff
 		INSTANCE XLXI_1
+	SUBMODULE program
+		INSTANCE XLXI_2

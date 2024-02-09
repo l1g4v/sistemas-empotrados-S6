@@ -7,3 +7,7 @@ vhdtdtfi -lib work SPI_INTERFACE.vhd -prj pb3-tarea4 -o SPI_INTERFACE.spl -modul
 vhdtdtfi -lib work SPI_INTERFACE.vhd -prj pb3-tarea4 -o SPI_INTERFACE.spl -module SPI_INTERFACE -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
 vhdtdtfi -lib work SPI_INTERFACE.vhd -prj pb3-tarea4 -o SPI_INTERFACE.spl -module SPI_INTERFACE -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3e -w SPI_INTERFACE.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.sym 
+vhdtdtfi -lib work SPI_INTERFACE.vhd -prj pb3-tarea4 -o SPI_INTERFACE.spl -module SPI_INTERFACE -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w SPI_INTERFACE.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.sym 
+vhdtdtfi -lib work SPI_INTERFACE.vhd -prj pb3-tarea4 -o SPI_INTERFACE.spl -module SPI_INTERFACE -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w SPI_INTERFACE.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.sym 

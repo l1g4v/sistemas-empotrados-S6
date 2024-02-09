@@ -1,0 +1,4 @@
+vhdl work "SPI_INTERFACE.vhd"
+vhdl work "kcpsm3.vhd"
+vhdl work "io_port.vhd"
+vhdl work "todo.vhf"

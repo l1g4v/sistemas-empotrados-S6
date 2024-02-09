@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.xst" -ofn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.syr" 

@@ -1,0 +1,8 @@
+EN io_port NULL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/io_port.vhd sub00/vhpl04 1707365902
+AR spi_interface behavioral /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.vhd sub00/vhpl01 1707365919
+AR todo behavioral /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.vhf sub00/vhpl07 1707365907
+AR io_port behavioral /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/io_port.vhd sub00/vhpl05 1707365903
+EN kcpsm3 NULL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/kcpsm3.vhd sub00/vhpl02 1707365900
+EN todo NULL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.vhf sub00/vhpl06 1707365906
+EN spi_interface NULL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.vhd sub00/vhpl00 1707365918
+AR kcpsm3 low_level_definition /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/kcpsm3.vhd sub00/vhpl03 1707365901

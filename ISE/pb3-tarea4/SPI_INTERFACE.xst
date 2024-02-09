@@ -1,0 +1,5 @@
+set -tmpdir "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/xst/projnav.tmp"
+set -xsthdpdir "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/xst"
+elaborate
+-ifn SPI_INTERFACE.prj
+-ifmt mixed

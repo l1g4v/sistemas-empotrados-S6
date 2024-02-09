@@ -1,7 +1,8 @@
 [Inputs]
+WRT_STROBE
 CLK
 CLR
-=PACKET[7:0]=
+=TX[7:0]=
 [Outputs]
 MOSI
 SCLK

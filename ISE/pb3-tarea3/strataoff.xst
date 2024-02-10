@@ -1,5 +1,0 @@
-set -tmpdir "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/xst/projnav.tmp"
-set -xsthdpdir "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/xst"
-elaborate
--ifn strataoff.prj
--ifmt mixed

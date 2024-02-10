@@ -1,6 +1,0 @@
-vhdl work "strataoff.vhd"
-vhdl work "program.vhdl"
-vhdl work "out_port.vhd"
-vhdl work "kcpsm3.vhd"
-vhdl work "input_port.vhd"
-vhdl work "todo.vhf"

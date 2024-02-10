@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="pb3_tarea3.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="io_port.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="io_port.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="kcpsm3.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="kcpsm3.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="program.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="program.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="strataoff.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="strataoff.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VHDL" xil_pn:name="todo.vhf"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="todo_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="todo_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="todo_isim_beh.wdb"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1707578064" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1707578064">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1707578647" xil_pn:in_ck="1239077836120269243" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1707578647">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="io_port.vhd"/>
+      <outfile xil_pn:name="kcpsm3.vhd"/>
+      <outfile xil_pn:name="program.vhdl"/>
+      <outfile xil_pn:name="strataoff.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1707578064" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-4473280379308651741" xil_pn:start_ts="1707578064">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1707578648" xil_pn:in_ck="5091139288130" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="7388518676765422565" xil_pn:start_ts="1707578647">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="todo.vhf"/>
+    </transform>
+    <transform xil_pn:end_ts="1707578065" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="8780884725824062699" xil_pn:start_ts="1707578065">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1707578648" xil_pn:in_ck="2388971832826279523" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1707578648">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="io_port.vhd"/>
+      <outfile xil_pn:name="kcpsm3.vhd"/>
+      <outfile xil_pn:name="program.vhdl"/>
+      <outfile xil_pn:name="strataoff.vhd"/>
+      <outfile xil_pn:name="todo.vhf"/>
+    </transform>
+    <transform xil_pn:end_ts="1707578649" xil_pn:in_ck="2388971832826279523" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5022185803380635375" xil_pn:start_ts="1707578648">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="todo_beh.prj"/>
+      <outfile xil_pn:name="todo_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1707578649" xil_pn:in_ck="5905428033507543365" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4667262301875038910" xil_pn:start_ts="1707578649">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="todo_isim_beh.wdb"/>
+    </transform>
+  </transforms>
+
+</generated_project>

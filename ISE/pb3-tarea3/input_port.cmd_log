@@ -1,6 +1,0 @@
-vhdtdtfi -lib work input_port.vhd -prj pb3-tarea3 -o input_port.spl -module input_port -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e -w input_port.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.sym 
-vhdtdtfi -lib work input_port.vhd -prj pb3-tarea3 -o input_port.spl -module input_port -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e -w input_port.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.sym 
-vhdtdtfi -lib work input_port.vhd -prj pb3-tarea3 -o input_port.spl -module input_port -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e -w input_port.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea3/input_port.sym 

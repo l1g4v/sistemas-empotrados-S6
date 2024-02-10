@@ -1,2 +1,0 @@
-vhdtdtfi -lib work program.vhdl -prj pb3-tarea3 -o program.spl -module program -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e -w program.spl C:/Users/JPablo17/Documents/GitHub/sistemas-empotrados-S6/ISE/pb3-tarea3/program.sym 

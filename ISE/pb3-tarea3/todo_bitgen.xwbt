@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Users\JPablo17\Documents\GitHub\sistemas-empotrados-S6\ISE\pb3-tarea3\todo.ncd
-OUTFILE=C:\Users\JPablo17\Documents\GitHub\sistemas-empotrados-S6\ISE\pb3-tarea3\todo.bit
-FAMILY=Spartan3E
-PART=xc3s500e-4fg320
-WORKINGDIR=C:\Users\JPablo17\Documents\GitHub\sistemas-empotrados-S6\ISE\pb3-tarea3
-LICENSE=WebPack
-USER_INFO=__0_0_0

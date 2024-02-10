@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="kcpsm3">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2024-2-7T23:50:42</timestamp>
+    <timestamp>2024-2-10T15:6:14</timestamp>
     <pin polarity="Input" x="0" y="-352" name="interrupt" />
     <pin polarity="Input" x="0" y="-272" name="reset" />
     <pin polarity="Input" x="0" y="-192" name="clk" />

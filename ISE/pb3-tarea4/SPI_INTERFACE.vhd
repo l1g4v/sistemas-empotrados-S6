@@ -22,7 +22,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx primitives in this code.
@@ -41,24 +41,50 @@ entity SPI_INTERFACE is
 end SPI_INTERFACE;
 
 architecture Behavioral of SPI_INTERFACE is
-signal loaded: STD_LOGIC := '0';
-signal payload: STD_LOGIC_VECTOR (7 downto 0) := x"00"; 
-begin
-	CS <= '0';
-	
-	load: process
+		signal payload: STD_LOGIC_VECTOR (7 downto 0) := x"00"; 
+		signal count: natural range 0 to 4 := 0;
+		signal bcount: natural range 0 to 7 := 7;
+		signal ready: STD_LOGIC := '0';
 	begin
-	wait until rising_edge(WRT_STROBE);
-	payload <= TX;		
-	for i in 7 downto 0 loop
-		wait until rising_edge(CLK);
-		MOSI <= payload(i);
-		wait until rising_edge(CLK);
+	SRST <= CLR;
+	
+	load: process(WRT_STROBE, CLK)
+	begin
+		if rising_edge(WRT_STROBE) and ready = '0' then
+			payload <= TX;		
+			CS <= '0';
+			count <= count + 1;
+			ready <= '1';
+		end if;
+		
+		-- 32 bit transmition done, send CS to high
+		if count = 4 then
+			count <= 0;
+			CS <= '1';
+		end if;
+		
+		if bcount = 0 then
+			ready <= '0';
+		end if;
+		--MOSI <= payload(7);
+		--wait until rising_edge(CLK);
+		--SCLK <= '1';
+		--wait until falling_edge(CLK);
+		--SCLK <= '0';
+
+	end process load;
+	
+	send_bit: process
+	begin
+	if ready = '1' then
+		MOSI <= payload(bcount);
+		bcount <= bcount - 1;
+	end if;
+	wait until rising_edge(CLK);
 		SCLK <= '1';
 		wait until rising_edge(CLK);
 		SCLK <= '0';
-	end loop;
-	end process load;
+	end process send_bit;
 
 end Behavioral;
 

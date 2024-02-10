@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="SPI_INTERFACE">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2024-2-8T4:19:35</timestamp>
+    <timestamp>2024-2-10T18:4:20</timestamp>
     <pin polarity="Input" x="0" y="96" name="WRT_STROBE" />
     <pin polarity="Input" x="0" y="-160" name="CLK" />
     <pin polarity="Input" x="0" y="-96" name="CLR" />
@@ -29,6 +29,6 @@
         <line x2="384" y1="-160" y2="-160" x1="320" />
         <line x2="384" y1="-96" y2="-96" x1="320" />
         <line x2="384" y1="-32" y2="-32" x1="320" />
-        <rect width="256" x="64" y="-192" height="384" />
+        <rect width="256" x="64" y="-192" height="448" />
     </graph>
 </symbol>

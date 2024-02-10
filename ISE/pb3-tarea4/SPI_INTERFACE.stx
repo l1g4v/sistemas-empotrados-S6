@@ -5,14 +5,14 @@ Parameter TMPDIR set to /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Parameter xsthdpdir set to /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
@@ -21,7 +21,8 @@ WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Onl
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.vhd" in Library work.
-Architecture behavioral of Entity spi_interface is up to date.
+Entity <spi_interface> compiled.
+Entity <spi_interface> (Architecture <behavioral>) compiled.
 
 
 Total REAL time to Xst completion: 0.00 secs
@@ -30,7 +31,7 @@ Total CPU time to Xst completion: 0.04 secs
 --> 
 
 
-Total memory usage is 456428 kilobytes
+Total memory usage is 456564 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

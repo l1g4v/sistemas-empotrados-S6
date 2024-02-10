@@ -1,0 +1,14 @@
+                      jump MAIN
+                      include "../utils/delay.asm"
+
+                MAIN: load s5, 54
+                      output s5, 00
+                      load s5, 54
+                      output s5, 00
+                      load s5, 54
+                      output s5, 00
+                      load s5, 54
+                      output s5, 00
+                      call delay_40us
+                      jump MAIN
+

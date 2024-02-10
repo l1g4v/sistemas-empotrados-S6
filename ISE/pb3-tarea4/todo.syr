@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Reading design: todo.prj
@@ -112,11 +112,10 @@ Architecture low_level_definition of Entity kcpsm3 is up to date.
 Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/io_port.vhd" in Library work.
 Architecture behavioral of Entity io_port is up to date.
 Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/program.vhdl" in Library work.
-Package <program_pkg> compiled.
-Entity <program> compiled.
-Entity <program> (Architecture <structure>) compiled.
+Architecture structure of Entity program is up to date.
 Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.vhd" in Library work.
-Architecture behavioral of Entity spi_interface is up to date.
+Entity <spi_interface> compiled.
+Entity <spi_interface> (Architecture <behavioral>) compiled.
 Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.vhf" in Library work.
 Architecture behavioral of Entity todo is up to date.
 
@@ -177,7 +176,7 @@ WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tar
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <todo> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.vhf" line 87: Unconnected output port 'interrupt_ack' of component 'kcpsm3'.
+WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.vhf" line 88: Unconnected output port 'interrupt_ack' of component 'kcpsm3'.
 Entity <todo> analyzed. Unit <todo> generated.
 
 Analyzing Entity <kcpsm3> in library <work> (Architecture <low_level_definition>).
@@ -400,7 +399,7 @@ Entity <io_port> analyzed. Unit <io_port> generated.
 
 Analyzing Entity <program> in library <work> (Architecture <structure>).
     Set user-defined property "INIT =  00000" for instance <rom_1024_x_18> in unit <program>.
-    Set user-defined property "INITP_00 =  00000000000000000000000000000000000000000000F8888B72DCB72DCB72D3" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INITP_00 =  00000000000000000000000000000000000000000000000F8B72DCB72DCB72D3" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
@@ -410,7 +409,7 @@ Analyzing Entity <program> in library <work> (Architecture <structure>).
     Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_00 =  027DA000540BC20100050219A0005406C10100010128A0005402C001000B401E" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_01 =  C5000554A000541AC40100140432A0005415C301000A0314A0005410C2010005" for instance <rom_1024_x_18> in unit <program>.
-    Set user-defined property "INIT_02 =  00000000000000000000000000000000401E0005C5000554C5000554C5000554" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_02 =  00000000000000000000000000000000000000000000000000000000401E0001" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
@@ -477,8 +476,10 @@ Analyzing Entity <program> in library <work> (Architecture <structure>).
 Entity <program> analyzed. Unit <program> generated.
 
 Analyzing Entity <SPI_INTERFACE> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.vhd" line 51: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <count>, <bcount>
+WARNING:Xst:819 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.vhd" line 56: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <RST>
+WARNING:Xst:819 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.vhd" line 81: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <done>
 Entity <SPI_INTERFACE> analyzed. Unit <SPI_INTERFACE> generated.
 
 
@@ -498,18 +499,23 @@ Unit <io_port> synthesized.
 
 Synthesizing Unit <SPI_INTERFACE>.
     Related source file is "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.vhd".
+WARNING:Xst:2110 - Clock of register <done> seems to be also used in the data or control logic of that element.
+WARNING:Xst:2110 - Clock of register <working> seems to be also used in the data or control logic of that element.
     Found 1-bit register for signal <CS>.
     Found 1-bit register for signal <MOSI>.
-    Found 1-bit register for signal <SCLK>.
     Found 3-bit down counter for signal <bcount>.
     Found 3-bit up counter for signal <count>.
-    Found 1-bit 8-to-1 multiplexer for signal <MOSI$mux0000> created at line 80.
+    Found 1-bit register for signal <done>.
+    Found 3-bit comparator greater for signal <done$cmp_gt0000> created at line 85.
+    Found 1-bit 8-to-1 multiplexer for signal <MOSI$mux0000> created at line 84.
     Found 8-bit register for signal <payload>.
     Found 1-bit register for signal <ready>.
-    Found 1-bit register for signal <wait<0>>.
+    Found 1-bit register for signal <working>.
+    Found 3-bit comparator lessequal for signal <working$cmp_le0000> created at line 85.
     Summary:
 	inferred   2 Counter(s).
 	inferred  13 D-type flip-flop(s).
+	inferred   2 Comparator(s).
 	inferred   1 Multiplexer(s).
 Unit <SPI_INTERFACE> synthesized.
 
@@ -540,6 +546,9 @@ Macro Statistics
 # Registers                                            : 7
  1-bit register                                        : 5
  8-bit register                                        : 2
+# Comparators                                          : 2
+ 3-bit comparator greater                              : 1
+ 3-bit comparator lessequal                            : 1
 # Multiplexers                                         : 1
  1-bit 8-to-1 multiplexer                              : 1
 
@@ -549,7 +558,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-INFO:Xst:2261 - The FF/Latch <wait_0> in Unit <XLXI_10> is equivalent to the following FF/Latch, which will be removed : <SCLK> 
 WARNING:Xst:1710 - FF/Latch <output_v_0> (without init value) has a constant value of 0 in block <XLXI_8>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <output_v_1> (without init value) has a constant value of 0 in block <XLXI_8>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <output_v_2> (without init value) has a constant value of 0 in block <XLXI_8>. This FF/Latch will be trimmed during the optimization process.
@@ -568,6 +576,9 @@ Macro Statistics
  3-bit up counter                                      : 1
 # Registers                                            : 97
  Flip-Flops                                            : 97
+# Comparators                                          : 2
+ 3-bit comparator greater                              : 1
+ 3-bit comparator lessequal                            : 1
 # Multiplexers                                         : 1
  1-bit 8-to-1 multiplexer                              : 1
 
@@ -576,7 +587,6 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <wait_0> in Unit <SPI_INTERFACE> is equivalent to the following FF/Latch, which will be removed : <SCLK> 
 INFO:Xst:2261 - The FF/Latch <output_v_0> in Unit <io_port> is equivalent to the following 7 FFs/Latches, which will be removed : <output_v_1> <output_v_2> <output_v_3> <output_v_4> <output_v_5> <output_v_6> <output_v_7> 
 WARNING:Xst:1710 - FF/Latch <output_v_0> (without init value) has a constant value of 0 in block <io_port>. This FF/Latch will be trimmed during the optimization process.
 
@@ -596,8 +606,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 94
- Flip-Flops                                            : 94
+# Registers                                            : 95
+ Flip-Flops                                            : 95
 
 =========================================================================
 
@@ -626,36 +636,38 @@ Design Statistics
 # IOs                              : 7
 
 Cell Usage :
-# BELS                             : 217
+# BELS                             : 230
 #      GND                         : 1
-#      INV                         : 8
+#      INV                         : 7
 #      LUT1                        : 2
-#      LUT2                        : 7
-#      LUT3                        : 77
-#      LUT4                        : 33
+#      LUT2                        : 9
+#      LUT3                        : 79
+#      LUT4                        : 43
 #      MUXCY                       : 39
 #      MUXF5                       : 11
 #      MUXF6                       : 1
 #      VCC                         : 1
 #      XORCY                       : 37
-# FlipFlops/Latches                : 94
+# FlipFlops/Latches                : 95
 #      FD                          : 24
-#      FDCE                        : 4
+#      FDCE_1                      : 2
 #      FDE                         : 14
-#      FDPE                        : 1
+#      FDE_1                       : 1
+#      FDP                         : 1
 #      FDR                         : 30
 #      FDRE                        : 8
 #      FDRSE                       : 10
-#      FDS                         : 3
+#      FDS                         : 2
+#      FDSE                        : 3
 # RAMS                             : 27
 #      RAM16X1D                    : 8
 #      RAM32X1S                    : 10
 #      RAM64X1S                    : 8
 #      RAMB16_S18                  : 1
 # Clock Buffers                    : 1
-#      BUFGP                       : 1
-# IO Buffers                       : 6
-#      IBUF                        : 2
+#      BUFG                        : 1
+# IO Buffers                       : 7
+#      IBUF                        : 3
 #      OBUF                        : 4
 =========================================================================
 
@@ -664,10 +676,10 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                      106  out of   4656     2%  
- Number of Slice Flip Flops:             94  out of   9312     1%  
- Number of 4 input LUTs:                195  out of   9312     2%  
-    Number used as logic:               127
+ Number of Slices:                      114  out of   4656     2%  
+ Number of Slice Flip Flops:             95  out of   9312     1%  
+ Number of 4 input LUTs:                208  out of   9312     2%  
+    Number used as logic:               140
     Number used as RAMs:                 68
  Number of IOs:                           7
  Number of bonded IOBs:                   7  out of    232     3%  
@@ -695,28 +707,28 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 108   |
-XLXN_17                            | NONE(XLXI_10/count_2)  | 13    |
+CLK                                | IBUF+BUFG              | 109   |
+WRTSTROBE                          | NONE(XLXI_10/count_2)  | 13    |
 -----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-------------------------------------------------------+------------------------+-------+
-Control Signal                                        | Buffer(FF name)        | Load  |
-------------------------------------------------------+------------------------+-------+
-XLXI_10/count_cmp_eq0000(XLXI_10/count_cmp_eq00001:O) | NONE(XLXI_10/CS)       | 4     |
-XLXI_10/ready_not0001_inv(XLXI_10/ready_cmp_eq00001:O)| NONE(XLXI_10/ready)    | 1     |
-------------------------------------------------------+------------------------+-------+
+---------------------------------------------+------------------------+-------+
+Control Signal                               | Buffer(FF name)        | Load  |
+---------------------------------------------+------------------------+-------+
+XLXI_10/done_and0000(XLXI_10/done_and00001:O)| NONE(XLXI_10/done)     | 2     |
+RST                                          | IBUF                   | 1     |
+---------------------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
    Minimum period: 9.959ns (Maximum Frequency: 100.415MHz)
-   Minimum input arrival time before clock: 2.576ns
-   Maximum output required time after clock: 4.310ns
-   Maximum combinational path delay: 4.937ns
+   Minimum input arrival time before clock: 4.025ns
+   Maximum output required time after clock: 5.486ns
+   Maximum combinational path delay: 6.320ns
 
 Timing Detail:
 --------------
@@ -725,7 +737,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
   Clock period: 9.959ns (frequency: 100.415MHz)
-  Total number of paths / destination ports: 3823 / 381
+  Total number of paths / destination ports: 3837 / 385
 -------------------------------------------------------------------------
 Delay:               9.959ns (Levels of Logic = 13)
   Source:            XLXI_9/rom_1024_x_18 (RAM)
@@ -757,32 +769,52 @@ Delay:               9.959ns (Levels of Logic = 13)
                                        (69.9% logic, 30.1% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'XLXN_17'
-  Clock period: 3.466ns (frequency: 288.517MHz)
-  Total number of paths / destination ports: 19 / 16
+Timing constraint: Default period analysis for Clock 'WRTSTROBE'
+  Clock period: 2.761ns (frequency: 362.188MHz)
+  Total number of paths / destination ports: 38 / 13
 -------------------------------------------------------------------------
-Delay:               3.466ns (Levels of Logic = 1)
-  Source:            XLXI_10/ready (FF)
+Delay:               2.761ns (Levels of Logic = 1)
+  Source:            XLXI_10/count_0 (FF)
   Destination:       XLXI_10/count_2 (FF)
-  Source Clock:      XLXN_17 rising
-  Destination Clock: XLXN_17 rising
+  Source Clock:      WRTSTROBE rising
+  Destination Clock: WRTSTROBE rising
 
-  Data Path: XLXI_10/ready to XLXI_10/count_2
+  Data Path: XLXI_10/count_0 to XLXI_10/count_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             5   0.591   0.633  XLXI_10/ready (XLXI_10/ready)
-     INV:I->O             13   0.704   0.983  XLXI_10/ready_inv1_INV_0 (XLXI_10/ready_inv)
-     FDCE:CE                   0.555          XLXI_10/ready
+     FDE:C->Q             13   0.591   1.158  XLXI_10/count_0 (XLXI_10/count_0)
+     LUT3:I0->O            1   0.704   0.000  XLXI_10/Mcount_count_xor<0>11 (XLXI_10/Mcount_count)
+     FDE:D                     0.308          XLXI_10/count_0
     ----------------------------------------
-    Total                      3.466ns (1.850ns logic, 1.616ns route)
-                                       (53.4% logic, 46.6% route)
+    Total                      2.761ns (1.603ns logic, 1.158ns route)
+                                       (58.1% logic, 41.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'WRTSTROBE'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              4.025ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       XLXI_10/count_2 (FF)
+  Destination Clock: WRTSTROBE rising
+
+  Data Path: RST to XLXI_10/count_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.218   0.587  RST_IBUF (RST_IBUF)
+     INV:I->O             12   0.704   0.961  XLXI_10/RST_inv1_INV_0 (XLXI_10/RST_inv)
+     FDE:CE                    0.555          XLXI_10/payload_0
+    ----------------------------------------
+    Total                      4.025ns (2.477ns logic, 1.548ns route)
+                                       (61.5% logic, 38.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
   Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
-Offset:              2.576ns (Levels of Logic = 1)
+Offset:              2.716ns (Levels of Logic = 1)
   Source:            RST (PAD)
   Destination:       XLXI_6/reset_flop2 (FF)
   Destination Clock: CLK rising
@@ -791,45 +823,46 @@ Offset:              2.576ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   1.218   0.447  RST_IBUF (RST_IBUF)
+     IBUF:I->O             4   1.218   0.587  RST_IBUF (RST_IBUF)
      FDS:S                     0.911          XLXI_6/reset_flop1
     ----------------------------------------
-    Total                      2.576ns (2.129ns logic, 0.447ns route)
-                                       (82.6% logic, 17.4% route)
+    Total                      2.716ns (2.129ns logic, 0.587ns route)
+                                       (78.4% logic, 21.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Offset:              4.310ns (Levels of Logic = 1)
-  Source:            XLXI_10/wait_0 (FF)
+Offset:              5.486ns (Levels of Logic = 2)
+  Source:            XLXI_10/working (FF)
   Destination:       DAC_SCLK (PAD)
-  Source Clock:      CLK rising
+  Source Clock:      CLK falling
 
-  Data Path: XLXI_10/wait_0 to DAC_SCLK
+  Data Path: XLXI_10/working to DAC_SCLK
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q              2   0.591   0.447  XLXI_10/wait_0 (XLXI_10/wait_0)
+     FDCE_1:C->Q           1   0.591   0.499  XLXI_10/working (XLXI_10/working)
+     LUT2:I1->O            1   0.704   0.420  XLXI_10/SCLK1 (DAC_SCLK_OBUF)
      OBUF:I->O                 3.272          DAC_SCLK_OBUF (DAC_SCLK)
     ----------------------------------------
-    Total                      4.310ns (3.863ns logic, 0.447ns route)
-                                       (89.6% logic, 10.4% route)
+    Total                      5.486ns (4.567ns logic, 0.919ns route)
+                                       (83.2% logic, 16.8% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXN_17'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'WRTSTROBE'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              4.283ns (Levels of Logic = 1)
   Source:            XLXI_10/CS (FF)
   Destination:       DAC_CS (PAD)
-  Source Clock:      XLXN_17 rising
+  Source Clock:      WRTSTROBE rising
 
   Data Path: XLXI_10/CS to DAC_CS
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDPE:C->Q             1   0.591   0.420  XLXI_10/CS (XLXI_10/CS)
+     FDP:C->Q              1   0.591   0.420  XLXI_10/CS (XLXI_10/CS)
      OBUF:I->O                 3.272          DAC_CS_OBUF (DAC_CS)
     ----------------------------------------
     Total                      4.283ns (3.863ns logic, 0.420ns route)
@@ -837,34 +870,35 @@ Offset:              4.283ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Delay:               4.937ns (Levels of Logic = 2)
-  Source:            INT (PAD)
-  Destination:       DAC_RST (PAD)
+Delay:               6.320ns (Levels of Logic = 3)
+  Source:            CLK (PAD)
+  Destination:       DAC_SCLK (PAD)
 
-  Data Path: INT to DAC_RST
+  Data Path: CLK to DAC_SCLK
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   1.218   0.447  INT_IBUF (INT_IBUF)
-     OBUF:I->O                 3.272          DAC_RST_OBUF (DAC_RST)
+     IBUF:I->O             3   1.218   0.706  CLK_IBUF (CLK_IBUF1)
+     LUT2:I0->O            1   0.704   0.420  XLXI_10/SCLK1 (DAC_SCLK_OBUF)
+     OBUF:I->O                 3.272          DAC_SCLK_OBUF (DAC_SCLK)
     ----------------------------------------
-    Total                      4.937ns (4.490ns logic, 0.447ns route)
-                                       (90.9% logic, 9.1% route)
+    Total                      6.320ns (5.194ns logic, 1.126ns route)
+                                       (82.2% logic, 17.8% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.34 secs
+Total CPU time to Xst completion: 3.35 secs
  
 --> 
 
 
-Total memory usage is 528684 kilobytes
+Total memory usage is 528700 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   52 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of warnings :   55 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 

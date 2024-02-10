@@ -3,12 +3,12 @@
 
                 MAIN: load s5, 54
                       output s5, 00
-                      load s5, 54
-                      output s5, 00
-                      load s5, 54
-                      output s5, 00
-                      load s5, 54
-                      output s5, 00
-                      call delay_40us
+                      ;LOAD s5, 54
+                      ;OUTPUT s5, 00
+                      ;LOAD s5, 54
+                      ;OUTPUT s5, 00
+                      ;LOAD s5, 54
+                      ;OUTPUT s5, 00
+                      call delay_1us
                       jump MAIN
 

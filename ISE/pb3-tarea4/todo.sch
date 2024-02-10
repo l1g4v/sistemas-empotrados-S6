@@ -10,7 +10,7 @@
         <signal name="XLXN_14(17:0)" />
         <signal name="XLXN_15(9:0)" />
         <signal name="XLXN_16(7:0)" />
-        <signal name="XLXN_17" />
+        <signal name="WRTSTROBE" />
         <signal name="XLXN_18" />
         <signal name="XLXN_19(7:0)" />
         <signal name="DAC_MOSI" />
@@ -72,7 +72,8 @@
             <line x2="448" y1="-96" y2="-96" x1="384" />
         </blockdef>
         <blockdef name="SPI_INTERFACE">
-            <timestamp>2024-2-10T18:4:20</timestamp>
+            <timestamp>2024-2-10T20:21:23</timestamp>
+            <line x2="0" y1="224" y2="224" x1="64" />
             <line x2="0" y1="96" y2="96" x1="64" />
             <rect width="64" x="0" y="148" height="24" />
             <line x2="0" y1="160" y2="160" x1="64" />
@@ -82,7 +83,7 @@
             <line x2="384" y1="-160" y2="-160" x1="320" />
             <line x2="384" y1="-96" y2="-96" x1="320" />
             <line x2="384" y1="-32" y2="-32" x1="320" />
-            <rect width="256" x="64" y="-192" height="448" />
+            <rect width="256" x="64" y="-192" height="512" />
         </blockdef>
         <block symbolname="kcpsm3" name="XLXI_6">
             <blockpin signalname="INT" name="interrupt" />
@@ -90,7 +91,7 @@
             <blockpin signalname="CLK" name="clk" />
             <blockpin signalname="XLXN_14(17:0)" name="instruction(17:0)" />
             <blockpin signalname="XLXN_13(7:0)" name="in_port(7:0)" />
-            <blockpin signalname="XLXN_17" name="write_strobe" />
+            <blockpin signalname="WRTSTROBE" name="write_strobe" />
             <blockpin signalname="XLXN_18" name="read_strobe" />
             <blockpin name="interrupt_ack" />
             <blockpin signalname="XLXN_15(9:0)" name="address(9:0)" />
@@ -110,7 +111,8 @@
             <blockpin signalname="XLXN_14(17:0)" name="Instruction(17:0)" />
         </block>
         <block symbolname="SPI_INTERFACE" name="XLXI_10">
-            <blockpin signalname="XLXN_17" name="WRT_STROBE" />
+            <blockpin signalname="RST" name="RST" />
+            <blockpin signalname="WRTSTROBE" name="WRT_STROBE" />
             <blockpin signalname="CLK" name="CLK" />
             <blockpin signalname="INT" name="CLR" />
             <blockpin signalname="XLXN_16(7:0)" name="TX(7:0)" />
@@ -149,7 +151,7 @@
         </branch>
         <instance x="2064" y="1520" name="XLXI_10" orien="R0">
         </instance>
-        <branch name="XLXN_17">
+        <branch name="WRTSTROBE">
             <wire x2="1952" y1="1360" y2="1360" x1="1840" />
             <wire x2="1952" y1="1360" y2="1616" x1="1952" />
             <wire x2="2064" y1="1616" y2="1616" x1="1952" />
@@ -204,7 +206,11 @@
             <wire x2="1344" y1="1376" y2="1440" x1="1344" />
             <wire x2="1376" y1="1440" y2="1440" x1="1344" />
             <wire x2="1392" y1="1440" y2="1440" x1="1376" />
-            <wire x2="1344" y1="1440" y2="1440" x1="1264" />
+            <wire x2="1320" y1="1440" y2="1440" x1="1264" />
+            <wire x2="1328" y1="1440" y2="1440" x1="1320" />
+            <wire x2="1344" y1="1440" y2="1440" x1="1328" />
+            <wire x2="1328" y1="1440" y2="1744" x1="1328" />
+            <wire x2="2064" y1="1744" y2="1744" x1="1328" />
         </branch>
         <branch name="CLK">
             <wire x2="864" y1="1920" y2="1920" x1="816" />

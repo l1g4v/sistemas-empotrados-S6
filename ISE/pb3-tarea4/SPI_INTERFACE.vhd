@@ -31,6 +31,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity SPI_INTERFACE is
     Port ( TX : in  STD_LOGIC_VECTOR (7 downto 0);
+			  RST: in STD_LOGIC;
 			  WRT_STROBE: in STD_LOGIC;
            CLK : in  STD_LOGIC;
            CLR : in  STD_LOGIC;
@@ -42,49 +43,62 @@ end SPI_INTERFACE;
 
 architecture Behavioral of SPI_INTERFACE is
 		signal payload: STD_LOGIC_VECTOR (7 downto 0) := x"00"; 
-		signal count: natural range 0 to 4 := 0;
-		signal bcount: natural range 0 to 7 := 7;
+		signal packet: STD_LOGIC_VECTOR (31 downto 0) := x"00";
 		signal ready: STD_LOGIC := '0';
+		signal working: STD_LOGIC := '0';
+		signal done: STD_LOGIC := '0';
+		signal count: natural range 0 to 4 := 0;	
+		signal bcount: natural range 0 to 7 := 7;	
+		
 	begin
 	SRST <= CLR;
+	SCLK <= CLK and working;
 	
-	load: process(WRT_STROBE, CLK)
+	load: process(WRT_STROBE,CLK)
 	begin
-		if rising_edge(WRT_STROBE) and ready = '0' then
-			payload <= TX;		
+		if RST = '1' then
+			CS <= '1';
+		elsif rising_edge(WRT_STROBE) then
+			payload <= TX;
 			CS <= '0';
 			count <= count + 1;
 			ready <= '1';
+			-- 32 bit transmition done, send CS to high	
+			if count = 4 then
+				count <= 0;
+				CS <= '1';
+				ready <= '0';
+				payload <= "00000000";
+			end if;
+			
 		end if;
 		
-		-- 32 bit transmition done, send CS to high
-		if count = 4 then
-			count <= 0;
-			CS <= '1';
-		end if;
 		
-		if bcount = 0 then
-			ready <= '0';
-		end if;
-		--MOSI <= payload(7);
-		--wait until rising_edge(CLK);
-		--SCLK <= '1';
-		--wait until falling_edge(CLK);
-		--SCLK <= '0';
+		
+		
 
 	end process load;
 	
-	send_bit: process
+	send: process(CLK)
 	begin
-	if ready = '1' then
-		MOSI <= payload(bcount);
-		bcount <= bcount - 1;
-	end if;
-	wait until rising_edge(CLK);
-		SCLK <= '1';
-		wait until rising_edge(CLK);
-		SCLK <= '0';
-	end process send_bit;
+			if falling_edge(CLK) and ready = '1' then
+				MOSI <= payload(bcount);	
+				if bcount > 0 then
+					bcount <= bcount - 1;
+					working <= '1';
+					done <= '0';
+				else
+					bcount <= 7;
+					done <= '1';
+				end if;
+			end if;
+			
+			if CLK = '0' and done = '1' then
+				working <= '0';
+				done <= '0';
+			end if;
+			
+	end process send;
 
 end Behavioral;
 

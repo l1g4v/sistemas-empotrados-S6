@@ -122,20 +122,27 @@
 <msg type="warning" file="Xst" num="2591" delta="old" ><arg fmt="%s" index="1">&quot;/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/kcpsm3.vhd&quot; line 906:</arg> <arg fmt="%s" index="2">attribute on instance</arg> &lt;<arg fmt="%s" index="3">INIT</arg>&gt; overrides <arg fmt="%s" index="4">generic/parameter on component</arg>. It is possible that simulator will not take this attribute into account.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.vhf</arg>&quot; line <arg fmt="%d" index="2">87</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">interrupt_ack</arg>&apos; of component &apos;<arg fmt="%s" index="4">kcpsm3</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.vhf</arg>&quot; line <arg fmt="%d" index="2">88</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">interrupt_ack</arg>&apos; of component &apos;<arg fmt="%s" index="4">kcpsm3</arg>&apos;.
 </msg>
 
 <msg type="warning" file="Xst" num="1961" delta="old" >The length of the hex value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">arith_loop[7].msb_arith.arith_carry_out_lut</arg> should be <arg fmt="%d" index="3">2</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
 </msg>
 
-<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.vhd</arg>&quot; line <arg fmt="%d" index="2">51</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-<arg fmt="%s" index="3">&lt;count&gt;, &lt;bcount&gt;</arg>
+<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.vhd</arg>&quot; line <arg fmt="%d" index="2">56</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;RST&gt;</arg>
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.vhd</arg>&quot; line <arg fmt="%d" index="2">81</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;done&gt;</arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2110" delta="new" >Clock of register &lt;<arg fmt="%s" index="1">done</arg>&gt; seems to be also used in the data or control logic of that element.
+</msg>
+
+<msg type="warning" file="Xst" num="2110" delta="old" >Clock of register &lt;<arg fmt="%s" index="1">working</arg>&gt; seems to be also used in the data or control logic of that element.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_8_input_v_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000</arg>.
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">wait_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">XLXI_10</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SCLK&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">output_v_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">XLXI_8</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -160,9 +167,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">output_v_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">XLXI_8</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">wait_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SPI_INTERFACE</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;SCLK&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">output_v_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">io_port</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;output_v_1&gt; &lt;output_v_2&gt; &lt;output_v_3&gt; &lt;output_v_4&gt; &lt;output_v_5&gt; &lt;output_v_6&gt; &lt;output_v_7&gt; </arg>

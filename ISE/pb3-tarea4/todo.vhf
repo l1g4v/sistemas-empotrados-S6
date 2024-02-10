@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : todo.vhf
--- /___/   /\     Timestamp : 02/10/2024 12:40:43
+-- /___/   /\     Timestamp : 02/10/2024 14:30:13
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -36,11 +36,11 @@ entity todo is
 end todo;
 
 architecture BEHAVIORAL of todo is
+   signal WRTSTROBE                 : std_logic;
    signal XLXN_13                   : std_logic_vector (7 downto 0);
    signal XLXN_14                   : std_logic_vector (17 downto 0);
    signal XLXN_15                   : std_logic_vector (9 downto 0);
    signal XLXN_16                   : std_logic_vector (7 downto 0);
-   signal XLXN_17                   : std_logic;
    signal XLXN_18                   : std_logic;
    signal XLXN_19                   : std_logic_vector (7 downto 0);
    signal XLXI_8_input_v_openSignal : std_logic_vector (7 downto 0);
@@ -73,7 +73,8 @@ architecture BEHAVIORAL of todo is
    end component;
    
    component SPI_INTERFACE
-      port ( WRT_STROBE : in    std_logic; 
+      port ( RST        : in    std_logic; 
+             WRT_STROBE : in    std_logic; 
              CLK        : in    std_logic; 
              CLR        : in    std_logic; 
              TX         : in    std_logic_vector (7 downto 0); 
@@ -95,7 +96,7 @@ begin
                 out_port(7 downto 0)=>XLXN_16(7 downto 0),
                 port_id(7 downto 0)=>XLXN_19(7 downto 0),
                 read_strobe=>XLXN_18,
-                write_strobe=>XLXN_17);
+                write_strobe=>WRTSTROBE);
    
    XLXI_8 : io_port
       port map (dir(7 downto 0)=>XLXN_19(7 downto 0),
@@ -112,8 +113,9 @@ begin
    XLXI_10 : SPI_INTERFACE
       port map (CLK=>CLK,
                 CLR=>INT,
+                RST=>RST,
                 TX(7 downto 0)=>XLXN_16(7 downto 0),
-                WRT_STROBE=>XLXN_17,
+                WRT_STROBE=>WRTSTROBE,
                 CS=>DAC_CS,
                 MOSI=>DAC_MOSI,
                 SCLK=>DAC_SCLK,

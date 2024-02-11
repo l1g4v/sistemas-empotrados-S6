@@ -42,13 +42,16 @@ entity SPI_INTERFACE is
 end SPI_INTERFACE;
 
 architecture Behavioral of SPI_INTERFACE is
-		signal payload: STD_LOGIC_VECTOR (7 downto 0) := x"00"; 
-		signal packet: STD_LOGIC_VECTOR (31 downto 0) := x"00";
+		signal packet: STD_LOGIC_VECTOR (7 downto 0) := x"00"; 
+		signal payload: STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
 		signal ready: STD_LOGIC := '0';
 		signal working: STD_LOGIC := '0';
 		signal done: STD_LOGIC := '0';
 		signal count: natural range 0 to 4 := 0;	
-		signal bcount: natural range 0 to 7 := 7;	
+		signal bcount: natural range 0 to 31 := 31;	
+		
+		signal down: natural range 0 to 32 := 0;
+		signal up: natural range 0 to 32 := 7;
 		
 	begin
 	SRST <= CLR;
@@ -59,20 +62,28 @@ architecture Behavioral of SPI_INTERFACE is
 		if RST = '1' then
 			CS <= '1';
 		elsif rising_edge(WRT_STROBE) then
-			payload <= TX;
-			CS <= '0';
-			count <= count + 1;
-			ready <= '1';
-			-- 32 bit transmition done, send CS to high	
+			
+			-- 32 bit transmition done, send payload
 			if count = 4 then
+				up <= 7;
+				down <= 0;
 				count <= 0;
-				CS <= '1';
-				ready <= '0';
-				payload <= "00000000";
+				CS <= '0';
+				ready <= '1';
+			else
+					payload(up downto down) <= TX;
+					up <= up + 8;
+					down <= down + 8;
+					
+					count <= count + 1;
 			end if;
 			
 		end if;
 		
+		if CLK = '1' and done = '1' then
+			ready <= '0';
+			CS <= '1';
+		end if;
 		
 		
 		
@@ -81,7 +92,10 @@ architecture Behavioral of SPI_INTERFACE is
 	
 	send: process(CLK)
 	begin
-			if falling_edge(CLK) and ready = '1' then
+			if RST = '1' then
+				MOSI <= '0';
+			
+			elsif falling_edge(CLK) and ready = '1' then
 				MOSI <= payload(bcount);	
 				if bcount > 0 then
 					bcount <= bcount - 1;

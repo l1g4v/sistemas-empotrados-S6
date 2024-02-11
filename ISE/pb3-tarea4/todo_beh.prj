@@ -1,4 +1,4 @@
-vhdl work "SPI_INTERFACE.vhd"
+vhdl work "register_merger.vhd"
 vhdl work "program.vhdl"
 vhdl work "kcpsm3.vhd"
 vhdl work "io_port.vhd"

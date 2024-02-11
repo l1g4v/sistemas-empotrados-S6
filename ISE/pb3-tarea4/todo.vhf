@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : todo.vhf
--- /___/   /\     Timestamp : 02/10/2024 14:30:13
+-- /___/   /\     Timestamp : 02/10/2024 22:04:30
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -26,13 +26,15 @@ library UNISIM;
 use UNISIM.Vcomponents.ALL;
 
 entity todo is
-   port ( CLK      : in    std_logic; 
-          INT      : in    std_logic; 
-          RST      : in    std_logic; 
-          DAC_CS   : out   std_logic; 
-          DAC_MOSI : out   std_logic; 
-          DAC_RST  : out   std_logic; 
-          DAC_SCLK : out   std_logic);
+   port ( CLK        : in    std_logic; 
+          INT        : in    std_logic; 
+          RST        : in    std_logic; 
+          DAC_CS     : out   std_logic; 
+          DAC_MOSI   : out   std_logic; 
+          DAC_RST    : out   std_logic; 
+          DAC_SCLK   : out   std_logic; 
+          merged     : out   std_logic_vector (31 downto 0); 
+          mergeready : out   std_logic);
 end todo;
 
 architecture BEHAVIORAL of todo is
@@ -72,16 +74,12 @@ architecture BEHAVIORAL of todo is
              Instruction : out   std_logic_vector (17 downto 0));
    end component;
    
-   component SPI_INTERFACE
-      port ( RST        : in    std_logic; 
-             WRT_STROBE : in    std_logic; 
-             CLK        : in    std_logic; 
-             CLR        : in    std_logic; 
-             TX         : in    std_logic_vector (7 downto 0); 
-             MOSI       : out   std_logic; 
-             SCLK       : out   std_logic; 
-             CS         : out   std_logic; 
-             SRST       : out   std_logic);
+   component register_merger
+      port ( strobe  : in    std_logic; 
+             rst     : in    std_logic; 
+             ready   : out   std_logic; 
+             inputv  : in    std_logic_vector (7 downto 0); 
+             outputv : out   std_logic_vector (31 downto 0));
    end component;
    
 begin
@@ -110,16 +108,12 @@ begin
                 Clk=>CLK,
                 Instruction(17 downto 0)=>XLXN_14(17 downto 0));
    
-   XLXI_10 : SPI_INTERFACE
-      port map (CLK=>CLK,
-                CLR=>INT,
-                RST=>RST,
-                TX(7 downto 0)=>XLXN_16(7 downto 0),
-                WRT_STROBE=>WRTSTROBE,
-                CS=>DAC_CS,
-                MOSI=>DAC_MOSI,
-                SCLK=>DAC_SCLK,
-                SRST=>DAC_RST);
+   XLXI_14 : register_merger
+      port map (inputv(7 downto 0)=>XLXN_16(7 downto 0),
+                rst=>RST,
+                strobe=>WRTSTROBE,
+                outputv(31 downto 0)=>merged(31 downto 0),
+                ready=>mergeready);
    
 end BEHAVIORAL;
 

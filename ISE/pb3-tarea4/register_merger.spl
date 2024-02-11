@@ -1,0 +1,8 @@
+[Inputs]
+strobe
+rst
+=inputv[7:0]=
+[Outputs]
+ready
+=outputv[31:0]=
+[BiDir]

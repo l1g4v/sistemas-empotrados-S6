@@ -11,16 +11,22 @@ Time resolution is 1 ps
 # isim force add /todo/clk 0 -radix bin -value 1 -radix bin -time 10 ns -repeat 20 ns
 # isim force add /todo/int 0 -radix bin
 # isim force add /todo/rst 1 -radix bin
-# isim force add /todo/rst 1 -radix bin
-# run 1.00us
+# run 40ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # isim force add /todo/rst 0 -radix bin
-# isim force add /todo/rst 0 -radix bin
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
+# run 40ns
+# run 40ns
+# run 40ns
+# run 40ns
+# run 40ns
+# run 40ns
+# run 40ns
+# run 40ns
+# run 40ns
+# run 40ns
+# run 40ns
+# run 40ns
+# run 40ns
+# run 40ns
 # exit 0

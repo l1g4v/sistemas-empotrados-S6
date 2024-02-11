@@ -1,0 +1,5 @@
+vhdtdtfi -prj pb3-tarea4 -o /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/register_merger.vhi -module register_merger -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work register_merger.vhd 
+vhdtdtfi -lib work register_merger.vhd -prj pb3-tarea4 -o register_merger.spl -module register_merger -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w register_merger.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/register_merger.sym 
+vhdtdtfi -lib work register_merger.vhd -prj pb3-tarea4 -o register_merger.spl -module register_merger -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w register_merger.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/register_merger.sym 

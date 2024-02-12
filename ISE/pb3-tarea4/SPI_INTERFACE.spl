@@ -1,9 +1,9 @@
 [Inputs]
 RST
-WRT_STROBE
+ENABLE
 CLK
 CLR
-=TX[7:0]=
+=TX[31:0]=
 [Outputs]
 MOSI
 SCLK

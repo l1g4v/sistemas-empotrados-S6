@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : todo.vhf
--- /___/   /\     Timestamp : 02/10/2024 22:04:30
+-- /___/   /\     Timestamp : 02/12/2024 11:45:23
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -26,15 +26,13 @@ library UNISIM;
 use UNISIM.Vcomponents.ALL;
 
 entity todo is
-   port ( CLK        : in    std_logic; 
-          INT        : in    std_logic; 
-          RST        : in    std_logic; 
-          DAC_CS     : out   std_logic; 
-          DAC_MOSI   : out   std_logic; 
-          DAC_RST    : out   std_logic; 
-          DAC_SCLK   : out   std_logic; 
-          merged     : out   std_logic_vector (31 downto 0); 
-          mergeready : out   std_logic);
+   port ( CLK      : in    std_logic; 
+          INT      : in    std_logic; 
+          RST      : in    std_logic; 
+          DAC_CS   : out   std_logic; 
+          DAC_MOSI : out   std_logic; 
+          DAC_RST  : out   std_logic; 
+          DAC_SCLK : out   std_logic);
 end todo;
 
 architecture BEHAVIORAL of todo is
@@ -45,6 +43,8 @@ architecture BEHAVIORAL of todo is
    signal XLXN_16                   : std_logic_vector (7 downto 0);
    signal XLXN_18                   : std_logic;
    signal XLXN_19                   : std_logic_vector (7 downto 0);
+   signal XLXN_42                   : std_logic_vector (31 downto 0);
+   signal XLXN_43                   : std_logic;
    signal XLXI_8_input_v_openSignal : std_logic_vector (7 downto 0);
    component kcpsm3
       port ( interrupt     : in    std_logic; 
@@ -82,6 +82,18 @@ architecture BEHAVIORAL of todo is
              outputv : out   std_logic_vector (31 downto 0));
    end component;
    
+   component SPI_INTERFACE
+      port ( RST    : in    std_logic; 
+             ENABLE : in    std_logic; 
+             CLK    : in    std_logic; 
+             CLR    : in    std_logic; 
+             TX     : in    std_logic_vector (31 downto 0); 
+             MOSI   : out   std_logic; 
+             SCLK   : out   std_logic; 
+             CS     : out   std_logic; 
+             SRST   : out   std_logic);
+   end component;
+   
 begin
    XLXI_6 : kcpsm3
       port map (clk=>CLK,
@@ -112,8 +124,19 @@ begin
       port map (inputv(7 downto 0)=>XLXN_16(7 downto 0),
                 rst=>RST,
                 strobe=>WRTSTROBE,
-                outputv(31 downto 0)=>merged(31 downto 0),
-                ready=>mergeready);
+                outputv(31 downto 0)=>XLXN_42(31 downto 0),
+                ready=>XLXN_43);
+   
+   XLXI_15 : SPI_INTERFACE
+      port map (CLK=>CLK,
+                CLR=>INT,
+                ENABLE=>XLXN_43,
+                RST=>RST,
+                TX(31 downto 0)=>XLXN_42(31 downto 0),
+                CS=>DAC_CS,
+                MOSI=>DAC_MOSI,
+                SCLK=>DAC_SCLK,
+                SRST=>DAC_RST);
    
 end BEHAVIORAL;
 

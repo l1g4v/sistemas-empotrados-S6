@@ -16,16 +16,15 @@
         <signal name="INT" />
         <signal name="RST" />
         <signal name="CLK" />
-        <signal name="XLXN_27" />
-        <signal name="XLXN_28" />
-        <signal name="XLXN_30" />
         <signal name="DAC_MOSI" />
         <signal name="DAC_SCLK" />
         <signal name="DAC_CS" />
         <signal name="DAC_RST" />
-        <signal name="XLXN_39(7:0)" />
-        <signal name="mergeready" />
-        <signal name="merged(31:0)" />
+        <signal name="XLXN_40" />
+        <signal name="XLXN_41" />
+        <signal name="XLXN_42(31:0)" />
+        <signal name="XLXN_43" />
+        <signal name="XLXN_44" />
         <port polarity="Input" name="INT" />
         <port polarity="Input" name="RST" />
         <port polarity="Input" name="CLK" />
@@ -33,8 +32,6 @@
         <port polarity="Output" name="DAC_SCLK" />
         <port polarity="Output" name="DAC_CS" />
         <port polarity="Output" name="DAC_RST" />
-        <port polarity="Output" name="mergeready" />
-        <port polarity="Output" name="merged(31:0)" />
         <blockdef name="kcpsm3">
             <timestamp>2024-2-10T15:6:14</timestamp>
             <rect width="320" x="64" y="-384" height="384" />
@@ -87,6 +84,20 @@
             <line x2="384" y1="-160" y2="-160" x1="320" />
             <rect width="256" x="64" y="-192" height="256" />
         </blockdef>
+        <blockdef name="SPI_INTERFACE">
+            <timestamp>2024-2-12T17:44:35</timestamp>
+            <line x2="0" y1="288" y2="288" x1="64" />
+            <line x2="0" y1="224" y2="224" x1="64" />
+            <rect width="64" x="0" y="148" height="24" />
+            <line x2="0" y1="160" y2="160" x1="64" />
+            <line x2="384" y1="32" y2="32" x1="320" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <line x2="384" y1="-160" y2="-160" x1="320" />
+            <line x2="384" y1="-96" y2="-96" x1="320" />
+            <line x2="384" y1="-32" y2="-32" x1="320" />
+            <rect width="256" x="64" y="-192" height="576" />
+        </blockdef>
         <block symbolname="kcpsm3" name="XLXI_6">
             <blockpin signalname="INT" name="interrupt" />
             <blockpin signalname="RST" name="reset" />
@@ -115,9 +126,20 @@
         <block symbolname="register_merger" name="XLXI_14">
             <blockpin signalname="WRTSTROBE" name="strobe" />
             <blockpin signalname="RST" name="rst" />
-            <blockpin signalname="mergeready" name="ready" />
+            <blockpin signalname="XLXN_43" name="ready" />
             <blockpin signalname="XLXN_16(7:0)" name="inputv(7:0)" />
-            <blockpin signalname="merged(31:0)" name="outputv(31:0)" />
+            <blockpin signalname="XLXN_42(31:0)" name="outputv(31:0)" />
+        </block>
+        <block symbolname="SPI_INTERFACE" name="XLXI_15">
+            <blockpin signalname="RST" name="RST" />
+            <blockpin signalname="XLXN_43" name="ENABLE" />
+            <blockpin signalname="CLK" name="CLK" />
+            <blockpin signalname="INT" name="CLR" />
+            <blockpin signalname="XLXN_42(31:0)" name="TX(31:0)" />
+            <blockpin signalname="DAC_MOSI" name="MOSI" />
+            <blockpin signalname="DAC_SCLK" name="SCLK" />
+            <blockpin signalname="DAC_CS" name="CS" />
+            <blockpin signalname="DAC_RST" name="SRST" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -178,6 +200,8 @@
             <wire x2="1984" y1="1184" y2="1184" x1="1440" />
             <wire x2="1984" y1="1184" y2="1424" x1="1984" />
             <wire x2="2064" y1="1424" y2="1424" x1="1984" />
+            <wire x2="2064" y1="1424" y2="1440" x1="2064" />
+            <wire x2="2592" y1="1440" y2="1440" x1="2064" />
             <wire x2="1440" y1="1216" y2="1216" x1="1376" />
             <wire x2="1376" y1="1216" y2="1360" x1="1376" />
             <wire x2="1392" y1="1360" y2="1360" x1="1376" />
@@ -189,13 +213,18 @@
             <wire x2="1248" y1="1280" y2="1376" x1="1248" />
             <wire x2="1344" y1="1376" y2="1376" x1="1248" />
             <wire x2="1344" y1="1376" y2="1440" x1="1344" />
-            <wire x2="1392" y1="1440" y2="1440" x1="1344" />
+            <wire x2="1360" y1="1440" y2="1440" x1="1344" />
+            <wire x2="1392" y1="1440" y2="1440" x1="1360" />
+            <wire x2="1360" y1="1440" y2="1888" x1="1360" />
+            <wire x2="2576" y1="1888" y2="1888" x1="1360" />
             <wire x2="1328" y1="1440" y2="1440" x1="1264" />
             <wire x2="1344" y1="1440" y2="1440" x1="1328" />
             <wire x2="1328" y1="1440" y2="1744" x1="1328" />
             <wire x2="1952" y1="1744" y2="1744" x1="1328" />
             <wire x2="1952" y1="1616" y2="1744" x1="1952" />
             <wire x2="2144" y1="1616" y2="1616" x1="1952" />
+            <wire x2="2576" y1="1760" y2="1888" x1="2576" />
+            <wire x2="2592" y1="1760" y2="1760" x1="2576" />
         </branch>
         <branch name="CLK">
             <wire x2="864" y1="1920" y2="1920" x1="816" />
@@ -212,6 +241,9 @@
             <wire x2="2016" y1="1728" y2="1728" x1="1312" />
             <wire x2="2016" y1="1232" y2="1360" x1="2016" />
             <wire x2="2016" y1="1360" y2="1728" x1="2016" />
+            <wire x2="2304" y1="1232" y2="1232" x1="2016" />
+            <wire x2="2304" y1="1232" y2="1376" x1="2304" />
+            <wire x2="2592" y1="1376" y2="1376" x1="2304" />
         </branch>
         <iomarker fontsize="28" x="1264" y="1520" name="CLK" orien="R180" />
         <iomarker fontsize="28" x="1264" y="1440" name="RST" orien="R180" />
@@ -232,17 +264,19 @@
         <iomarker fontsize="28" x="3008" y="1440" name="DAC_SCLK" orien="R0" />
         <iomarker fontsize="28" x="3008" y="1504" name="DAC_CS" orien="R0" />
         <iomarker fontsize="28" x="3008" y="1568" name="DAC_RST" orien="R0" />
-        <branch name="mergeready">
-            <wire x2="2544" y1="1552" y2="1552" x1="2528" />
-            <wire x2="2544" y1="1552" y2="1616" x1="2544" />
-            <wire x2="2560" y1="1616" y2="1616" x1="2544" />
-        </branch>
-        <iomarker fontsize="28" x="2560" y="1616" name="mergeready" orien="R0" />
-        <branch name="merged(31:0)">
-            <wire x2="2560" y1="1744" y2="1744" x1="2528" />
-        </branch>
-        <iomarker fontsize="28" x="2560" y="1744" name="merged(31:0)" orien="R0" />
         <instance x="2144" y="1712" name="XLXI_14" orien="R0">
         </instance>
+        <instance x="2592" y="1536" name="XLXI_15" orien="R0">
+        </instance>
+        <branch name="XLXN_42(31:0)">
+            <wire x2="2560" y1="1744" y2="1744" x1="2528" />
+            <wire x2="2560" y1="1696" y2="1744" x1="2560" />
+            <wire x2="2592" y1="1696" y2="1696" x1="2560" />
+        </branch>
+        <branch name="XLXN_43">
+            <wire x2="2544" y1="1552" y2="1552" x1="2528" />
+            <wire x2="2544" y1="1552" y2="1824" x1="2544" />
+            <wire x2="2592" y1="1824" y2="1824" x1="2544" />
+        </branch>
     </sheet>
 </drawing>

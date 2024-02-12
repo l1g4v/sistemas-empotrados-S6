@@ -3,6 +3,7 @@ ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 12
 Turning on mult-threading, number of parallel sub-compilation jobs: 24 
 Determining compilation order of HDL files
+Parsing VHDL file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.vhd" into library work
 Parsing VHDL file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/register_merger.vhd" into library work
 Parsing VHDL file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/program.vhdl" into library work
 Parsing VHDL file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/kcpsm3.vhd" into library work
@@ -10,8 +11,8 @@ Parsing VHDL file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tare
 Parsing VHDL file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.vhf" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 114416 KB
-Fuse CPU Usage: 930 ms
+Fuse Memory Usage: 114448 KB
+Fuse CPU Usage: 1050 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -44,11 +45,11 @@ Compiling architecture behavioral of entity io_port [io_port_default]
 Compiling architecture ramb16_s18_v of entity RAMB16_S18 [\RAMB16_S18("0000000000000000000...]
 Compiling architecture structure of entity program [program_default]
 Compiling architecture behavioral of entity register_merger [register_merger_default]
+Compiling architecture behavioral of entity SPI_INTERFACE [spi_interface_default]
 Compiling architecture behavioral of entity todo
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 119 VHDL Units
+Compiled 121 VHDL Units
 Built simulation executable /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo_isim_beh.exe
-Fuse Memory Usage: 1753288 KB
-Fuse CPU Usage: 1260 ms
-GCC CPU Usage: 1920 ms
+Fuse Memory Usage: 1753316 KB
+Fuse CPU Usage: 1380 ms
+GCC CPU Usage: 2050 ms

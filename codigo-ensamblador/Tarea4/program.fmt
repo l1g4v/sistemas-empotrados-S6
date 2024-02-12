@@ -1,14 +1,20 @@
                       jump MAIN
                       include "../utils/delay.asm"
 
-                MAIN: load s5, 01
+                MAIN: load s5, F0
                       output s5, 00
-                      load s5, 02
+                      load s5, 0F
                       output s5, 00
-                      load s5, 03
+                      load s5, F0
                       output s5, 00
-                      load s5, 04
+                      load s5, 0F
                       output s5, 00
                       call delay_1ms
-                      jump MAIN
+                      call delay_1ms
+                      load s5, 00
+                      output s5, 00
+                 lop:
+                      load s0, s0
+
+                      jump lop
 

@@ -33,7 +33,7 @@ entity register_merger is
     Port ( inputv : in  STD_LOGIC_VECTOR (7 downto 0);
            strobe : in  STD_LOGIC;
            rst : in  STD_LOGIC;
-			  clk: in STD_LOGIC;
+			  --clk: in STD_LOGIC;
 			  ready: out STD_LOGIC;
            outputv : out  STD_LOGIC_VECTOR (31 downto 0));
 end register_merger;
@@ -41,7 +41,7 @@ end register_merger;
 architecture Behavioral of register_merger is
 begin
 
-process(strobe, clk)
+process(strobe)
 	variable payload: STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
 	variable up: natural range 0 to 31 := 7;
 	variable down: natural range 0 to 31 := 0;
@@ -52,7 +52,8 @@ begin
 		up := 7;
 		down := 0;
 		count := 0;
-	elsif (rising_edge(strobe) and count < 4) then	
+		ready <= '0';
+	elsif (falling_edge(strobe) and count < 4) then	
 		count := count + 1;
 		payload(up downto down) := inputv;
 		up := up + 8;

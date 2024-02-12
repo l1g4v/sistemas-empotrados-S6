@@ -13,7 +13,8 @@
 
                       ;from here everything will use s5 register up to sF
                       ;s5 will hold the data to be sent
-         LCD_E_PULSE: xor s5, 40
+         LCD_E_PULSE: call delay_1us
+                      xor s5, 40
                       output s5, LCD_PORT
                       call delay_1us
                       xor s5, 40
@@ -59,14 +60,14 @@
                       load s5, 00                    ;high nibble 0x0C
                       call LCD_CMD
                       call delay_1us
-                      load s5, 06                    ;lower nibble 0x06
+                      load s5, 0C                    ;lower nibble 0x06
                       call LCD_CMD
                       call delay_40us
 
                       load s5, 00                    ;high nibble 0x0C
                       call LCD_CMD
                       call delay_1us
-                      load s5, 0C                    ;lower nibble 0x0C
+                      load s5, 06                    ;lower nibble 0x0C
                       call LCD_CMD
                       call delay_40us
 
@@ -100,56 +101,63 @@
                       call delay_40us
                       return
 
+           LCD_CHARA: or s5, 20
+                      output s5, LCD_PORT
+                      call LCD_E_PULSE
+                      return
 
 
                 MAIN: load s5, 80
                       output s5, LCD_PORT
+                      call delay_1s
                       call LCD_INIT
 
 
-                      load s5, 08                    ;high nibble 0x28
-                      call LCD_CMD
+                      load s5, 04                    ;high nibble 0x28
+                      call LCD_CHARA
                       call delay_1us
                       load s5, 0A                    ;lower nibble 0x28
-                      call LCD_CMD
+                      call LCD_CHARA
                       call delay_40us
 
                       load s5, 05                    ;high nibble 0x0C
-                      call LCD_CMD
+                      call LCD_CHARA
                       call delay_1us
                       load s5, 0E                    ;lower nibble 0x06
-                      call LCD_CMD
+                      call LCD_CHARA
                       call delay_40us
 
                       load s5, 03                    ;high nibble 0x0C
-                      call LCD_CMD
+                      call LCD_CHARA
                       call delay_1us
                       load s5, 02                    ;lower nibble 0x0C
-                      call LCD_CMD
+                      call LCD_CHARA
                       call delay_40us
 
-                      load s5, 08                    ;high nibble 0x0C
-                      call LCD_CMD
+                      load s5, 04                    ;high nibble 0x0C
+                      call LCD_CHARA
                       call delay_1us
                       load s5, 01                    ;lower nibble 0x0C
-                      call LCD_CMD
+                      call LCD_CHARA
                       call delay_40us
 
-                      load s5, 08                    ;high nibble 0x0C
-                      call LCD_CMD
+                      load s5, 04                    ;high nibble 0x0C
+                      call LCD_CHARA
                       call delay_1us
-                      load s5, 08                    ;lower nibble 0x0C
-                      call LCD_CMD
+                      load s5, 04                    ;lower nibble 0x0C
+                      call LCD_CHARA
                       call delay_40us
 
-                      load s5, 0C                    ;high nibble 0x0C
-                      call LCD_CMD
+                      load s5, 04                    ;high nibble 0x0C
+                      call LCD_CHARA
                       call delay_1us
-                      load s5, 08                    ;lower nibble 0x0C
-                      call LCD_CMD
+                      load s5, 0C                    ;lower nibble 0x0C
+                      call LCD_CHARA
                       call delay_40us
 
                       call delay_1us
-                      jump MAIN
+               loopp:
+                      load s0, s0
+                      jump loopp
 
 

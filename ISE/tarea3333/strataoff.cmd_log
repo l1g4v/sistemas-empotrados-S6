@@ -1,0 +1,4 @@
+vhdtdtfi -lib work strataoff.vhd -prj tarea3333 -o strataoff.spl -module strataoff -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e strataoff.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/tarea3333/strataoff.sym 
+vhdtdtfi -lib work strataoff.vhd -prj tarea3333 -o strataoff.spl -module strataoff -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w strataoff.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/tarea3333/strataoff.sym 

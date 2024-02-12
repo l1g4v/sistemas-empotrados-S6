@@ -38,8 +38,8 @@
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="kcpsm3.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="kcpsm3.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="netgen"/>
-    <file xil_pn:branch="PostSynthSim" xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/synthesis/todo_synthesis.nlf"/>
-    <file xil_pn:branch="PostSynthSim" xil_pn:fileType="FILE_VHDL" xil_pn:name="netgen/synthesis/todo_synthesis.vhd"/>
+    <file xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/synthesis/todo_synthesis.nlf"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="netgen/synthesis/todo_synthesis.vhd"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="program.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="program.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="register_merger.prj"/>
@@ -118,7 +118,7 @@
     </transform>
     <transform xil_pn:end_ts="1707624816" xil_pn:in_ck="1001239670708689803" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5022185803380635375" xil_pn:start_ts="1707624814">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -129,7 +129,7 @@
     </transform>
     <transform xil_pn:end_ts="1707624816" xil_pn:in_ck="5905428033507543365" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3593034686466236409" xil_pn:start_ts="1707624816">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -191,7 +191,7 @@
     </transform>
     <transform xil_pn:end_ts="1707624809" xil_pn:in_ck="5091139282812" xil_pn:name="TRAN_postSynthesisSimModel" xil_pn:prop_ck="4001625514494026696" xil_pn:start_ts="1707624807">
       <status xil_pn:value="AbortedRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>

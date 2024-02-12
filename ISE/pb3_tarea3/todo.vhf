@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : todo.vhf
--- /___/   /\     Timestamp : 02/10/2024 09:14:25
+-- /___/   /\     Timestamp : 02/12/2024 07:43:23
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -56,12 +56,6 @@ architecture BEHAVIORAL of todo is
              out_port      : out   std_logic_vector (7 downto 0));
    end component;
    
-   component program
-      port ( Clk         : in    std_logic; 
-             Address     : in    std_logic_vector (9 downto 0); 
-             Instruction : out   std_logic_vector (17 downto 0));
-   end component;
-   
    component io_port
       port ( enable   : in    std_logic; 
              rst      : in    std_logic; 
@@ -72,6 +66,12 @@ architecture BEHAVIORAL of todo is
    
    component strataoff
       port ( op : out   std_logic);
+   end component;
+   
+   component program
+      port ( Clk         : in    std_logic; 
+             Address     : in    std_logic_vector (9 downto 0); 
+             Instruction : out   std_logic_vector (17 downto 0));
    end component;
    
 begin
@@ -87,11 +87,6 @@ begin
                 port_id(7 downto 0)=>XLXN_9(7 downto 0),
                 read_strobe=>XLXN_5,
                 write_strobe=>XLXN_6);
-   
-   XLXI_2 : program
-      port map (Address(9 downto 0)=>XLXN_4(9 downto 0),
-                Clk=>CLK,
-                Instruction(17 downto 0)=>XLXN_2(17 downto 0));
    
    XLXI_3 : io_port
       port map (dir(7 downto 0)=>XLXN_9(7 downto 0),
@@ -109,6 +104,11 @@ begin
    
    XLXI_5 : strataoff
       port map (op=>SF_CE0);
+   
+   XLXI_6 : program
+      port map (Address(9 downto 0)=>XLXN_4(9 downto 0),
+                Clk=>CLK,
+                Instruction(17 downto 0)=>XLXN_2(17 downto 0));
    
 end BEHAVIORAL;
 

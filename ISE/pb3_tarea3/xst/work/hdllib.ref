@@ -1,0 +1,11 @@
+EN io_port NULL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea3/io_port.vhd sub00/vhpl05 1707745408
+AR todo behavioral /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea3/todo.vhf sub00/vhpl10 1707745416
+EN program NULL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea3/program.vhdl sub00/vhpl03 1707745413
+AR io_port behavioral /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea3/io_port.vhd sub00/vhpl06 1707745409
+PH program_pkg NULL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea3/program.vhdl sub00/vhpl02 1707745412
+EN kcpsm3 NULL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea3/kcpsm3.vhd sub00/vhpl00 1707745406
+AR strataoff behavioral /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea3/strataoff.vhd sub00/vhpl08 1707745411
+EN todo NULL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea3/todo.vhf sub00/vhpl09 1707745415
+EN strataoff NULL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea3/strataoff.vhd sub00/vhpl07 1707745410
+AR program structure /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea3/program.vhdl sub00/vhpl04 1707745414
+AR kcpsm3 low_level_definition /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3_tarea3/kcpsm3.vhd sub00/vhpl01 1707745407

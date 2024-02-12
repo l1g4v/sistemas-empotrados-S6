@@ -1,0 +1,2 @@
+vhdtdtfi -lib work io_port.vhd -prj tarea3333 -o io_port.spl -module io_port -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w io_port.spl /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/tarea3333/io_port.sym 

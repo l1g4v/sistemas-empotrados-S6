@@ -1,0 +1,561 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml todo.twx todo.ncd -o todo.twr todo.pcf -ucf todo.ucf
+
+Design file:              todo.ncd
+Physical constraint file: todo.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "CLK_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 5605 paths analyzed, 847 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  10.387ns.
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_1/arith_loop[7].msb_arith.arith_carry_flop (SLICE_X67Y71.CIN), 129 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     9.613ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_2/rom_1024_x_18.A (RAM)
+  Destination:          XLXI_1/arith_loop[7].msb_arith.arith_carry_flop (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.387ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_2/rom_1024_x_18.A to XLXI_1/arith_loop[7].msb_arith.arith_carry_flop
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y8.DOA5     Tbcko                 2.812   XLXI_2/rom_1024_x_18
+                                                       XLXI_2/rom_1024_x_18.A
+    SLICE_X64Y74.F2      net (fanout=10)       1.657   XLXN_5<5>
+    SLICE_X64Y74.X       Tilo                  0.759   XLXI_1/sy<3>
+                                                       XLXI_1/reg_loop[3].register_bit.SLICEM_F
+    SLICE_X65Y75.G4      net (fanout=1)        0.024   XLXI_1/sy<3>
+    SLICE_X65Y75.Y       Tilo                  0.704   XLXI_1/logical_result<3>
+                                                       XLXI_1/reg_loop[3].operand_select_mux
+    SLICE_X67Y69.F1      net (fanout=35)       2.149   XLXN_9<3>
+    SLICE_X67Y69.COUT    Topcyf                1.162   XLXI_1/arith_result<3>
+                                                       XLXI_1/arith_loop[3].arith_lut
+                                                       XLXI_1/arith_loop[3].mid_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[4].mid_arith.arith_muxcy
+    SLICE_X67Y70.CIN     net (fanout=1)        0.000   XLXI_1/arith_internal_carry<4>
+    SLICE_X67Y70.COUT    Tbyp                  0.118   XLXI_1/arith_result<5>
+                                                       XLXI_1/arith_loop[5].mid_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[6].mid_arith.arith_muxcy
+    SLICE_X67Y71.CIN     net (fanout=1)        0.000   XLXI_1/arith_internal_carry<6>
+    SLICE_X67Y71.CLK     Tcinck                1.002   XLXI_1/arith_result<7>
+                                                       XLXI_1/arith_loop[7].msb_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[7].msb_arith.arith_carry_out_xor
+                                                       XLXI_1/arith_loop[7].msb_arith.arith_carry_flop
+    -------------------------------------------------  ---------------------------
+    Total                                     10.387ns (6.557ns logic, 3.830ns route)
+                                                       (63.1% logic, 36.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     10.170ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_2/rom_1024_x_18.A (RAM)
+  Destination:          XLXI_1/arith_loop[7].msb_arith.arith_carry_flop (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.830ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_2/rom_1024_x_18.A to XLXI_1/arith_loop[7].msb_arith.arith_carry_flop
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y8.DOA6     Tbcko                 2.812   XLXI_2/rom_1024_x_18
+                                                       XLXI_2/rom_1024_x_18.A
+    SLICE_X64Y74.F3      net (fanout=10)       1.100   XLXN_5<6>
+    SLICE_X64Y74.X       Tilo                  0.759   XLXI_1/sy<3>
+                                                       XLXI_1/reg_loop[3].register_bit.SLICEM_F
+    SLICE_X65Y75.G4      net (fanout=1)        0.024   XLXI_1/sy<3>
+    SLICE_X65Y75.Y       Tilo                  0.704   XLXI_1/logical_result<3>
+                                                       XLXI_1/reg_loop[3].operand_select_mux
+    SLICE_X67Y69.F1      net (fanout=35)       2.149   XLXN_9<3>
+    SLICE_X67Y69.COUT    Topcyf                1.162   XLXI_1/arith_result<3>
+                                                       XLXI_1/arith_loop[3].arith_lut
+                                                       XLXI_1/arith_loop[3].mid_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[4].mid_arith.arith_muxcy
+    SLICE_X67Y70.CIN     net (fanout=1)        0.000   XLXI_1/arith_internal_carry<4>
+    SLICE_X67Y70.COUT    Tbyp                  0.118   XLXI_1/arith_result<5>
+                                                       XLXI_1/arith_loop[5].mid_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[6].mid_arith.arith_muxcy
+    SLICE_X67Y71.CIN     net (fanout=1)        0.000   XLXI_1/arith_internal_carry<6>
+    SLICE_X67Y71.CLK     Tcinck                1.002   XLXI_1/arith_result<7>
+                                                       XLXI_1/arith_loop[7].msb_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[7].msb_arith.arith_carry_out_xor
+                                                       XLXI_1/arith_loop[7].msb_arith.arith_carry_flop
+    -------------------------------------------------  ---------------------------
+    Total                                      9.830ns (6.557ns logic, 3.273ns route)
+                                                       (66.7% logic, 33.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     10.498ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_2/rom_1024_x_18.A (RAM)
+  Destination:          XLXI_1/arith_loop[7].msb_arith.arith_carry_flop (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.502ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_2/rom_1024_x_18.A to XLXI_1/arith_loop[7].msb_arith.arith_carry_flop
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y8.DOA4     Tbcko                 2.812   XLXI_2/rom_1024_x_18
+                                                       XLXI_2/rom_1024_x_18.A
+    SLICE_X64Y74.F1      net (fanout=10)       0.772   XLXN_5<4>
+    SLICE_X64Y74.X       Tilo                  0.759   XLXI_1/sy<3>
+                                                       XLXI_1/reg_loop[3].register_bit.SLICEM_F
+    SLICE_X65Y75.G4      net (fanout=1)        0.024   XLXI_1/sy<3>
+    SLICE_X65Y75.Y       Tilo                  0.704   XLXI_1/logical_result<3>
+                                                       XLXI_1/reg_loop[3].operand_select_mux
+    SLICE_X67Y69.F1      net (fanout=35)       2.149   XLXN_9<3>
+    SLICE_X67Y69.COUT    Topcyf                1.162   XLXI_1/arith_result<3>
+                                                       XLXI_1/arith_loop[3].arith_lut
+                                                       XLXI_1/arith_loop[3].mid_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[4].mid_arith.arith_muxcy
+    SLICE_X67Y70.CIN     net (fanout=1)        0.000   XLXI_1/arith_internal_carry<4>
+    SLICE_X67Y70.COUT    Tbyp                  0.118   XLXI_1/arith_result<5>
+                                                       XLXI_1/arith_loop[5].mid_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[6].mid_arith.arith_muxcy
+    SLICE_X67Y71.CIN     net (fanout=1)        0.000   XLXI_1/arith_internal_carry<6>
+    SLICE_X67Y71.CLK     Tcinck                1.002   XLXI_1/arith_result<7>
+                                                       XLXI_1/arith_loop[7].msb_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[7].msb_arith.arith_carry_out_xor
+                                                       XLXI_1/arith_loop[7].msb_arith.arith_carry_flop
+    -------------------------------------------------  ---------------------------
+    Total                                      9.502ns (6.557ns logic, 2.945ns route)
+                                                       (69.0% logic, 31.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_1/arith_loop[6].arith_flop (SLICE_X67Y70.CIN), 93 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     9.731ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_2/rom_1024_x_18.A (RAM)
+  Destination:          XLXI_1/arith_loop[6].arith_flop (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.269ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_2/rom_1024_x_18.A to XLXI_1/arith_loop[6].arith_flop
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y8.DOA5     Tbcko                 2.812   XLXI_2/rom_1024_x_18
+                                                       XLXI_2/rom_1024_x_18.A
+    SLICE_X64Y74.F2      net (fanout=10)       1.657   XLXN_5<5>
+    SLICE_X64Y74.X       Tilo                  0.759   XLXI_1/sy<3>
+                                                       XLXI_1/reg_loop[3].register_bit.SLICEM_F
+    SLICE_X65Y75.G4      net (fanout=1)        0.024   XLXI_1/sy<3>
+    SLICE_X65Y75.Y       Tilo                  0.704   XLXI_1/logical_result<3>
+                                                       XLXI_1/reg_loop[3].operand_select_mux
+    SLICE_X67Y69.F1      net (fanout=35)       2.149   XLXN_9<3>
+    SLICE_X67Y69.COUT    Topcyf                1.162   XLXI_1/arith_result<3>
+                                                       XLXI_1/arith_loop[3].arith_lut
+                                                       XLXI_1/arith_loop[3].mid_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[4].mid_arith.arith_muxcy
+    SLICE_X67Y70.CIN     net (fanout=1)        0.000   XLXI_1/arith_internal_carry<4>
+    SLICE_X67Y70.CLK     Tcinck                1.002   XLXI_1/arith_result<5>
+                                                       XLXI_1/arith_loop[5].mid_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[6].mid_arith.arith_xor
+                                                       XLXI_1/arith_loop[6].arith_flop
+    -------------------------------------------------  ---------------------------
+    Total                                     10.269ns (6.439ns logic, 3.830ns route)
+                                                       (62.7% logic, 37.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     10.288ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_2/rom_1024_x_18.A (RAM)
+  Destination:          XLXI_1/arith_loop[6].arith_flop (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.712ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_2/rom_1024_x_18.A to XLXI_1/arith_loop[6].arith_flop
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y8.DOA6     Tbcko                 2.812   XLXI_2/rom_1024_x_18
+                                                       XLXI_2/rom_1024_x_18.A
+    SLICE_X64Y74.F3      net (fanout=10)       1.100   XLXN_5<6>
+    SLICE_X64Y74.X       Tilo                  0.759   XLXI_1/sy<3>
+                                                       XLXI_1/reg_loop[3].register_bit.SLICEM_F
+    SLICE_X65Y75.G4      net (fanout=1)        0.024   XLXI_1/sy<3>
+    SLICE_X65Y75.Y       Tilo                  0.704   XLXI_1/logical_result<3>
+                                                       XLXI_1/reg_loop[3].operand_select_mux
+    SLICE_X67Y69.F1      net (fanout=35)       2.149   XLXN_9<3>
+    SLICE_X67Y69.COUT    Topcyf                1.162   XLXI_1/arith_result<3>
+                                                       XLXI_1/arith_loop[3].arith_lut
+                                                       XLXI_1/arith_loop[3].mid_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[4].mid_arith.arith_muxcy
+    SLICE_X67Y70.CIN     net (fanout=1)        0.000   XLXI_1/arith_internal_carry<4>
+    SLICE_X67Y70.CLK     Tcinck                1.002   XLXI_1/arith_result<5>
+                                                       XLXI_1/arith_loop[5].mid_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[6].mid_arith.arith_xor
+                                                       XLXI_1/arith_loop[6].arith_flop
+    -------------------------------------------------  ---------------------------
+    Total                                      9.712ns (6.439ns logic, 3.273ns route)
+                                                       (66.3% logic, 33.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     10.616ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_2/rom_1024_x_18.A (RAM)
+  Destination:          XLXI_1/arith_loop[6].arith_flop (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.384ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_2/rom_1024_x_18.A to XLXI_1/arith_loop[6].arith_flop
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y8.DOA4     Tbcko                 2.812   XLXI_2/rom_1024_x_18
+                                                       XLXI_2/rom_1024_x_18.A
+    SLICE_X64Y74.F1      net (fanout=10)       0.772   XLXN_5<4>
+    SLICE_X64Y74.X       Tilo                  0.759   XLXI_1/sy<3>
+                                                       XLXI_1/reg_loop[3].register_bit.SLICEM_F
+    SLICE_X65Y75.G4      net (fanout=1)        0.024   XLXI_1/sy<3>
+    SLICE_X65Y75.Y       Tilo                  0.704   XLXI_1/logical_result<3>
+                                                       XLXI_1/reg_loop[3].operand_select_mux
+    SLICE_X67Y69.F1      net (fanout=35)       2.149   XLXN_9<3>
+    SLICE_X67Y69.COUT    Topcyf                1.162   XLXI_1/arith_result<3>
+                                                       XLXI_1/arith_loop[3].arith_lut
+                                                       XLXI_1/arith_loop[3].mid_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[4].mid_arith.arith_muxcy
+    SLICE_X67Y70.CIN     net (fanout=1)        0.000   XLXI_1/arith_internal_carry<4>
+    SLICE_X67Y70.CLK     Tcinck                1.002   XLXI_1/arith_result<5>
+                                                       XLXI_1/arith_loop[5].mid_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[6].mid_arith.arith_xor
+                                                       XLXI_1/arith_loop[6].arith_flop
+    -------------------------------------------------  ---------------------------
+    Total                                      9.384ns (6.439ns logic, 2.945ns route)
+                                                       (68.6% logic, 31.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_1/arith_loop[7].arith_flop (SLICE_X67Y71.CIN), 129 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     10.020ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_2/rom_1024_x_18.A (RAM)
+  Destination:          XLXI_1/arith_loop[7].arith_flop (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.980ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_2/rom_1024_x_18.A to XLXI_1/arith_loop[7].arith_flop
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y8.DOA5     Tbcko                 2.812   XLXI_2/rom_1024_x_18
+                                                       XLXI_2/rom_1024_x_18.A
+    SLICE_X64Y74.F2      net (fanout=10)       1.657   XLXN_5<5>
+    SLICE_X64Y74.X       Tilo                  0.759   XLXI_1/sy<3>
+                                                       XLXI_1/reg_loop[3].register_bit.SLICEM_F
+    SLICE_X65Y75.G4      net (fanout=1)        0.024   XLXI_1/sy<3>
+    SLICE_X65Y75.Y       Tilo                  0.704   XLXI_1/logical_result<3>
+                                                       XLXI_1/reg_loop[3].operand_select_mux
+    SLICE_X67Y69.F1      net (fanout=35)       2.149   XLXN_9<3>
+    SLICE_X67Y69.COUT    Topcyf                1.162   XLXI_1/arith_result<3>
+                                                       XLXI_1/arith_loop[3].arith_lut
+                                                       XLXI_1/arith_loop[3].mid_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[4].mid_arith.arith_muxcy
+    SLICE_X67Y70.CIN     net (fanout=1)        0.000   XLXI_1/arith_internal_carry<4>
+    SLICE_X67Y70.COUT    Tbyp                  0.118   XLXI_1/arith_result<5>
+                                                       XLXI_1/arith_loop[5].mid_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[6].mid_arith.arith_muxcy
+    SLICE_X67Y71.CIN     net (fanout=1)        0.000   XLXI_1/arith_internal_carry<6>
+    SLICE_X67Y71.CLK     Tcinck                0.595   XLXI_1/arith_result<7>
+                                                       XLXI_1/arith_loop[7].msb_arith.arith_xor
+                                                       XLXI_1/arith_loop[7].arith_flop
+    -------------------------------------------------  ---------------------------
+    Total                                      9.980ns (6.150ns logic, 3.830ns route)
+                                                       (61.6% logic, 38.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     10.577ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_2/rom_1024_x_18.A (RAM)
+  Destination:          XLXI_1/arith_loop[7].arith_flop (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.423ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_2/rom_1024_x_18.A to XLXI_1/arith_loop[7].arith_flop
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y8.DOA6     Tbcko                 2.812   XLXI_2/rom_1024_x_18
+                                                       XLXI_2/rom_1024_x_18.A
+    SLICE_X64Y74.F3      net (fanout=10)       1.100   XLXN_5<6>
+    SLICE_X64Y74.X       Tilo                  0.759   XLXI_1/sy<3>
+                                                       XLXI_1/reg_loop[3].register_bit.SLICEM_F
+    SLICE_X65Y75.G4      net (fanout=1)        0.024   XLXI_1/sy<3>
+    SLICE_X65Y75.Y       Tilo                  0.704   XLXI_1/logical_result<3>
+                                                       XLXI_1/reg_loop[3].operand_select_mux
+    SLICE_X67Y69.F1      net (fanout=35)       2.149   XLXN_9<3>
+    SLICE_X67Y69.COUT    Topcyf                1.162   XLXI_1/arith_result<3>
+                                                       XLXI_1/arith_loop[3].arith_lut
+                                                       XLXI_1/arith_loop[3].mid_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[4].mid_arith.arith_muxcy
+    SLICE_X67Y70.CIN     net (fanout=1)        0.000   XLXI_1/arith_internal_carry<4>
+    SLICE_X67Y70.COUT    Tbyp                  0.118   XLXI_1/arith_result<5>
+                                                       XLXI_1/arith_loop[5].mid_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[6].mid_arith.arith_muxcy
+    SLICE_X67Y71.CIN     net (fanout=1)        0.000   XLXI_1/arith_internal_carry<6>
+    SLICE_X67Y71.CLK     Tcinck                0.595   XLXI_1/arith_result<7>
+                                                       XLXI_1/arith_loop[7].msb_arith.arith_xor
+                                                       XLXI_1/arith_loop[7].arith_flop
+    -------------------------------------------------  ---------------------------
+    Total                                      9.423ns (6.150ns logic, 3.273ns route)
+                                                       (65.3% logic, 34.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     10.905ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_2/rom_1024_x_18.A (RAM)
+  Destination:          XLXI_1/arith_loop[7].arith_flop (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.095ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_2/rom_1024_x_18.A to XLXI_1/arith_loop[7].arith_flop
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y8.DOA4     Tbcko                 2.812   XLXI_2/rom_1024_x_18
+                                                       XLXI_2/rom_1024_x_18.A
+    SLICE_X64Y74.F1      net (fanout=10)       0.772   XLXN_5<4>
+    SLICE_X64Y74.X       Tilo                  0.759   XLXI_1/sy<3>
+                                                       XLXI_1/reg_loop[3].register_bit.SLICEM_F
+    SLICE_X65Y75.G4      net (fanout=1)        0.024   XLXI_1/sy<3>
+    SLICE_X65Y75.Y       Tilo                  0.704   XLXI_1/logical_result<3>
+                                                       XLXI_1/reg_loop[3].operand_select_mux
+    SLICE_X67Y69.F1      net (fanout=35)       2.149   XLXN_9<3>
+    SLICE_X67Y69.COUT    Topcyf                1.162   XLXI_1/arith_result<3>
+                                                       XLXI_1/arith_loop[3].arith_lut
+                                                       XLXI_1/arith_loop[3].mid_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[4].mid_arith.arith_muxcy
+    SLICE_X67Y70.CIN     net (fanout=1)        0.000   XLXI_1/arith_internal_carry<4>
+    SLICE_X67Y70.COUT    Tbyp                  0.118   XLXI_1/arith_result<5>
+                                                       XLXI_1/arith_loop[5].mid_arith.arith_muxcy
+                                                       XLXI_1/arith_loop[6].mid_arith.arith_muxcy
+    SLICE_X67Y71.CIN     net (fanout=1)        0.000   XLXI_1/arith_internal_carry<6>
+    SLICE_X67Y71.CLK     Tcinck                0.595   XLXI_1/arith_result<7>
+                                                       XLXI_1/arith_loop[7].msb_arith.arith_xor
+                                                       XLXI_1/arith_loop[7].arith_flop
+    -------------------------------------------------  ---------------------------
+    Total                                      9.095ns (6.150ns logic, 2.945ns route)
+                                                       (67.6% logic, 32.4% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "CLK_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_1/stack_ram_loop[0].stack_bit/G (SLICE_X50Y58.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.753ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_1/pc_loop[0].register_bit (FF)
+  Destination:          XLXI_1/stack_ram_loop[0].stack_bit/G (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.754ns (Levels of Logic = 1)
+  Clock Path Skew:      0.001ns (0.056 - 0.055)
+  Source Clock:         CLK_BUFGP rising at 20.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: XLXI_1/pc_loop[0].register_bit to XLXI_1/stack_ram_loop[0].stack_bit/G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y58.XQ      Tcko                  0.473   XLXN_7<0>
+                                                       XLXI_1/pc_loop[0].register_bit
+    SLICE_X50Y58.BY      net (fanout=3)        0.408   XLXN_7<0>
+    SLICE_X50Y58.CLK     Tdh         (-Th)     0.127   XLXI_1/stack_pop_data<0>
+                                                       XLXI_1/stack_ram_loop[0].stack_bit/G
+    -------------------------------------------------  ---------------------------
+    Total                                      0.754ns (0.346ns logic, 0.408ns route)
+                                                       (45.9% logic, 54.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_1/stack_ram_loop[8].stack_bit/G (SLICE_X48Y63.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.753ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_1/pc_loop[8].register_bit (FF)
+  Destination:          XLXI_1/stack_ram_loop[8].stack_bit/G (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.753ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 20.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: XLXI_1/pc_loop[8].register_bit to XLXI_1/stack_ram_loop[8].stack_bit/G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y62.XQ      Tcko                  0.473   XLXN_7<8>
+                                                       XLXI_1/pc_loop[8].register_bit
+    SLICE_X48Y63.BY      net (fanout=3)        0.407   XLXN_7<8>
+    SLICE_X48Y63.CLK     Tdh         (-Th)     0.127   XLXI_1/stack_pop_data<8>
+                                                       XLXI_1/stack_ram_loop[8].stack_bit/G
+    -------------------------------------------------  ---------------------------
+    Total                                      0.753ns (0.346ns logic, 0.407ns route)
+                                                       (45.9% logic, 54.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_1/stack_ram_loop[7].stack_bit/G (SLICE_X48Y59.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.764ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_1/pc_loop[7].register_bit (FF)
+  Destination:          XLXI_1/stack_ram_loop[7].stack_bit/G (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.766ns (Levels of Logic = 1)
+  Clock Path Skew:      0.002ns (0.005 - 0.003)
+  Source Clock:         CLK_BUFGP rising at 20.000ns
+  Destination Clock:    CLK_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: XLXI_1/pc_loop[7].register_bit to XLXI_1/stack_ram_loop[7].stack_bit/G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y61.YQ      Tcko                  0.470   XLXN_7<6>
+                                                       XLXI_1/pc_loop[7].register_bit
+    SLICE_X48Y59.BY      net (fanout=3)        0.423   XLXN_7<7>
+    SLICE_X48Y59.CLK     Tdh         (-Th)     0.127   XLXI_1/stack_pop_data<7>
+                                                       XLXI_1/stack_ram_loop[7].stack_bit/G
+    -------------------------------------------------  ---------------------------
+    Total                                      0.766ns (0.343ns logic, 0.423ns route)
+                                                       (44.8% logic, 55.2% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "CLK_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 16.824ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 1.588ns (Tbpwl)
+  Physical resource: XLXI_2/rom_1024_x_18/CLKA
+  Logical resource: XLXI_2/rom_1024_x_18.A/CLKA
+  Location pin: RAMB16_X1Y8.CLKA
+  Clock network: CLK_BUFGP
+--------------------------------------------------------------------------------
+Slack: 16.824ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 1.588ns (Tbpwh)
+  Physical resource: XLXI_2/rom_1024_x_18/CLKA
+  Logical resource: XLXI_2/rom_1024_x_18.A/CLKA
+  Location pin: RAMB16_X1Y8.CLKA
+  Clock network: CLK_BUFGP
+--------------------------------------------------------------------------------
+Slack: 16.824ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 3.176ns (314.861MHz) (Tbp)
+  Physical resource: XLXI_2/rom_1024_x_18/CLKA
+  Logical resource: XLXI_2/rom_1024_x_18.A/CLKA
+  Location pin: RAMB16_X1Y8.CLKA
+  Clock network: CLK_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |   10.387|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 5605 paths, 0 nets, and 915 connections
+
+Design statistics:
+   Minimum period:  10.387ns{1}   (Maximum frequency:  96.274MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Mon Feb 12 08:58:28 2024 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 347 MB
+
+
+

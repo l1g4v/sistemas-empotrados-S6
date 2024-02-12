@@ -19,7 +19,6 @@
         <signal name="LCD1(7:0)" />
         <signal name="SF_CE0" />
         <signal name="inputs(7:0)" />
-        <signal name="XLXN_12" />
         <port polarity="Input" name="CLK" />
         <port polarity="Input" name="RST" />
         <port polarity="Input" name="INT" />
@@ -46,15 +45,6 @@
             <rect width="64" x="384" y="-44" height="24" />
             <line x2="448" y1="-32" y2="-32" x1="384" />
         </blockdef>
-        <blockdef name="program">
-            <timestamp>2024-2-10T15:6:11</timestamp>
-            <rect width="320" x="64" y="-128" height="128" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-            <rect width="64" x="0" y="-44" height="24" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <rect width="64" x="384" y="-108" height="24" />
-            <line x2="448" y1="-96" y2="-96" x1="384" />
-        </blockdef>
         <blockdef name="io_port">
             <timestamp>2024-2-10T15:7:19</timestamp>
             <rect width="256" x="64" y="-256" height="256" />
@@ -72,6 +62,15 @@
             <rect width="256" x="64" y="-64" height="64" />
             <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
+        <blockdef name="program">
+            <timestamp>2024-2-12T13:42:29</timestamp>
+            <rect width="320" x="64" y="-128" height="128" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <rect width="64" x="0" y="-44" height="24" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <rect width="64" x="384" y="-108" height="24" />
+            <line x2="448" y1="-96" y2="-96" x1="384" />
+        </blockdef>
         <block symbolname="kcpsm3" name="XLXI_1">
             <blockpin signalname="INT" name="interrupt" />
             <blockpin signalname="RST" name="reset" />
@@ -84,11 +83,6 @@
             <blockpin signalname="XLXN_4(9:0)" name="address(9:0)" />
             <blockpin signalname="XLXN_9(7:0)" name="port_id(7:0)" />
             <blockpin signalname="XLXN_7(7:0)" name="out_port(7:0)" />
-        </block>
-        <block symbolname="program" name="XLXI_2">
-            <blockpin signalname="CLK" name="Clk" />
-            <blockpin signalname="XLXN_4(9:0)" name="Address(9:0)" />
-            <blockpin signalname="XLXN_2(17:0)" name="Instruction(17:0)" />
         </block>
         <block symbolname="io_port" name="XLXI_3">
             <blockpin signalname="XLXN_5" name="enable" />
@@ -107,6 +101,11 @@
         <block symbolname="strataoff" name="XLXI_5">
             <blockpin signalname="SF_CE0" name="op" />
         </block>
+        <block symbolname="program" name="XLXI_6">
+            <blockpin signalname="CLK" name="Clk" />
+            <blockpin signalname="XLXN_4(9:0)" name="Address(9:0)" />
+            <blockpin signalname="XLXN_2(17:0)" name="Instruction(17:0)" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
         <instance x="1328" y="1552" name="XLXI_1" orien="R0">
@@ -114,8 +113,6 @@
         <instance x="1984" y="1440" name="XLXI_4" orien="R0">
         </instance>
         <instance x="576" y="1424" name="XLXI_3" orien="R0">
-        </instance>
-        <instance x="576" y="1808" name="XLXI_2" orien="R0">
         </instance>
         <instance x="1344" y="1856" name="XLXI_5" orien="R0">
         </instance>
@@ -207,5 +204,7 @@
         <iomarker fontsize="28" x="1248" y="1360" name="CLK" orien="R180" />
         <iomarker fontsize="28" x="1248" y="1280" name="RST" orien="R180" />
         <iomarker fontsize="28" x="1232" y="1200" name="INT" orien="R180" />
+        <instance x="576" y="1808" name="XLXI_6" orien="R0">
+        </instance>
     </sheet>
 </drawing>

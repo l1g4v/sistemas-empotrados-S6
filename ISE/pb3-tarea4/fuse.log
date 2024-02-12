@@ -11,8 +11,8 @@ Parsing VHDL file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tare
 Parsing VHDL file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.vhf" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 114448 KB
-Fuse CPU Usage: 1050 ms
+Fuse Memory Usage: 114444 KB
+Fuse CPU Usage: 950 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -48,8 +48,9 @@ Compiling architecture behavioral of entity register_merger [register_merger_def
 Compiling architecture behavioral of entity SPI_INTERFACE [spi_interface_default]
 Compiling architecture behavioral of entity todo
 Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 121 VHDL Units
 Built simulation executable /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo_isim_beh.exe
 Fuse Memory Usage: 1753316 KB
-Fuse CPU Usage: 1380 ms
-GCC CPU Usage: 2050 ms
+Fuse CPU Usage: 1310 ms
+GCC CPU Usage: 2090 ms

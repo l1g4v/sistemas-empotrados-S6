@@ -25,6 +25,7 @@
         <signal name="XLXN_42(31:0)" />
         <signal name="XLXN_43" />
         <signal name="XLXN_44" />
+        <signal name="inputs(7:0)" />
         <port polarity="Input" name="INT" />
         <port polarity="Input" name="RST" />
         <port polarity="Input" name="CLK" />
@@ -32,6 +33,7 @@
         <port polarity="Output" name="DAC_SCLK" />
         <port polarity="Output" name="DAC_CS" />
         <port polarity="Output" name="DAC_RST" />
+        <port polarity="Input" name="inputs(7:0)" />
         <blockdef name="kcpsm3">
             <timestamp>2024-2-10T15:6:14</timestamp>
             <rect width="320" x="64" y="-384" height="384" />
@@ -114,7 +116,7 @@
         <block symbolname="io_port" name="XLXI_8">
             <blockpin signalname="XLXN_18" name="enable" />
             <blockpin signalname="RST" name="rst" />
-            <blockpin name="input_v(7:0)" />
+            <blockpin signalname="inputs(7:0)" name="input_v(7:0)" />
             <blockpin signalname="XLXN_19(7:0)" name="dir(7:0)" />
             <blockpin signalname="XLXN_13(7:0)" name="output_v(7:0)" />
         </block>
@@ -278,5 +280,9 @@
             <wire x2="2544" y1="1552" y2="1824" x1="2544" />
             <wire x2="2592" y1="1824" y2="1824" x1="2544" />
         </branch>
+        <branch name="inputs(7:0)">
+            <wire x2="832" y1="1488" y2="1488" x1="800" />
+        </branch>
+        <iomarker fontsize="28" x="800" y="1488" name="inputs(7:0)" orien="R180" />
     </sheet>
 </drawing>

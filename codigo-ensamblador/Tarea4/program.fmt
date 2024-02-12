@@ -9,10 +9,25 @@
                       output s5, 00
                       load s5, 0F
                       output s5, 00
-                      call delay_1ms
-                      call delay_1ms
-                      load s5, 00
-                      output s5, 00
+                      ;32 clock cycles
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, 00
+                      output s0, 00                  ;disable SPI
+
                  lop:
                       load s0, s0
 

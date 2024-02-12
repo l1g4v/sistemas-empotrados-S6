@@ -42,11 +42,11 @@ entity SPI_INTERFACE is
 end SPI_INTERFACE;
 
 architecture Behavioral of SPI_INTERFACE is
-		
+	--signal last: STD_LOGIC := '0';
 		
 	begin
 	SRST <= CLR;
-	SCLK <= not CLK and ENABLE;
+	SCLK <= (not CLK and ENABLE) ;--or last;
 	--CS <= not ENABLE;
 	
 	load: process(CLK)
@@ -58,16 +58,17 @@ architecture Behavioral of SPI_INTERFACE is
 			MOSI <= '0';
 			--SCLK <= '0';
 			
-		elsif (CLK'event and CLK = '1' and ENABLE='1') then
-			
+		elsif (CLK'event and CLK = '1') then
 			if count = 0 then
 				count := 32;
 				CS <= '1';
+				--last<='1';
 				--done := true;
-			elsif (count > 0) then
+			elsif (count > 0 and ENABLE='1') then
 					MOSI <= TX( count - 1 );		
 					CS <= '0';
 					count := count - 1;
+					--last<='0';
 			end if;
 		end if;
 		

@@ -166,3 +166,26 @@ xst -intstyle ise -ifn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3
 xst -intstyle ise -ifn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.xst" -ofn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.syr" 
 xst -intstyle ise -ifn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.xst" -ofn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.syr" 
 netgen -intstyle ise -ar Structure -tm todo -w -dir netgen/synthesis -ofmt vhdl -sim todo.ngc todo_synthesis.vhd 
+xst -intstyle ise -ifn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.xst" -ofn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.syr" 
+netgen -intstyle ise -ar Structure -tm todo -w -dir netgen/synthesis -ofmt vhdl -sim todo.ngc todo_synthesis.vhd 
+xst -intstyle ise -ifn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.xst" -ofn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.syr" 
+xst -intstyle ise -ifn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.xst" -ofn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.syr" 
+netgen -intstyle ise -ar Structure -tm todo -w -dir netgen/synthesis -ofmt vhdl -sim todo.ngc todo_synthesis.vhd 
+xst -intstyle ise -ifn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.xst" -ofn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.syr" 
+netgen -intstyle ise -ar Structure -tm todo -w -dir netgen/synthesis -ofmt vhdl -sim todo.ngc todo_synthesis.vhd 
+xst -intstyle ise -ifn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.xst" -ofn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.syr" 
+netgen -intstyle ise -ar Structure -tm todo -w -dir netgen/synthesis -ofmt vhdl -sim todo.ngc todo_synthesis.vhd 
+xst -intstyle ise -ifn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.xst" -ofn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.syr" 
+netgen -intstyle ise -ar Structure -tm todo -w -dir netgen/synthesis -ofmt vhdl -sim todo.ngc todo_synthesis.vhd 
+xst -intstyle ise -ifn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.xst" -ofn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.syr" 
+netgen -intstyle ise -ar Structure -tm todo -w -dir netgen/synthesis -ofmt vhdl -sim todo.ngc todo_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc todo.ucf -p xc3s500e-fg320-4 todo.ngc todo.ngd  
+xst -intstyle ise -ifn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.xst" -ofn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc todo.ucf -p xc3s500e-fg320-4 todo.ngc todo.ngd  
+xst -intstyle ise -ifn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.xst" -ofn "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc todo.ucf -p xc3s500e-fg320-4 todo.ngc todo.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc todo.ucf -p xc3s500e-fg320-4 todo.ngc todo.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o todo_map.ncd todo.ngd todo.pcf 
+par -w -intstyle ise -ol high -t 1 todo_map.ncd todo.ncd todo.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml todo.twx todo.ncd -o todo.twr todo.pcf -ucf todo.ucf 
+bitgen -intstyle ise -f todo.ut todo.ncd 

@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : todo.vhf
--- /___/   /\     Timestamp : 02/12/2024 11:45:23
+-- /___/   /\     Timestamp : 02/12/2024 16:22:33
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -27,6 +27,7 @@ use UNISIM.Vcomponents.ALL;
 
 entity todo is
    port ( CLK      : in    std_logic; 
+          inputs   : in    std_logic_vector (7 downto 0); 
           INT      : in    std_logic; 
           RST      : in    std_logic; 
           DAC_CS   : out   std_logic; 
@@ -36,16 +37,15 @@ entity todo is
 end todo;
 
 architecture BEHAVIORAL of todo is
-   signal WRTSTROBE                 : std_logic;
-   signal XLXN_13                   : std_logic_vector (7 downto 0);
-   signal XLXN_14                   : std_logic_vector (17 downto 0);
-   signal XLXN_15                   : std_logic_vector (9 downto 0);
-   signal XLXN_16                   : std_logic_vector (7 downto 0);
-   signal XLXN_18                   : std_logic;
-   signal XLXN_19                   : std_logic_vector (7 downto 0);
-   signal XLXN_42                   : std_logic_vector (31 downto 0);
-   signal XLXN_43                   : std_logic;
-   signal XLXI_8_input_v_openSignal : std_logic_vector (7 downto 0);
+   signal WRTSTROBE : std_logic;
+   signal XLXN_13   : std_logic_vector (7 downto 0);
+   signal XLXN_14   : std_logic_vector (17 downto 0);
+   signal XLXN_15   : std_logic_vector (9 downto 0);
+   signal XLXN_16   : std_logic_vector (7 downto 0);
+   signal XLXN_18   : std_logic;
+   signal XLXN_19   : std_logic_vector (7 downto 0);
+   signal XLXN_42   : std_logic_vector (31 downto 0);
+   signal XLXN_43   : std_logic;
    component kcpsm3
       port ( interrupt     : in    std_logic; 
              reset         : in    std_logic; 
@@ -111,7 +111,7 @@ begin
    XLXI_8 : io_port
       port map (dir(7 downto 0)=>XLXN_19(7 downto 0),
                 enable=>XLXN_18,
-                input_v(7 downto 0)=>XLXI_8_input_v_openSignal(7 downto 0),
+                input_v(7 downto 0)=>inputs(7 downto 0),
                 rst=>RST,
                 output_v(7 downto 0)=>XLXN_13(7 downto 0));
    

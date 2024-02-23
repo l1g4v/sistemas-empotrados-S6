@@ -50,7 +50,7 @@ architecture Behavioral of SPI_INTERFACE is
 	--CS <= not ENABLE;
 	
 	load: process(CLK)
-		variable count: natural range 0 to 32 := 32;
+		variable count: natural range 0 to 32 := 31;
 		--variable done: boolean := false;
 	begin
 		if RST = '1' then
@@ -60,8 +60,8 @@ architecture Behavioral of SPI_INTERFACE is
 			
 		elsif (CLK'event and CLK = '1') then
 			if count = 0 then
-				count := 32;
 				CS <= '1';
+				count := 31;
 				--last<='1';
 				--done := true;
 			elsif (count > 0 and ENABLE='1') then

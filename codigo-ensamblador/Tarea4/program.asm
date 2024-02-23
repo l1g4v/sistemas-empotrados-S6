@@ -1,13 +1,13 @@
 JUMP MAIN
 INCLUDE "../utils/delay.asm"
 
-MAIN:     LOAD s5, F0
+MAIN:     LOAD s5, A0
           OUTPUT s5, 00
-          LOAD s5, 0F
+          LOAD s5, F8
           OUTPUT s5, 00
-          LOAD s5, F0
+          LOAD s5, C4
           OUTPUT s5, 00
-          LOAD s5, 0F
+          LOAD s5, 00
           OUTPUT s5, 00
           ;32 clock cycles
           load s0,s0
@@ -18,6 +18,7 @@ MAIN:     LOAD s5, F0
           load s0,s0
           load s0,s0
           load s0,s0
+          
           load s0,s0
           load s0,s0
           load s0,s0
@@ -25,7 +26,8 @@ MAIN:     LOAD s5, F0
           load s0,s0
           load s0,s0
           load s0,s0
-          load s0,00
+          ;load s0,s0
+          ;load s0,00
           OUTPUT s0, 00 ;disable SPI
 
           lop:

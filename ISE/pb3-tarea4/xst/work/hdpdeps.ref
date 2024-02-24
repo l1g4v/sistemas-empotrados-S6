@@ -1,51 +1,51 @@
 V3 46
 FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/io_port.vhd 2024/01/22.20:43:37 P.20131013
-EN work/io_port 1707776557 \
+EN work/io_port 1708816963 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/io_port.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/io_port/Behavioral 1707776558 \
+AR work/io_port/Behavioral 1708816964 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/io_port.vhd \
-      EN work/io_port 1707776557
+      EN work/io_port 1708816963
 FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/kcpsm3.vhd 2024/01/22.14:05:00 P.20131013
-EN work/kcpsm3 1707776555 \
+EN work/kcpsm3 1708816961 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/kcpsm3.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179 LB UNISIM PH unisim/VCOMPONENTS 1381692182
-AR work/kcpsm3/low_level_definition 1707776556 \
+AR work/kcpsm3/low_level_definition 1708816962 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/kcpsm3.vhd \
-      EN work/kcpsm3 1707776555 CP LUT1 CP FDR CP FDS CP LUT4 CP FD CP FDE CP LUT3 \
+      EN work/kcpsm3 1708816961 CP LUT1 CP FDR CP FDS CP LUT4 CP FD CP FDE CP LUT3 \
       CP FDRE CP LUT2 CP MUXCY CP XORCY CP INV CP string CP label CP FDRSE CP RAM16X1D \
       CP RAM64X1S CP MUXF5 CP RAM32X1S
-FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/program.vhdl 2024/02/12.15:44:41 P.20131013
-PH work/program_pkg 1707776559 \
+FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/program.vhdl 2024/02/24.17:20:22 P.20131013
+PH work/program_pkg 1708816965 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/program.vhdl \
       PB ieee/std_logic_1164 1381692176 CD program
-EN work/program 1707776560 \
+EN work/program 1708816966 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/program.vhdl \
       PB ieee/std_logic_1164 1381692176 LB UNISIM PH unisim/VCOMPONENTS 1381692182
-AR work/program/structure 1707776561 \
+AR work/program/structure 1708816967 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/program.vhdl \
-      EN work/program 1707776560 CP RAMB16_S18
+      EN work/program 1708816966 CP RAMB16_S18
 FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/register_merger.vhd 2024/02/12.12:03:54 P.20131013
-EN work/register_merger 1707776562 \
+EN work/register_merger 1708816968 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/register_merger.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/register_merger/Behavioral 1707776563 \
+AR work/register_merger/Behavioral 1708816969 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/register_merger.vhd \
-      EN work/register_merger 1707776562
-FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.vhd 2024/02/12.15:44:20 P.20131013
-EN work/SPI_INTERFACE 1707776564 \
+      EN work/register_merger 1708816968
+FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.vhd 2024/02/24.17:20:22 P.20131013
+EN work/SPI_INTERFACE 1708816970 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/SPI_INTERFACE/Behavioral 1707776565 \
+AR work/SPI_INTERFACE/Behavioral 1708816971 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.vhd \
-      EN work/SPI_INTERFACE 1707776564
-FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.vhf 2024/02/12.16:22:33 P.20131013
-EN work/todo 1707776566 \
+      EN work/SPI_INTERFACE 1708816970
+FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.vhf 2024/02/24.17:22:38 P.20131013
+EN work/todo 1708816972 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.vhf \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/todo/BEHAVIORAL 1707776567 \
+AR work/todo/BEHAVIORAL 1708816973 \
       FL /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.vhf \
-      EN work/todo 1707776566 CP kcpsm3 CP io_port CP program CP register_merger \
+      EN work/todo 1708816972 CP kcpsm3 CP io_port CP program CP register_merger \
       CP SPI_INTERFACE

@@ -3,9 +3,9 @@ INCLUDE "../utils/delay.asm"
 
 MAIN:     LOAD s5, F0
           OUTPUT s5, 00
-          LOAD s5, 0F
+          LOAD s5, F8
           OUTPUT s5, 00
-          LOAD s5, F0
+          LOAD s5, C4
           OUTPUT s5, 00
           LOAD s5, 0F
           OUTPUT s5, 00

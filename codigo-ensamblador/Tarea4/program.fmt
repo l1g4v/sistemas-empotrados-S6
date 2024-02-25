@@ -3,11 +3,11 @@
 
                 MAIN: load s5, F0
                       output s5, 00
-                      load s5, 0F
+                      load s5, 51
                       output s5, 00
-                      load s5, F0
+                      load s5, C2
                       output s5, 00
-                      load s5, 0F
+                      load s5, 00
                       output s5, 00
                       ;32 clock cycles
                       load s0, s0
@@ -26,6 +26,7 @@
                       load s0, s0
                       load s0, s0
                       load s0, 00
+                      ;OUTPUT s0, 00
                       output s0, 00                  ;disable SPI
 
                  lop:

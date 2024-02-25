@@ -56,11 +56,12 @@ architecture Behavioral of SPI_INTERFACE is
 		if RST = '1' then
 			CS <= '1';
 			MOSI <= '0';
+			count := 32;
 			--SCLK <= '0';
 			
-		elsif (CLK'event and CLK = '1') then
+		elsif (rising_edge(CLK)) then
 			if count = 0 then
-				count := 32;
+				--count := 32;
 				CS <= '1';
 				--last<='1';
 				--done := true;

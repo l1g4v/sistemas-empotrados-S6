@@ -180,7 +180,8 @@ WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tar
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <todo> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.vhf" line 98: Unconnected output port 'interrupt_ack' of component 'kcpsm3'.
+WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.vhf" line 108: Unconnected output port 'interrupt_ack' of component 'kcpsm3'.
+    Set user-defined property "INIT =  0" for instance <XLXI_20> in unit <todo>.
 Entity <todo> analyzed. Unit <todo> generated.
 
 Analyzing Entity <kcpsm3> in library <work> (Architecture <low_level_definition>).
@@ -413,7 +414,7 @@ Analyzing Entity <program> in library <work> (Architecture <structure>).
     Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_00 =  027DA000540BC20100050219A0005406C10100010128A0005402C001000B401E" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_01 =  C50005F0A000541AC40100140432A0005415C301000A0314A0005410C2010005" for instance <rom_1024_x_18> in unit <program>.
-    Set user-defined property "INIT_02 =  1000100010001000100010001000100010001000C500050FC50005F0C500050F" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_02 =  1000100010001000100010001000100010001000C5000500C50005C2C5000551" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_03 =  000000000000000000000000000040371000C000000010001000100010001000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
@@ -526,8 +527,8 @@ Synthesizing Unit <SPI_INTERFACE>.
     Found 1-bit register for signal <CS>.
     Found 1-bit register for signal <MOSI>.
     Found 6-bit down counter for signal <count>.
-    Found 6-bit comparator greater for signal <count$cmp_gt0000> created at line 64.
-    Found 6-bit comparator lessequal for signal <MOSI$cmp_le0000> created at line 64.
+    Found 6-bit comparator lessequal for signal <count$cmp_le0000> created at line 65.
+    Found 6-bit comparator greater for signal <CS$cmp_gt0000> created at line 65.
     Summary:
 	inferred   1 Counter(s).
 	inferred   2 D-type flip-flop(s).
@@ -583,8 +584,8 @@ Macro Statistics
  6-bit down counter                                    : 1
 # Accumulators                                         : 2
  5-bit up accumulator                                  : 2
-# Registers                                            : 119
- Flip-Flops                                            : 119
+# Registers                                            : 120
+ Flip-Flops                                            : 120
 # Comparators                                          : 3
  3-bit comparator less                                 : 1
  6-bit comparator greater                              : 1
@@ -596,8 +597,8 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 WARNING:Xst:1293 - FF/Latch <down_0> has a constant value of 0 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <down_1> has a constant value of 0 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <down_2> has a constant value of 0 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <down_1> has a constant value of 0 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <down_2> has a constant value of 0 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <todo> ...
 
@@ -609,17 +610,17 @@ Optimizing unit <kcpsm3> ...
 
 Optimizing unit <register_merger> ...
 WARNING:Xst:1293 - FF/Latch <up_2> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <up_1> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <up_0> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <up_1> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <up_0> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <up_2> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <up_1> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <up_0> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <up_1> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <up_0> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <up_2> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <up_1> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <up_0> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <up_1> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <up_0> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <up_2> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <up_1> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <up_0> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <up_1> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <up_0> has a constant value of 1 in block <register_merger>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -631,8 +632,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 132
- Flip-Flops                                            : 132
+# Registers                                            : 133
+ Flip-Flops                                            : 133
 
 =========================================================================
 
@@ -661,26 +662,24 @@ Design Statistics
 # IOs                              : 15
 
 Cell Usage :
-# BELS                             : 300
+# BELS                             : 293
 #      GND                         : 1
 #      INV                         : 8
 #      LUT1                        : 2
 #      LUT2                        : 14
-#      LUT3                        : 86
-#      LUT4                        : 93
+#      LUT3                        : 85
+#      LUT4                        : 89
 #      LUT4_L                      : 5
 #      MUXCY                       : 39
-#      MUXF5                       : 14
+#      MUXF5                       : 12
 #      VCC                         : 1
 #      XORCY                       : 37
-# FlipFlops/Latches                : 132
-#      FD                          : 24
-#      FDCE                        : 14
-#      FDCPE                       : 2
-#      FDCPE_1                     : 1
-#      FDE                         : 8
-#      FDE_1                       : 32
-#      FDPE                        : 1
+# FlipFlops/Latches                : 133
+#      FD                          : 25
+#      FDCE                        : 19
+#      FDCPE                       : 3
+#      FDE                         : 34
+#      FDPE                        : 2
 #      FDR                         : 30
 #      FDRE                        : 8
 #      FDRSE                       : 10
@@ -702,10 +701,10 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                      151  out of   4656     3%  
- Number of Slice Flip Flops:            124  out of   9312     1%  
- Number of 4 input LUTs:                276  out of   9312     2%  
-    Number used as logic:               208
+ Number of Slices:                      147  out of   4656     3%  
+ Number of Slice Flip Flops:            125  out of   9312     1%  
+ Number of 4 input LUTs:                271  out of   9312     2%  
+    Number used as logic:               203
     Number used as RAMs:                 68
  Number of IOs:                          15
  Number of bonded IOBs:                  15  out of    232     6%  
@@ -734,8 +733,8 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
+CLK                                | IBUF+BUFG              | 112   |
 XLXN_18                            | NONE(XLXI_8/output_v_7)| 8     |
-CLK                                | IBUF+BUFG              | 111   |
 WRTSTROBE1                         | BUFG                   | 40    |
 -----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -745,7 +744,7 @@ Asynchronous Control Signals Information:
 -----------------------------------------------------+------------------------+-------+
 Control Signal                                       | Buffer(FF name)        | Load  |
 -----------------------------------------------------+------------------------+-------+
-RST                                                  | IBUF                   | 10    |
+RST                                                  | IBUF                   | 16    |
 XLXI_14/count_or0000(XLXI_14/count_or00001:O)        | NONE(XLXI_14/count_0)  | 7     |
 N0(XST_GND:G)                                        | NONE(XLXI_14/up_3)     | 2     |
 XLXI_14/ready_and0000(XLXI_14/ready_and00001:O)      | NONE(XLXI_14/ready)    | 1     |
@@ -757,8 +756,8 @@ Timing Summary:
 Speed Grade: -4
 
    Minimum period: 9.959ns (Maximum Frequency: 100.415MHz)
-   Minimum input arrival time before clock: 4.982ns
-   Maximum output required time after clock: 5.653ns
+   Minimum input arrival time before clock: 5.116ns
+   Maximum output required time after clock: 5.597ns
    Maximum combinational path delay: 6.236ns
 
 Timing Detail:
@@ -768,7 +767,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
   Clock period: 9.959ns (frequency: 100.415MHz)
-  Total number of paths / destination ports: 3943 / 392
+  Total number of paths / destination ports: 3935 / 392
 -------------------------------------------------------------------------
 Delay:               9.959ns (Levels of Logic = 13)
   Source:            XLXI_9/rom_1024_x_18 (RAM)
@@ -807,8 +806,8 @@ Timing constraint: Default period analysis for Clock 'WRTSTROBE1'
 Delay:               4.318ns (Levels of Logic = 2)
   Source:            XLXI_14/down_3 (FF)
   Destination:       XLXI_14/payload_18 (FF)
-  Source Clock:      WRTSTROBE1 falling
-  Destination Clock: WRTSTROBE1 falling
+  Source Clock:      WRTSTROBE1 rising
+  Destination Clock: WRTSTROBE1 rising
 
   Data Path: XLXI_14/down_3 to XLXI_14/payload_18
                                 Gate     Net
@@ -817,7 +816,7 @@ Delay:               4.318ns (Levels of Logic = 2)
      FDCE:C->Q            14   0.591   1.079  XLXI_14/down_3 (XLXI_14/down_3)
      LUT3:I1->O            8   0.704   0.932  XLXI_14/payload_16_mux000011 (XLXI_14/N1)
      LUT4:I0->O            1   0.704   0.000  XLXI_14/payload_23_mux00001 (XLXI_14/payload_23_mux0000)
-     FDE_1:D                   0.308          XLXI_14/payload_23
+     FDE:D                     0.308          XLXI_14/payload_23
     ----------------------------------------
     Total                      4.318ns (2.307ns logic, 2.011ns route)
                                        (53.4% logic, 46.6% route)
@@ -843,82 +842,62 @@ Offset:              1.946ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 9 / 9
+  Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
-Offset:              4.389ns (Levels of Logic = 2)
+Offset:              3.331ns (Levels of Logic = 1)
   Source:            RST (PAD)
-  Destination:       XLXI_15/count_5 (FF)
+  Destination:       XLXI_6/reset_flop2 (FF)
   Destination Clock: CLK rising
 
-  Data Path: RST to XLXI_15/count_5
+  Data Path: RST to XLXI_6/reset_flop2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            18   1.218   1.243  RST_IBUF (RST_IBUF)
-     LUT4:I0->O            6   0.704   0.669  XLXI_15/count_and0000172 (XLXI_15/count_and0000)
-     FDE:CE                    0.555          XLXI_15/count_0
+     IBUF:I->O            23   1.218   1.202  RST_IBUF (RST_IBUF)
+     FDS:S                     0.911          XLXI_6/reset_flop1
     ----------------------------------------
-    Total                      4.389ns (2.477ns logic, 1.912ns route)
-                                       (56.4% logic, 43.6% route)
+    Total                      3.331ns (2.129ns logic, 1.202ns route)
+                                       (63.9% logic, 36.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'WRTSTROBE1'
   Total number of paths / destination ports: 34 / 34
 -------------------------------------------------------------------------
-Offset:              4.982ns (Levels of Logic = 2)
+Offset:              5.116ns (Levels of Logic = 2)
   Source:            RST (PAD)
   Destination:       XLXI_14/payload_27 (FF)
-  Destination Clock: WRTSTROBE1 falling
+  Destination Clock: WRTSTROBE1 rising
 
   Data Path: RST to XLXI_14/payload_27
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            18   1.218   1.243  RST_IBUF (RST_IBUF)
+     IBUF:I->O            23   1.218   1.377  RST_IBUF (RST_IBUF)
      LUT2:I0->O           32   0.704   1.262  XLXI_14/payload_28_and00001 (XLXI_14/payload_28_and0000)
-     FDE_1:CE                  0.555          XLXI_14/payload_28
+     FDE:CE                    0.555          XLXI_14/payload_28
     ----------------------------------------
-    Total                      4.982ns (2.477ns logic, 2.505ns route)
-                                       (49.7% logic, 50.3% route)
+    Total                      5.116ns (2.477ns logic, 2.639ns route)
+                                       (48.4% logic, 51.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 2 / 2
+  Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
-Offset:              4.283ns (Levels of Logic = 1)
-  Source:            XLXI_15/MOSI (FF)
-  Destination:       DAC_MOSI (PAD)
+Offset:              5.597ns (Levels of Logic = 2)
+  Source:            XLXI_20 (FF)
+  Destination:       DAC_SCLK (PAD)
   Source Clock:      CLK rising
 
-  Data Path: XLXI_15/MOSI to DAC_MOSI
+  Data Path: XLXI_20 to DAC_SCLK
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             1   0.591   0.420  XLXI_15/MOSI (XLXI_15/MOSI)
-     OBUF:I->O                 3.272          DAC_MOSI_OBUF (DAC_MOSI)
-    ----------------------------------------
-    Total                      4.283ns (3.863ns logic, 0.420ns route)
-                                       (90.2% logic, 9.8% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'WRTSTROBE1'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              5.653ns (Levels of Logic = 2)
-  Source:            XLXI_14/ready (FF)
-  Destination:       DAC_SCLK (PAD)
-  Source Clock:      WRTSTROBE1 falling
-
-  Data Path: XLXI_14/ready to DAC_SCLK
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDCPE_1:C->Q          4   0.591   0.666  XLXI_14/ready (XLXI_14/ready)
+     FD:C->Q               3   0.591   0.610  XLXI_20 (XLXN_551)
      LUT2:I1->O            1   0.704   0.420  XLXI_15/SCLK1 (DAC_SCLK_OBUF)
      OBUF:I->O                 3.272          DAC_SCLK_OBUF (DAC_SCLK)
     ----------------------------------------
-    Total                      5.653ns (4.567ns logic, 1.086ns route)
-                                       (80.8% logic, 19.2% route)
+    Total                      5.597ns (4.567ns logic, 1.030ns route)
+                                       (81.6% logic, 18.4% route)
 
 =========================================================================
 Timing constraint: Default path analysis
@@ -943,12 +922,12 @@ Delay:               6.236ns (Levels of Logic = 3)
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.90 secs
+Total CPU time to Xst completion: 7.74 secs
  
 --> 
 
 
-Total memory usage is 563476 kilobytes
+Total memory usage is 563524 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   58 (   0 filtered)

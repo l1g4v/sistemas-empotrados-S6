@@ -24,7 +24,7 @@
 static const char *ng0 = "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/register_merger.vhd";
 extern char *IEEE_P_2592010699;
 
-unsigned char ieee_p_2592010699_sub_13554554585326073636_503743352(char *, char *, unsigned int , unsigned int );
+unsigned char ieee_p_2592010699_sub_2763492388968962707_503743352(char *, char *, unsigned int , unsigned int );
 
 
 static void work_a_3592459638_3212880686_p_0(char *t0)
@@ -56,7 +56,7 @@ LAB0:    xsi_set_current_line(50, ng0);
         goto LAB2;
 
 LAB4:    t1 = (t0 + 1152U);
-    t4 = ieee_p_2592010699_sub_13554554585326073636_503743352(IEEE_P_2592010699, t1, 0U, 0U);
+    t4 = ieee_p_2592010699_sub_2763492388968962707_503743352(IEEE_P_2592010699, t1, 0U, 0U);
     if (t4 == 1)
         goto LAB7;
 

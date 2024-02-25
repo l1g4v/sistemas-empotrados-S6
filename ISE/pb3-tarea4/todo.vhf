@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : todo.vhf
--- /___/   /\     Timestamp : 02/24/2024 17:22:38
+-- /___/   /\     Timestamp : 02/24/2024 19:58:08
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -37,6 +37,7 @@ entity todo is
 end todo;
 
 architecture BEHAVIORAL of todo is
+   attribute BOX_TYPE   : string ;
    signal WRTSTROBE : std_logic;
    signal XLXN_13   : std_logic_vector (7 downto 0);
    signal XLXN_14   : std_logic_vector (17 downto 0);
@@ -45,7 +46,8 @@ architecture BEHAVIORAL of todo is
    signal XLXN_18   : std_logic;
    signal XLXN_19   : std_logic_vector (7 downto 0);
    signal XLXN_42   : std_logic_vector (31 downto 0);
-   signal XLXN_43   : std_logic;
+   signal XLXN_551  : std_logic;
+   signal XLXN_552  : std_logic;
    component kcpsm3
       port ( interrupt     : in    std_logic; 
              reset         : in    std_logic; 
@@ -94,6 +96,14 @@ architecture BEHAVIORAL of todo is
              SRST   : out   std_logic);
    end component;
    
+   component FD
+      generic( INIT : bit :=  '0');
+      port ( C : in    std_logic; 
+             D : in    std_logic; 
+             Q : out   std_logic);
+   end component;
+   attribute BOX_TYPE of FD : component is "BLACK_BOX";
+   
 begin
    XLXI_6 : kcpsm3
       port map (clk=>CLK,
@@ -125,18 +135,23 @@ begin
                 rst=>RST,
                 strobe=>WRTSTROBE,
                 outputv(31 downto 0)=>XLXN_42(31 downto 0),
-                ready=>XLXN_43);
+                ready=>XLXN_552);
    
    XLXI_15 : SPI_INTERFACE
       port map (CLK=>CLK,
                 CLR=>INT,
-                ENABLE=>XLXN_43,
+                ENABLE=>XLXN_551,
                 RST=>RST,
                 TX(31 downto 0)=>XLXN_42(31 downto 0),
                 CS=>DAC_CS,
                 MOSI=>DAC_MOSI,
                 SCLK=>DAC_SCLK,
                 SRST=>DAC_RST);
+   
+   XLXI_20 : FD
+      port map (C=>CLK,
+                D=>XLXN_552,
+                Q=>XLXN_551);
    
 end BEHAVIORAL;
 

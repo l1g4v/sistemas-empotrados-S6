@@ -53,7 +53,7 @@ begin
 		down := 0;
 		count := 0;
 		ready <= '0';
-	elsif (falling_edge(strobe) and count < 4) then	
+	elsif (rising_edge(strobe) and count < 4) then	
 		count := count + 1;
 		payload(up downto down) := inputv;
 		up := up + 8;

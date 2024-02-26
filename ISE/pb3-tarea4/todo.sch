@@ -6,51 +6,29 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="XLXN_542" />
-        <signal name="XLXN_543" />
-        <signal name="XLXN_549(31:0)" />
-        <signal name="XLXN_550" />
-        <signal name="XLXN_553" />
-        <signal name="XLXN_554" />
-        <signal name="XLXN_559(9:0)" />
-        <signal name="XLXN_562" />
-        <signal name="XLXN_566" />
-        <signal name="XLXN_568" />
-        <signal name="XLXN_569" />
-        <signal name="XLXN_570" />
-        <signal name="XLXN_573(31:0)" />
-        <signal name="XLXN_581" />
-        <signal name="XLXN_582" />
         <signal name="XLXN_13(7:0)" />
         <signal name="XLXN_14(17:0)" />
         <signal name="XLXN_15(9:0)" />
-        <signal name="XLXN_587(9:0)" />
         <signal name="XLXN_16(7:0)" />
         <signal name="WRTSTROBE" />
-        <signal name="XLXN_590" />
         <signal name="XLXN_18" />
         <signal name="XLXN_19(7:0)" />
         <signal name="INT" />
-        <signal name="XLXN_594" />
         <signal name="RST" />
-        <signal name="XLXN_596" />
-        <signal name="XLXN_597" />
-        <signal name="XLXN_598" />
         <signal name="CLK" />
         <signal name="XLXN_42(31:0)" />
-        <signal name="XLXN_601(31:0)" />
         <signal name="inputs(7:0)" />
         <signal name="DAC_CS" />
         <signal name="XLXN_551" />
-        <signal name="XLXN_609" />
-        <signal name="XLXN_610" />
         <signal name="XLXN_552" />
         <signal name="DAC_MOSI" />
         <signal name="DAC_SCLK" />
         <signal name="DAC_RST" />
-        <signal name="XLXN_616(31:0)" />
-        <signal name="XLXN_618" />
-        <signal name="XLXN_619" />
+        <signal name="flash" />
+        <signal name="preamp" />
+        <signal name="adc" />
+        <signal name="ceo" />
+        <signal name="prom" />
         <port polarity="Input" name="INT" />
         <port polarity="Input" name="RST" />
         <port polarity="Input" name="CLK" />
@@ -59,6 +37,11 @@
         <port polarity="Output" name="DAC_MOSI" />
         <port polarity="Output" name="DAC_SCLK" />
         <port polarity="Output" name="DAC_RST" />
+        <port polarity="Output" name="flash" />
+        <port polarity="Output" name="preamp" />
+        <port polarity="Output" name="adc" />
+        <port polarity="Output" name="ceo" />
+        <port polarity="Output" name="prom" />
         <blockdef name="kcpsm3">
             <timestamp>2024-2-10T15:6:14</timestamp>
             <rect width="320" x="64" y="-384" height="384" />
@@ -134,6 +117,15 @@
             <line x2="64" y1="-128" y2="-144" x1="80" />
             <line x2="80" y1="-112" y2="-128" x1="64" />
         </blockdef>
+        <blockdef name="spioff">
+            <timestamp>2024-2-26T13:39:50</timestamp>
+            <rect width="256" x="64" y="-320" height="320" />
+            <line x2="384" y1="-288" y2="-288" x1="320" />
+            <line x2="384" y1="-224" y2="-224" x1="320" />
+            <line x2="384" y1="-160" y2="-160" x1="320" />
+            <line x2="384" y1="-96" y2="-96" x1="320" />
+            <line x2="384" y1="-32" y2="-32" x1="320" />
+        </blockdef>
         <block symbolname="kcpsm3" name="XLXI_6">
             <blockpin signalname="INT" name="interrupt" />
             <blockpin signalname="RST" name="reset" />
@@ -181,6 +173,13 @@
             <blockpin signalname="DAC_SCLK" name="SCLK" />
             <blockpin signalname="DAC_CS" name="CS" />
             <blockpin signalname="DAC_RST" name="SRST" />
+        </block>
+        <block symbolname="spioff" name="XLXI_21">
+            <blockpin signalname="flash" name="flash" />
+            <blockpin signalname="preamp" name="preamp" />
+            <blockpin signalname="adc" name="adc" />
+            <blockpin signalname="ceo" name="ceo" />
+            <blockpin signalname="prom" name="prom" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -336,5 +335,27 @@
             <wire x2="2864" y1="1536" y2="1536" x1="2848" />
         </branch>
         <iomarker fontsize="28" x="2864" y="1536" name="DAC_CS" orien="R0" />
+        <instance x="2128" y="448" name="XLXI_21" orien="R0">
+        </instance>
+        <branch name="flash">
+            <wire x2="2544" y1="160" y2="160" x1="2512" />
+        </branch>
+        <iomarker fontsize="28" x="2544" y="160" name="flash" orien="R0" />
+        <branch name="preamp">
+            <wire x2="2544" y1="224" y2="224" x1="2512" />
+        </branch>
+        <iomarker fontsize="28" x="2544" y="224" name="preamp" orien="R0" />
+        <branch name="adc">
+            <wire x2="2544" y1="288" y2="288" x1="2512" />
+        </branch>
+        <iomarker fontsize="28" x="2544" y="288" name="adc" orien="R0" />
+        <branch name="ceo">
+            <wire x2="2544" y1="352" y2="352" x1="2512" />
+        </branch>
+        <iomarker fontsize="28" x="2544" y="352" name="ceo" orien="R0" />
+        <branch name="prom">
+            <wire x2="2544" y1="416" y2="416" x1="2512" />
+        </branch>
+        <iomarker fontsize="28" x="2544" y="416" name="prom" orien="R0" />
     </sheet>
 </drawing>

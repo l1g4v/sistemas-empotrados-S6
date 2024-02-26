@@ -45,7 +45,7 @@ architecture Behavioral of SPI_INTERFACE is
 	--signal last: STD_LOGIC := '0';
 		
 	begin
-	SRST <= CLR;
+	SRST <= not CLR;
 	SCLK <= (not CLK and ENABLE) ;--or last;
 	--CS <= not ENABLE;
 	

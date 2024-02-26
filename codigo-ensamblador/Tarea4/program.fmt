@@ -5,7 +5,7 @@
                       output s5, 00
                       load s5, 51
                       output s5, 00
-                      load s5, C2
+                      load s5, 32
                       output s5, 00
                       load s5, 00
                       output s5, 00

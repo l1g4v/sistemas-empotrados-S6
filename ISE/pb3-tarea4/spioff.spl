@@ -1,0 +1,8 @@
+[Inputs]
+[Outputs]
+flash
+preamp
+adc
+ceo
+prom
+[BiDir]

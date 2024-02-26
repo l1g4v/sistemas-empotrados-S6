@@ -7,7 +7,7 @@
 -- \   \   \/     Version: P.20131013
 --  \   \         Application: netgen
 --  /   /         Filename: todo_synthesis.vhd
--- /___/   /\     Timestamp: Sat Feb 24 19:58:19 2024
+-- /___/   /\     Timestamp: Mon Feb 26 08:03:36 2024
 -- \   \  /  \ 
 --  \___\/\___\
 --             
@@ -45,7 +45,12 @@ entity todo is
     DAC_MOSI : out STD_LOGIC; 
     DAC_RST : out STD_LOGIC; 
     DAC_CS : out STD_LOGIC; 
+    preamp : out STD_LOGIC; 
     DAC_SCLK : out STD_LOGIC; 
+    adc : out STD_LOGIC; 
+    flash : out STD_LOGIC; 
+    ceo : out STD_LOGIC; 
+    prom : out STD_LOGIC; 
     INT : in STD_LOGIC := 'X'; 
     inputs : in STD_LOGIC_VECTOR ( 7 downto 0 ) 
   );
@@ -54,8 +59,9 @@ end todo;
 architecture Structure of todo is
   signal CLK_IBUF_1 : STD_LOGIC; 
   signal CLK_IBUF1 : STD_LOGIC; 
-  signal DAC_SCLK_OBUF_7 : STD_LOGIC; 
-  signal INT_IBUF_9 : STD_LOGIC; 
+  signal DAC_RST_OBUF_6 : STD_LOGIC; 
+  signal DAC_SCLK_OBUF_8 : STD_LOGIC; 
+  signal INT_IBUF_10 : STD_LOGIC; 
   signal N0 : STD_LOGIC; 
   signal N1 : STD_LOGIC; 
   signal N10 : STD_LOGIC; 
@@ -66,7 +72,7 @@ architecture Structure of todo is
   signal N6 : STD_LOGIC; 
   signal N8 : STD_LOGIC; 
   signal N9 : STD_LOGIC; 
-  signal RST_IBUF_21 : STD_LOGIC; 
+  signal RST_IBUF_22 : STD_LOGIC; 
   signal WRTSTROBE : STD_LOGIC; 
   signal WRTSTROBE1 : STD_LOGIC; 
   signal XLXI_14_N1 : STD_LOGIC; 
@@ -110,36 +116,36 @@ architecture Structure of todo is
   signal XLXI_14_payload_7_mux0000 : STD_LOGIC; 
   signal XLXI_14_payload_8_mux0000 : STD_LOGIC; 
   signal XLXI_14_payload_9_mux0000 : STD_LOGIC; 
-  signal XLXI_14_ready_107 : STD_LOGIC; 
+  signal XLXI_14_ready_108 : STD_LOGIC; 
   signal XLXI_14_ready_and0000 : STD_LOGIC; 
   signal XLXI_14_ready_cmp_eq0000 : STD_LOGIC; 
-  signal XLXI_15_CS_114 : STD_LOGIC; 
+  signal XLXI_15_CS_115 : STD_LOGIC; 
   signal XLXI_15_CS_cmp_eq0000 : STD_LOGIC; 
   signal XLXI_15_CS_cmp_eq0000_bdd2 : STD_LOGIC; 
   signal XLXI_15_CS_not0001 : STD_LOGIC; 
-  signal XLXI_15_MOSI_118 : STD_LOGIC; 
+  signal XLXI_15_MOSI_119 : STD_LOGIC; 
   signal XLXI_15_MOSI_mux0000 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux00001112_120 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux0000112_121 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux00001148_122 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux00001163_123 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux00001211_124 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux00001232_125 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux0000127_126 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux00001276_127 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux00001313_128 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux00001328_129 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux00001385_130 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux00001413_131 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux00001449_132 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux00001464_133 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux00001521_134 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux00001549_135 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux00001593_136 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux00001628_137 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux00001644_138 : STD_LOGIC; 
-  signal XLXI_15_MOSI_mux0000184_139 : STD_LOGIC; 
-  signal XLXI_15_count_not0001_152 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux00001112_121 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux0000112_122 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux00001148_123 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux00001163_124 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux00001211_125 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux00001232_126 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux0000127_127 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux00001276_128 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux00001313_129 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux00001328_130 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux00001385_131 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux00001413_132 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux00001449_133 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux00001464_134 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux00001521_135 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux00001549_136 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux00001593_137 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux00001628_138 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux00001644_139 : STD_LOGIC; 
+  signal XLXI_15_MOSI_mux0000184_140 : STD_LOGIC; 
+  signal XLXI_15_count_not0001_153 : STD_LOGIC; 
   signal XLXI_6_active_interrupt : STD_LOGIC; 
   signal XLXI_6_arith_carry : STD_LOGIC; 
   signal XLXI_6_arith_carry_in : STD_LOGIC; 
@@ -207,19 +213,19 @@ architecture Structure of todo is
   signal XLXI_6_zero_carry : STD_LOGIC; 
   signal XLXI_6_zero_fast_route : STD_LOGIC; 
   signal XLXI_6_zero_flag : STD_LOGIC; 
-  signal XLXI_8_output_v_cmp_eq000012_441 : STD_LOGIC; 
-  signal XLXI_8_output_v_cmp_eq000025_442 : STD_LOGIC; 
+  signal XLXI_8_output_v_cmp_eq000012_442 : STD_LOGIC; 
+  signal XLXI_8_output_v_cmp_eq000025_443 : STD_LOGIC; 
   signal XLXI_8_output_v_not0001_inv : STD_LOGIC; 
   signal XLXN_18 : STD_LOGIC; 
   signal XLXN_551 : STD_LOGIC; 
-  signal inputs_0_IBUF_498 : STD_LOGIC; 
-  signal inputs_1_IBUF_499 : STD_LOGIC; 
-  signal inputs_2_IBUF_500 : STD_LOGIC; 
-  signal inputs_3_IBUF_501 : STD_LOGIC; 
-  signal inputs_4_IBUF_502 : STD_LOGIC; 
-  signal inputs_5_IBUF_503 : STD_LOGIC; 
-  signal inputs_6_IBUF_504 : STD_LOGIC; 
-  signal inputs_7_IBUF_505 : STD_LOGIC; 
+  signal inputs_0_IBUF_502 : STD_LOGIC; 
+  signal inputs_1_IBUF_503 : STD_LOGIC; 
+  signal inputs_2_IBUF_504 : STD_LOGIC; 
+  signal inputs_3_IBUF_505 : STD_LOGIC; 
+  signal inputs_4_IBUF_506 : STD_LOGIC; 
+  signal inputs_5_IBUF_507 : STD_LOGIC; 
+  signal inputs_6_IBUF_508 : STD_LOGIC; 
+  signal inputs_7_IBUF_509 : STD_LOGIC; 
   signal XLXI_14_Result : STD_LOGIC_VECTOR ( 4 downto 0 ); 
   signal XLXI_14_count : STD_LOGIC_VECTOR ( 2 downto 0 ); 
   signal XLXI_14_down : STD_LOGIC_VECTOR ( 4 downto 3 ); 
@@ -275,71 +281,71 @@ begin
     )
     port map (
       C => CLK_IBUF_1,
-      D => XLXI_14_ready_107,
+      D => XLXI_14_ready_108,
       Q => XLXN_551
     );
   XLXI_8_output_v_7 : FDCE
     port map (
       C => XLXN_18,
       CE => XLXI_8_output_v_not0001_inv,
-      CLR => RST_IBUF_21,
-      D => inputs_7_IBUF_505,
+      CLR => RST_IBUF_22,
+      D => inputs_7_IBUF_509,
       Q => XLXI_8_output_v(7)
     );
   XLXI_8_output_v_6 : FDCE
     port map (
       C => XLXN_18,
       CE => XLXI_8_output_v_not0001_inv,
-      CLR => RST_IBUF_21,
-      D => inputs_6_IBUF_504,
+      CLR => RST_IBUF_22,
+      D => inputs_6_IBUF_508,
       Q => XLXI_8_output_v(6)
     );
   XLXI_8_output_v_5 : FDCE
     port map (
       C => XLXN_18,
       CE => XLXI_8_output_v_not0001_inv,
-      CLR => RST_IBUF_21,
-      D => inputs_5_IBUF_503,
+      CLR => RST_IBUF_22,
+      D => inputs_5_IBUF_507,
       Q => XLXI_8_output_v(5)
     );
   XLXI_8_output_v_4 : FDCE
     port map (
       C => XLXN_18,
       CE => XLXI_8_output_v_not0001_inv,
-      CLR => RST_IBUF_21,
-      D => inputs_4_IBUF_502,
+      CLR => RST_IBUF_22,
+      D => inputs_4_IBUF_506,
       Q => XLXI_8_output_v(4)
     );
   XLXI_8_output_v_3 : FDCE
     port map (
       C => XLXN_18,
       CE => XLXI_8_output_v_not0001_inv,
-      CLR => RST_IBUF_21,
-      D => inputs_3_IBUF_501,
+      CLR => RST_IBUF_22,
+      D => inputs_3_IBUF_505,
       Q => XLXI_8_output_v(3)
     );
   XLXI_8_output_v_2 : FDCE
     port map (
       C => XLXN_18,
       CE => XLXI_8_output_v_not0001_inv,
-      CLR => RST_IBUF_21,
-      D => inputs_2_IBUF_500,
+      CLR => RST_IBUF_22,
+      D => inputs_2_IBUF_504,
       Q => XLXI_8_output_v(2)
     );
   XLXI_8_output_v_1 : FDCE
     port map (
       C => XLXN_18,
       CE => XLXI_8_output_v_not0001_inv,
-      CLR => RST_IBUF_21,
-      D => inputs_1_IBUF_499,
+      CLR => RST_IBUF_22,
+      D => inputs_1_IBUF_503,
       Q => XLXI_8_output_v(1)
     );
   XLXI_8_output_v_0 : FDCE
     port map (
       C => XLXN_18,
       CE => XLXI_8_output_v_not0001_inv,
-      CLR => RST_IBUF_21,
-      D => inputs_0_IBUF_498,
+      CLR => RST_IBUF_22,
+      D => inputs_0_IBUF_502,
       Q => XLXI_8_output_v(0)
     );
   XLXI_15_count_5 : FDPE
@@ -348,9 +354,9 @@ begin
     )
     port map (
       C => CLK_IBUF_1,
-      CE => XLXI_15_count_not0001_152,
+      CE => XLXI_15_count_not0001_153,
       D => XLXI_15_Result(5),
-      PRE => RST_IBUF_21,
+      PRE => RST_IBUF_22,
       Q => XLXI_15_count(5)
     );
   XLXI_15_count_4 : FDCE
@@ -359,8 +365,8 @@ begin
     )
     port map (
       C => CLK_IBUF_1,
-      CE => XLXI_15_count_not0001_152,
-      CLR => RST_IBUF_21,
+      CE => XLXI_15_count_not0001_153,
+      CLR => RST_IBUF_22,
       D => XLXI_15_Result(4),
       Q => XLXI_15_count(4)
     );
@@ -370,8 +376,8 @@ begin
     )
     port map (
       C => CLK_IBUF_1,
-      CE => XLXI_15_count_not0001_152,
-      CLR => RST_IBUF_21,
+      CE => XLXI_15_count_not0001_153,
+      CLR => RST_IBUF_22,
       D => XLXI_15_Result(3),
       Q => XLXI_15_count(3)
     );
@@ -381,8 +387,8 @@ begin
     )
     port map (
       C => CLK_IBUF_1,
-      CE => XLXI_15_count_not0001_152,
-      CLR => RST_IBUF_21,
+      CE => XLXI_15_count_not0001_153,
+      CLR => RST_IBUF_22,
       D => XLXI_15_Result(2),
       Q => XLXI_15_count(2)
     );
@@ -392,8 +398,8 @@ begin
     )
     port map (
       C => CLK_IBUF_1,
-      CE => XLXI_15_count_not0001_152,
-      CLR => RST_IBUF_21,
+      CE => XLXI_15_count_not0001_153,
+      CLR => RST_IBUF_22,
       D => XLXI_15_Result(1),
       Q => XLXI_15_count(1)
     );
@@ -403,8 +409,8 @@ begin
     )
     port map (
       C => CLK_IBUF_1,
-      CE => XLXI_15_count_not0001_152,
-      CLR => RST_IBUF_21,
+      CE => XLXI_15_count_not0001_153,
+      CLR => RST_IBUF_22,
       D => XLXI_15_Result(0),
       Q => XLXI_15_count(0)
     );
@@ -413,16 +419,16 @@ begin
       C => CLK_IBUF_1,
       CE => XLXI_15_CS_not0001,
       D => XLXI_15_CS_cmp_eq0000,
-      PRE => RST_IBUF_21,
-      Q => XLXI_15_CS_114
+      PRE => RST_IBUF_22,
+      Q => XLXI_15_CS_115
     );
   XLXI_15_MOSI : FDCE
     port map (
       C => CLK_IBUF_1,
-      CE => XLXI_15_count_not0001_152,
-      CLR => RST_IBUF_21,
+      CE => XLXI_15_count_not0001_153,
+      CLR => RST_IBUF_22,
       D => XLXI_15_MOSI_mux0000,
-      Q => XLXI_15_MOSI_118
+      Q => XLXI_15_MOSI_119
     );
   XLXI_6_stack_count_loop_4_msb_stack_count_count_xor : XORCY
     port map (
@@ -3276,7 +3282,7 @@ begin
     )
     port map (
       C => CLK_IBUF_1,
-      D => INT_IBUF_9,
+      D => INT_IBUF_10,
       R => XLXI_6_internal_reset,
       Q => XLXI_6_clean_int
     );
@@ -3287,7 +3293,7 @@ begin
     port map (
       C => CLK_IBUF_1,
       D => XLXI_6_reset_delay,
-      S => RST_IBUF_21,
+      S => RST_IBUF_22,
       Q => XLXI_6_internal_reset
     );
   XLXI_6_reset_flop1 : FDS
@@ -3297,7 +3303,7 @@ begin
     port map (
       C => CLK_IBUF_1,
       D => N0,
-      S => RST_IBUF_21,
+      S => RST_IBUF_22,
       Q => XLXI_6_reset_delay
     );
   XLXI_6_toggle_flop : FDR
@@ -3396,7 +3402,7 @@ begin
       CLR => XLXI_14_ready_and0000,
       D => N0,
       PRE => XLXI_14_ready_cmp_eq0000,
-      Q => XLXI_14_ready_107
+      Q => XLXI_14_ready_108
     );
   XLXI_14_payload_27 : FDE
     generic map(
@@ -3737,7 +3743,7 @@ begin
       I1 => XLXN_19(2),
       I2 => XLXN_19(1),
       I3 => XLXN_19(0),
-      O => XLXI_8_output_v_cmp_eq000012_441
+      O => XLXI_8_output_v_cmp_eq000012_442
     );
   XLXI_8_output_v_cmp_eq000025 : LUT4
     generic map(
@@ -3748,15 +3754,15 @@ begin
       I1 => XLXN_19(6),
       I2 => XLXN_19(5),
       I3 => XLXN_19(4),
-      O => XLXI_8_output_v_cmp_eq000025_442
+      O => XLXI_8_output_v_cmp_eq000025_443
     );
   XLXI_8_output_v_cmp_eq000026 : LUT2
     generic map(
       INIT => X"8"
     )
     port map (
-      I0 => XLXI_8_output_v_cmp_eq000012_441,
-      I1 => XLXI_8_output_v_cmp_eq000025_442,
+      I0 => XLXI_8_output_v_cmp_eq000012_442,
+      I1 => XLXI_8_output_v_cmp_eq000025_443,
       O => XLXI_8_output_v_not0001_inv
     );
   XLXI_15_SCLK1 : LUT2
@@ -3766,14 +3772,14 @@ begin
     port map (
       I0 => CLK_IBUF1,
       I1 => XLXN_551,
-      O => DAC_SCLK_OBUF_7
+      O => DAC_SCLK_OBUF_8
     );
   XLXI_14_up_Q_mux0000_3_1 : LUT2
     generic map(
       INIT => X"1"
     )
     port map (
-      I0 => RST_IBUF_21,
+      I0 => RST_IBUF_22,
       I1 => XLXI_14_up(3),
       O => XLXI_14_up_Q_mux0000(3)
     );
@@ -3809,7 +3815,7 @@ begin
       INIT => X"14"
     )
     port map (
-      I0 => RST_IBUF_21,
+      I0 => RST_IBUF_22,
       I1 => XLXI_14_up(4),
       I2 => XLXI_14_up(3),
       O => XLXI_14_up_Q_mux0000(4)
@@ -3938,7 +3944,7 @@ begin
       INIT => X"1"
     )
     port map (
-      I0 => RST_IBUF_21,
+      I0 => RST_IBUF_22,
       I1 => XLXI_14_count(2),
       O => XLXI_14_payload_28_and0000
     );
@@ -4327,7 +4333,7 @@ begin
       I1 => XLXI_15_count(0),
       I2 => XLXI_15_count(3),
       I3 => N2,
-      O => XLXI_15_count_not0001_152
+      O => XLXI_15_count_not0001_153
     );
   XLXI_15_CS_not00011 : LUT4
     generic map(
@@ -4349,7 +4355,7 @@ begin
       I1 => XLXI_15_count(0),
       I2 => XLXI_14_payload(13),
       I3 => XLXI_14_payload(14),
-      O => XLXI_15_MOSI_mux0000112_121
+      O => XLXI_15_MOSI_mux0000112_122
     );
   XLXI_15_MOSI_mux00001112 : LUT4
     generic map(
@@ -4357,10 +4363,10 @@ begin
     )
     port map (
       I0 => XLXI_15_count(2),
-      I1 => XLXI_15_MOSI_mux0000112_121,
-      I2 => XLXI_15_MOSI_mux0000184_139,
-      I3 => XLXI_15_MOSI_mux0000127_126,
-      O => XLXI_15_MOSI_mux00001112_120
+      I1 => XLXI_15_MOSI_mux0000112_122,
+      I2 => XLXI_15_MOSI_mux0000184_140,
+      I3 => XLXI_15_MOSI_mux0000127_127,
+      O => XLXI_15_MOSI_mux00001112_121
     );
   XLXI_15_MOSI_mux00001148 : LUT4
     generic map(
@@ -4371,7 +4377,7 @@ begin
       I1 => XLXI_15_count(0),
       I2 => XLXI_14_payload(11),
       I3 => XLXI_14_payload(12),
-      O => XLXI_15_MOSI_mux00001148_122
+      O => XLXI_15_MOSI_mux00001148_123
     );
   XLXI_15_MOSI_mux00001163 : LUT4
     generic map(
@@ -4382,7 +4388,7 @@ begin
       I1 => XLXI_14_payload(3),
       I2 => XLXI_15_count(3),
       I3 => XLXI_14_payload(4),
-      O => XLXI_15_MOSI_mux00001163_123
+      O => XLXI_15_MOSI_mux00001163_124
     );
   XLXI_15_MOSI_mux00001232 : LUT4
     generic map(
@@ -4390,10 +4396,10 @@ begin
     )
     port map (
       I0 => XLXI_15_count(2),
-      I1 => XLXI_15_MOSI_mux00001148_122,
-      I2 => XLXI_15_MOSI_mux00001211_124,
-      I3 => XLXI_15_MOSI_mux00001163_123,
-      O => XLXI_15_MOSI_mux00001232_125
+      I1 => XLXI_15_MOSI_mux00001148_123,
+      I2 => XLXI_15_MOSI_mux00001211_125,
+      I3 => XLXI_15_MOSI_mux00001163_124,
+      O => XLXI_15_MOSI_mux00001232_126
     );
   XLXI_15_MOSI_mux00001313 : LUT4
     generic map(
@@ -4404,7 +4410,7 @@ begin
       I1 => XLXI_15_count(0),
       I2 => XLXI_14_payload(29),
       I3 => XLXI_14_payload(30),
-      O => XLXI_15_MOSI_mux00001313_128
+      O => XLXI_15_MOSI_mux00001313_129
     );
   XLXI_15_MOSI_mux00001413 : LUT4
     generic map(
@@ -4412,10 +4418,10 @@ begin
     )
     port map (
       I0 => XLXI_15_count(2),
-      I1 => XLXI_15_MOSI_mux00001313_128,
-      I2 => XLXI_15_MOSI_mux00001385_130,
-      I3 => XLXI_15_MOSI_mux00001328_129,
-      O => XLXI_15_MOSI_mux00001413_131
+      I1 => XLXI_15_MOSI_mux00001313_129,
+      I2 => XLXI_15_MOSI_mux00001385_131,
+      I3 => XLXI_15_MOSI_mux00001328_130,
+      O => XLXI_15_MOSI_mux00001413_132
     );
   XLXI_15_MOSI_mux00001449 : LUT4
     generic map(
@@ -4426,7 +4432,7 @@ begin
       I1 => XLXI_15_count(0),
       I2 => XLXI_14_payload(27),
       I3 => XLXI_14_payload(28),
-      O => XLXI_15_MOSI_mux00001449_132
+      O => XLXI_15_MOSI_mux00001449_133
     );
   XLXI_15_MOSI_mux00001464 : LUT4
     generic map(
@@ -4437,7 +4443,7 @@ begin
       I1 => XLXI_14_payload(19),
       I2 => XLXI_15_count(3),
       I3 => XLXI_14_payload(20),
-      O => XLXI_15_MOSI_mux00001464_133
+      O => XLXI_15_MOSI_mux00001464_134
     );
   XLXI_15_MOSI_mux00001593 : LUT4
     generic map(
@@ -4446,9 +4452,9 @@ begin
     port map (
       I0 => XLXI_15_count(4),
       I1 => XLXI_15_count(1),
-      I2 => XLXI_15_MOSI_mux00001549_135,
-      I3 => XLXI_15_MOSI_mux00001413_131,
-      O => XLXI_15_MOSI_mux00001593_136
+      I2 => XLXI_15_MOSI_mux00001549_136,
+      I3 => XLXI_15_MOSI_mux00001413_132,
+      O => XLXI_15_MOSI_mux00001593_137
     );
   XLXI_15_MOSI_mux00001628 : LUT4
     generic map(
@@ -4459,17 +4465,17 @@ begin
       I1 => XLXI_15_count(4),
       I2 => XLXI_15_count(1),
       I3 => XLXI_15_count(2),
-      O => XLXI_15_MOSI_mux00001628_137
+      O => XLXI_15_MOSI_mux00001628_138
     );
   XLXI_15_MOSI_mux00001654 : LUT4
     generic map(
       INIT => X"AAA8"
     )
     port map (
-      I0 => XLXI_15_MOSI_mux00001644_138,
+      I0 => XLXI_15_MOSI_mux00001644_139,
       I1 => XLXI_15_count(5),
-      I2 => XLXI_15_MOSI_mux00001276_127,
-      I3 => XLXI_15_MOSI_mux00001593_136,
+      I2 => XLXI_15_MOSI_mux00001276_128,
+      I3 => XLXI_15_MOSI_mux00001593_137,
       O => XLXI_15_MOSI_mux0000
     );
   CLK_IBUF : IBUF
@@ -4480,72 +4486,97 @@ begin
   RST_IBUF : IBUF
     port map (
       I => RST,
-      O => RST_IBUF_21
+      O => RST_IBUF_22
     );
   INT_IBUF : IBUF
     port map (
       I => INT,
-      O => INT_IBUF_9
+      O => INT_IBUF_10
     );
   inputs_7_IBUF : IBUF
     port map (
       I => inputs(7),
-      O => inputs_7_IBUF_505
+      O => inputs_7_IBUF_509
     );
   inputs_6_IBUF : IBUF
     port map (
       I => inputs(6),
-      O => inputs_6_IBUF_504
+      O => inputs_6_IBUF_508
     );
   inputs_5_IBUF : IBUF
     port map (
       I => inputs(5),
-      O => inputs_5_IBUF_503
+      O => inputs_5_IBUF_507
     );
   inputs_4_IBUF : IBUF
     port map (
       I => inputs(4),
-      O => inputs_4_IBUF_502
+      O => inputs_4_IBUF_506
     );
   inputs_3_IBUF : IBUF
     port map (
       I => inputs(3),
-      O => inputs_3_IBUF_501
+      O => inputs_3_IBUF_505
     );
   inputs_2_IBUF : IBUF
     port map (
       I => inputs(2),
-      O => inputs_2_IBUF_500
+      O => inputs_2_IBUF_504
     );
   inputs_1_IBUF : IBUF
     port map (
       I => inputs(1),
-      O => inputs_1_IBUF_499
+      O => inputs_1_IBUF_503
     );
   inputs_0_IBUF : IBUF
     port map (
       I => inputs(0),
-      O => inputs_0_IBUF_498
+      O => inputs_0_IBUF_502
     );
   DAC_MOSI_OBUF : OBUF
     port map (
-      I => XLXI_15_MOSI_118,
+      I => XLXI_15_MOSI_119,
       O => DAC_MOSI
     );
   DAC_RST_OBUF : OBUF
     port map (
-      I => INT_IBUF_9,
+      I => DAC_RST_OBUF_6,
       O => DAC_RST
     );
   DAC_CS_OBUF : OBUF
     port map (
-      I => XLXI_15_CS_114,
+      I => XLXI_15_CS_115,
       O => DAC_CS
+    );
+  preamp_OBUF : OBUF
+    port map (
+      I => N1,
+      O => preamp
     );
   DAC_SCLK_OBUF : OBUF
     port map (
-      I => DAC_SCLK_OBUF_7,
+      I => DAC_SCLK_OBUF_8,
       O => DAC_SCLK
+    );
+  adc_OBUF : OBUF
+    port map (
+      I => N0,
+      O => adc
+    );
+  flash_OBUF : OBUF
+    port map (
+      I => N1,
+      O => flash
+    );
+  ceo_OBUF : OBUF
+    port map (
+      I => N1,
+      O => ceo
+    );
+  prom_OBUF : OBUF
+    port map (
+      I => N1,
+      O => prom
     );
   XLXI_15_MOSI_mux00001211_SW0 : LUT3
     generic map(
@@ -4564,9 +4595,9 @@ begin
     port map (
       I0 => XLXI_15_count(0),
       I1 => XLXI_15_count(3),
-      I2 => XLXI_15_MOSI_mux00001628_137,
+      I2 => XLXI_15_MOSI_mux00001628_138,
       I3 => XLXI_15_count(5),
-      O => XLXI_15_MOSI_mux00001644_138
+      O => XLXI_15_MOSI_mux00001644_139
     );
   XLXI_14_ready_and00001 : LUT4
     generic map(
@@ -4574,7 +4605,7 @@ begin
     )
     port map (
       I0 => XLXI_14_count(0),
-      I1 => RST_IBUF_21,
+      I1 => RST_IBUF_22,
       I2 => XLXI_14_count(1),
       I3 => XLXI_14_count(2),
       O => XLXI_14_ready_and0000
@@ -4584,7 +4615,7 @@ begin
       INIT => X"AAAE"
     )
     port map (
-      I0 => RST_IBUF_21,
+      I0 => RST_IBUF_22,
       I1 => XLXI_14_count(2),
       I2 => XLXI_14_count(1),
       I3 => XLXI_14_count(0),
@@ -4595,7 +4626,7 @@ begin
       I0 => N8,
       I1 => N9,
       S => XLXI_15_count(3),
-      O => XLXI_15_MOSI_mux0000184_139
+      O => XLXI_15_MOSI_mux0000184_140
     );
   XLXI_15_MOSI_mux0000184_F : LUT3
     generic map(
@@ -4622,7 +4653,7 @@ begin
       I0 => N10,
       I1 => N11,
       S => XLXI_15_count(3),
-      O => XLXI_15_MOSI_mux00001385_130
+      O => XLXI_15_MOSI_mux00001385_131
     );
   XLXI_15_MOSI_mux00001385_F : LUT3
     generic map(
@@ -4649,7 +4680,7 @@ begin
       I0 => N12,
       I1 => N13,
       S => XLXI_15_count(3),
-      O => XLXI_15_MOSI_mux00001521_134
+      O => XLXI_15_MOSI_mux00001521_135
     );
   XLXI_15_MOSI_mux00001521_F : LUT3
     generic map(
@@ -4680,6 +4711,11 @@ begin
     port map (
       I => WRTSTROBE1,
       O => WRTSTROBE
+    );
+  XLXI_15_SRST1_INV_0 : INV
+    port map (
+      I => INT_IBUF_10,
+      O => DAC_RST_OBUF_6
     );
   XLXI_15_Mcount_count_xor_0_11_INV_0 : INV
     port map (
@@ -4715,7 +4751,7 @@ begin
       INITP_07 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_00 => X"027DA000540BC20100050219A0005406C10100010128A0005402C001000B401E",
       INIT_01 => X"C50005F0A000541AC40100140432A0005415C301000A0314A0005410C2010005",
-      INIT_02 => X"1000100010001000100010001000100010001000C5000500C50005C2C5000551",
+      INIT_02 => X"1000100010001000100010001000100010001000C5000500C5000532C5000551",
       INIT_03 => X"000000000000000000000000000040371000C000000010001000100010001000",
       INIT_04 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_05 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -4840,7 +4876,7 @@ begin
       I1 => XLXI_14_payload(5),
       I2 => XLXI_15_count(3),
       I3 => XLXI_14_payload(6),
-      LO => XLXI_15_MOSI_mux0000127_126
+      LO => XLXI_15_MOSI_mux0000127_127
     );
   XLXI_15_MOSI_mux00001276 : LUT4_L
     generic map(
@@ -4848,10 +4884,10 @@ begin
     )
     port map (
       I0 => XLXI_15_count(1),
-      I1 => XLXI_15_MOSI_mux00001232_125,
+      I1 => XLXI_15_MOSI_mux00001232_126,
       I2 => XLXI_15_count(4),
-      I3 => XLXI_15_MOSI_mux00001112_120,
-      LO => XLXI_15_MOSI_mux00001276_127
+      I3 => XLXI_15_MOSI_mux00001112_121,
+      LO => XLXI_15_MOSI_mux00001276_128
     );
   XLXI_15_MOSI_mux00001328 : LUT4_L
     generic map(
@@ -4862,7 +4898,7 @@ begin
       I1 => XLXI_14_payload(21),
       I2 => XLXI_15_count(3),
       I3 => XLXI_14_payload(22),
-      LO => XLXI_15_MOSI_mux00001328_129
+      LO => XLXI_15_MOSI_mux00001328_130
     );
   XLXI_15_MOSI_mux00001549 : LUT4_L
     generic map(
@@ -4870,10 +4906,10 @@ begin
     )
     port map (
       I0 => XLXI_15_count(2),
-      I1 => XLXI_15_MOSI_mux00001449_132,
-      I2 => XLXI_15_MOSI_mux00001521_134,
-      I3 => XLXI_15_MOSI_mux00001464_133,
-      LO => XLXI_15_MOSI_mux00001549_135
+      I1 => XLXI_15_MOSI_mux00001449_133,
+      I2 => XLXI_15_MOSI_mux00001521_135,
+      I3 => XLXI_15_MOSI_mux00001464_134,
+      LO => XLXI_15_MOSI_mux00001549_136
     );
   XLXI_15_MOSI_mux00001211 : LUT4_L
     generic map(
@@ -4884,7 +4920,7 @@ begin
       I1 => XLXI_14_payload(7),
       I2 => XLXI_15_count(3),
       I3 => N6,
-      LO => XLXI_15_MOSI_mux00001211_124
+      LO => XLXI_15_MOSI_mux00001211_125
     );
 
 end Structure;

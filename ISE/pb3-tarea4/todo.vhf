@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : todo.vhf
--- /___/   /\     Timestamp : 02/24/2024 19:58:08
+-- /___/   /\     Timestamp : 02/26/2024 07:44:16
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -30,10 +30,15 @@ entity todo is
           inputs   : in    std_logic_vector (7 downto 0); 
           INT      : in    std_logic; 
           RST      : in    std_logic; 
+          adc      : out   std_logic; 
+          ceo      : out   std_logic; 
           DAC_CS   : out   std_logic; 
           DAC_MOSI : out   std_logic; 
           DAC_RST  : out   std_logic; 
-          DAC_SCLK : out   std_logic);
+          DAC_SCLK : out   std_logic; 
+          flash    : out   std_logic; 
+          preamp   : out   std_logic; 
+          prom     : out   std_logic);
 end todo;
 
 architecture BEHAVIORAL of todo is
@@ -104,6 +109,14 @@ architecture BEHAVIORAL of todo is
    end component;
    attribute BOX_TYPE of FD : component is "BLACK_BOX";
    
+   component spioff
+      port ( flash  : out   std_logic; 
+             preamp : out   std_logic; 
+             adc    : out   std_logic; 
+             ceo    : out   std_logic; 
+             prom   : out   std_logic);
+   end component;
+   
 begin
    XLXI_6 : kcpsm3
       port map (clk=>CLK,
@@ -152,6 +165,13 @@ begin
       port map (C=>CLK,
                 D=>XLXN_552,
                 Q=>XLXN_551);
+   
+   XLXI_21 : spioff
+      port map (adc=>adc,
+                ceo=>ceo,
+                flash=>flash,
+                preamp=>preamp,
+                prom=>prom);
    
 end BEHAVIORAL;
 

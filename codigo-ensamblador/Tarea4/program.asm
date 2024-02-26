@@ -5,7 +5,7 @@ MAIN:     LOAD s5, F0
           OUTPUT s5, 00
           LOAD s5, 51
           OUTPUT s5, 00
-          LOAD s5, C2
+          LOAD s5, 32
           OUTPUT s5, 00
           LOAD s5, 00
           OUTPUT s5, 00

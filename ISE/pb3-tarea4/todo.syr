@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> 
 Reading design: todo.prj
@@ -116,10 +116,12 @@ Architecture structure of Entity program is up to date.
 Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/register_merger.vhd" in Library work.
 Architecture behavioral of Entity register_merger is up to date.
 Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/SPI_INTERFACE.vhd" in Library work.
-Architecture behavioral of Entity spi_interface is up to date.
+Entity <spi_interface> compiled.
+Entity <spi_interface> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/spioff.vhd" in Library work.
+Architecture behavioral of Entity spioff is up to date.
 Compiling vhdl file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.vhf" in Library work.
-Entity <todo> compiled.
-Entity <todo> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity todo is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -135,6 +137,8 @@ Analyzing hierarchy for entity <program> in library <work> (architecture <struct
 Analyzing hierarchy for entity <register_merger> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <SPI_INTERFACE> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <spioff> in library <work> (architecture <behavioral>).
 
 WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/kcpsm3.vhd" line 289: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
 WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/kcpsm3.vhd" line 1200: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
@@ -180,7 +184,7 @@ WARNING:Xst:2591 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tar
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <todo> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.vhf" line 108: Unconnected output port 'interrupt_ack' of component 'kcpsm3'.
+WARNING:Xst:753 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo.vhf" line 121: Unconnected output port 'interrupt_ack' of component 'kcpsm3'.
     Set user-defined property "INIT =  0" for instance <XLXI_20> in unit <todo>.
 Entity <todo> analyzed. Unit <todo> generated.
 
@@ -414,7 +418,7 @@ Analyzing Entity <program> in library <work> (Architecture <structure>).
     Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_00 =  027DA000540BC20100050219A0005406C10100010128A0005402C001000B401E" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_01 =  C50005F0A000541AC40100140432A0005415C301000A0314A0005410C2010005" for instance <rom_1024_x_18> in unit <program>.
-    Set user-defined property "INIT_02 =  1000100010001000100010001000100010001000C5000500C50005C2C5000551" for instance <rom_1024_x_18> in unit <program>.
+    Set user-defined property "INIT_02 =  1000100010001000100010001000100010001000C5000500C5000532C5000551" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_03 =  000000000000000000000000000040371000C000000010001000100010001000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
     Set user-defined property "INIT_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <rom_1024_x_18> in unit <program>.
@@ -490,6 +494,9 @@ WARNING:Xst:819 - "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tare
    <RST>
 Entity <SPI_INTERFACE> analyzed. Unit <SPI_INTERFACE> generated.
 
+Analyzing Entity <spioff> in library <work> (Architecture <behavioral>).
+Entity <spioff> analyzed. Unit <spioff> generated.
+
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -534,6 +541,11 @@ Synthesizing Unit <SPI_INTERFACE>.
 	inferred   2 D-type flip-flop(s).
 	inferred   2 Comparator(s).
 Unit <SPI_INTERFACE> synthesized.
+
+
+Synthesizing Unit <spioff>.
+    Related source file is "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/spioff.vhd".
+Unit <spioff> synthesized.
 
 
 Synthesizing Unit <kcpsm3>.
@@ -659,12 +671,12 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 15
+# IOs                              : 20
 
 Cell Usage :
-# BELS                             : 293
+# BELS                             : 294
 #      GND                         : 1
-#      INV                         : 8
+#      INV                         : 9
 #      LUT1                        : 2
 #      LUT2                        : 14
 #      LUT3                        : 85
@@ -691,9 +703,9 @@ Cell Usage :
 #      RAMB16_S18                  : 1
 # Clock Buffers                    : 2
 #      BUFG                        : 2
-# IO Buffers                       : 15
+# IO Buffers                       : 20
 #      IBUF                        : 11
-#      OBUF                        : 4
+#      OBUF                        : 9
 =========================================================================
 
 Device utilization summary:
@@ -703,11 +715,11 @@ Selected Device : 3s500efg320-4
 
  Number of Slices:                      147  out of   4656     3%  
  Number of Slice Flip Flops:            125  out of   9312     1%  
- Number of 4 input LUTs:                271  out of   9312     2%  
-    Number used as logic:               203
+ Number of 4 input LUTs:                272  out of   9312     2%  
+    Number used as logic:               204
     Number used as RAMs:                 68
- Number of IOs:                          15
- Number of bonded IOBs:                  15  out of    232     6%  
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of    232     8%  
     IOB Flip Flops:                       8
  Number of BRAMs:                         1  out of     20     5%  
  Number of GCLKs:                         2  out of     24     8%  
@@ -921,13 +933,13 @@ Delay:               6.236ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.74 secs
+Total REAL time to Xst completion: 37.00 secs
+Total CPU time to Xst completion: 36.31 secs
  
 --> 
 
 
-Total memory usage is 563524 kilobytes
+Total memory usage is 563720 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   58 (   0 filtered)

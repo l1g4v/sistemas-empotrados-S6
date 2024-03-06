@@ -1,0 +1,112 @@
+                      enable interrupt
+
+                      constant n_points, 10
+
+
+                      constant spi_port, 00
+
+                      constant rom_oport, 02
+
+
+                      constant rom_iport, 00
+
+
+                      namereg s9, point
+                      namereg sa, high_rom
+                      namereg sb, low_rom
+
+
+
+                      jump MAIN
+
+                      include "../utils/lcd.asm"     ;LCD PORT 01
+                      ;IMPORTANTE: USEN s8-sF
+
+
+
+        spi_done_isr:
+                      address 3FF                    ; Switch to interrupt vector address
+                      jump spi_done_isr              ; Assemble instruction at interrupt vector location
+                      address spi_done_isr           ; Resume assembly at address previously captured in "spi_done_isr"
+                      ;TODO
+
+                      call next_16bit_rom
+                      call spi_send
+
+                      returni enable
+
+            spi_send: load s8, F0
+                      output s8, spi_port
+
+                      load s8, high_rom
+                      output s8, spi_port
+
+                      load s8, low_rom
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+                      ;32 clock cycles
+                      load s8, s8
+                      load s8, s8
+                      load s8, s8
+                      load s8, s8
+                      load s8, s8
+                      load s8, s8
+                      load s8, s8
+                      load s8, s8
+                      load s8, s8
+                      load s8, s8
+                      load s8, s8
+                      load s8, s8
+                      load s8, s8
+                      load s8, s8
+                      load s8, s8
+                      load s8, s8
+
+                      load s8, s8
+                      ;OUTPUT s8, spi_port ;end
+                      return
+
+      next_16bit_rom:
+                      ;high byte
+                      output point, rom_oport
+                      input high_rom, rom_iport
+                      add point, 01
+
+                      ;low byte
+                      output point, rom_oport
+                      input low_rom, rom_iport
+                      add point, 01
+
+                      compare point, n_points
+                      jump NZ, .end
+                      load point, 00
+                .end:
+                      return
+
+
+                MAIN: load point, 00
+
+                      ;LOAD s5, 80
+                      ;OUTPUT s5, LCD_PORT
+                      ;CALL delay_1s
+                      ;CALL LCD_INIT
+
+                      ;LOAD s5, 04 ;high nibble 0x28
+                      ;CALL LCD_CHARA
+                      ;CALL delay_1us
+                      ;LOAD s5, 0A ;lower nibble 0x28
+                      ;CALL LCD_CHARA
+                      ;CALL delay_40us
+
+
+                      call delay_1us
+
+                      call next_16bit_rom
+                      call spi_send
+
+               loopp:
+                      load sf, sf
+                      jump loopp
+

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/practica_1/main_isim_beh.exe" -prj "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/practica_1/main_beh.prj" "work.main" 

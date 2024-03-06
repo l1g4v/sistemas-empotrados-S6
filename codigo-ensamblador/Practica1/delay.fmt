@@ -1,0 +1,41 @@
+                      ;DELAYS
+
+                      constant c_delay_1us, 0B       ; at 50Mhz
+
+                      ;TIMERS
+                      ;all this region uses registers s0 to s4
+           delay_1us: load s0, c_delay_1us
+            wait_1us: sub s0, 01
+                      jump NZ, wait_1us
+                      return
+
+          delay_40us: load s1, 28                    ;40 x 1us = 40us
+           wait_40us: call delay_1us
+                      sub s1, 01
+                      jump NZ, wait_40us
+                      return
+
+           delay_1ms: load s2, 19                    ;25 x 40us = 1ms
+            wait_1ms: call delay_40us
+                      sub s2, 01
+                      jump NZ, wait_1ms
+                      return
+
+           delay_5ms: load s2, 7D                    ;125 x 40us = 1ms
+            wait_5ms: call delay_40us
+                      sub s2, 01
+                      jump NZ, wait_5ms
+                      return
+
+          delay_20ms: load s3, 14                    ;20 x 1ms = 20ms
+           wait_20ms: call delay_1ms
+                      sub s3, 01
+                      jump NZ, wait_20ms
+                      return
+
+            delay_1s: load s4, 32                    ;50 x 20ms = 1000ms
+             wait_1s: call delay_20ms
+                      sub s4, 01
+                      jump NZ, wait_1s
+                      return
+

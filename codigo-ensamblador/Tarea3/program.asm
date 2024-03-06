@@ -107,7 +107,7 @@ LCD_CHARA:          OR s5, 20
             
           
 MAIN:       LOAD s5, 80
-	          OUTPUT s5, LCD_PORT 
+	        OUTPUT s5, LCD_PORT 
             CALL delay_1s
       	    CALL LCD_INIT
 

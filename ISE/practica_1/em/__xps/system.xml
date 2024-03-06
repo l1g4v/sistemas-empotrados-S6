@@ -1,0 +1,10 @@
+
+<EDKSYSTEM EDKVERSION="14.7" EDWVERSION="1.2" TIMESTAMP="Mon Mar  4 10:38:27 2024">
+
+  <SYSTEMINFO ARCH="spartan3e" DEVICE="xc3s500e" PACKAGE="fg320" PART="xc3s500efg320-4" SOURCE="/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/practica_1/em/em.xmp" SPEEDGRADE="-4"/>
+
+  <EXTERNALPORTS/>
+
+  <MODULES/>
+
+</EDKSYSTEM>

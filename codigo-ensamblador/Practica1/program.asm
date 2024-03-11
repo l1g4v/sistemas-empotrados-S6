@@ -1,6 +1,6 @@
 enable interrupt
 
-CONSTANT n_points, 10
+CONSTANT n_points, FF
 
 CONSTANT spi_port, 00
 CONSTANT rom_oport, 02
@@ -25,23 +25,24 @@ spi_done_isr:
   jump spi_done_isr     ; Assemble instruction at interrupt vector location
   address spi_done_isr  ; Resume assembly at address previously captured in "spi_done_isr"
   ;TODO
-
+  CALL delay_8us
   CALL next_16bit_rom
   CALL spi_send
 
   returni enable
 
-spi_send: LOAD s8, F0
+spi_send: LOAD s8, low_rom
           OUTPUT s8, spi_port
 
           LOAD s8, high_rom
           OUTPUT s8, spi_port
 
-          LOAD s8, low_rom
+          LOAD s8, 32
           OUTPUT s8, spi_port
 
           LOAD s8, 00
           OUTPUT s8, spi_port
+
           ;32 clock cycles
           load s8,s8
           load s8,s8
@@ -74,7 +75,7 @@ next_16bit_rom:
     OUTPUT point, rom_oport
     INPUT low_rom, rom_iport
     ADD point, 01
-
+    
     COMPARE point, n_points
     JUMP NZ, .end
     LOAD point, 00
@@ -84,17 +85,17 @@ next_16bit_rom:
 
 MAIN:       LOAD point, 00
 
-            ;LOAD s5, 80
-	        ;OUTPUT s5, LCD_PORT 
-            ;CALL delay_1s
-      	    ;CALL LCD_INIT
+            LOAD s5, 80
+	          OUTPUT s5, LCD_PORT 
+            CALL delay_1s
+      	    CALL LCD_INIT
 
-            ;LOAD s5, 04 ;high nibble 0x28
-            ;CALL LCD_CHARA
-            ;CALL delay_1us
-            ;LOAD s5, 0A ;lower nibble 0x28
-            ;CALL LCD_CHARA
-            ;CALL delay_40us
+            LOAD s5, 04 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 0A ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
 
 
             CALL delay_1us

@@ -3,7 +3,18 @@ import csv
 with open('data.csv', newline='') as csvfile:
     data = list(csv.reader(csvfile))
 
-in_hex = [f'x"{int(v):0>2X}",' for v in data[0]]
+def swap_characters(input_str):
+    # Check if input string is of length 2
+    if len(input_str) != 2:
+        return "Input string must be exactly 2 characters long"
+    
+    # Swap the characters
+    swapped_str = input_str[1] + input_str[0]
+    
+    #return swapped_str
+    return input_str
+
+in_hex = ["x\""+swap_characters(f'{int(v):0>2X}')+"\"," for v in data[0]]
 
 #while len(in_hex)<254:
 #    in_hex.append('x"00",')

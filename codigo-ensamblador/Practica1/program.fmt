@@ -1,6 +1,6 @@
                       enable interrupt
 
-                      constant n_points, 10
+                      constant n_points, 7E
 
 
                       constant spi_port, 00
@@ -29,23 +29,24 @@
                       jump spi_done_isr              ; Assemble instruction at interrupt vector location
                       address spi_done_isr           ; Resume assembly at address previously captured in "spi_done_isr"
                       ;TODO
-
+                      call delay_8us
                       call next_16bit_rom
                       call spi_send
 
                       returni enable
 
-            spi_send: load s8, F0
+            spi_send: load s8, low_rom
                       output s8, spi_port
 
                       load s8, high_rom
                       output s8, spi_port
 
-                      load s8, low_rom
+                      load s8, 32
                       output s8, spi_port
 
                       load s8, 00
                       output s8, spi_port
+
                       ;32 clock cycles
                       load s8, s8
                       load s8, s8
@@ -88,17 +89,17 @@
 
                 MAIN: load point, 00
 
-                      ;LOAD s5, 80
-                      ;OUTPUT s5, LCD_PORT
-                      ;CALL delay_1s
-                      ;CALL LCD_INIT
+                      load s5, 80
+                      output s5, LCD_PORT
+                      call delay_1s
+                      call LCD_INIT
 
-                      ;LOAD s5, 04 ;high nibble 0x28
-                      ;CALL LCD_CHARA
-                      ;CALL delay_1us
-                      ;LOAD s5, 0A ;lower nibble 0x28
-                      ;CALL LCD_CHARA
-                      ;CALL delay_40us
+                      load s5, 04                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 0A                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
 
 
                       call delay_1us

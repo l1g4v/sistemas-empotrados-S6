@@ -7,7 +7,7 @@
 -- \   \   \/     Version: P.20131013
 --  \   \         Application: netgen
 --  /   /         Filename: main_synthesis.vhd
--- /___/   /\     Timestamp: Tue Mar  5 18:00:37 2024
+-- /___/   /\     Timestamp: Fri Mar 15 18:10:54 2024
 -- \   \  /  \ 
 --  \___\/\___\
 --             
@@ -32,6 +32,8 @@
 --             
 --------------------------------------------------------------------------------
 
+
+-- synthesis translate_off
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
@@ -51,11 +53,20 @@ entity main is
     flash : out STD_LOGIC; 
     ceo : out STD_LOGIC; 
     prom : out STD_LOGIC; 
+    sin : out STD_LOGIC_VECTOR ( 11 downto 0 ); 
+    pas : out STD_LOGIC_VECTOR ( 15 downto 0 ); 
     LCD : out STD_LOGIC_VECTOR ( 7 downto 0 ) 
   );
 end main;
 
 architecture Structure of main is
+  component dss
+    port (
+      clk : in STD_LOGIC := 'X'; 
+      phase_out : out STD_LOGIC_VECTOR ( 15 downto 0 ); 
+      sine : out STD_LOGIC_VECTOR ( 11 downto 0 ) 
+    );
+  end component;
   signal CLK_IBUF_1 : STD_LOGIC; 
   signal CLK_IBUF1 : STD_LOGIC; 
   signal DAC_RST_OBUF_6 : STD_LOGIC; 
@@ -171,6 +182,22 @@ architecture Structure of main is
   signal op_output_00_not0001_inv : STD_LOGIC; 
   signal op_output_01_cmp_eq0000 : STD_LOGIC; 
   signal op_output_02_cmp_eq0000 : STD_LOGIC; 
+  signal pas_0_OBUF_298 : STD_LOGIC; 
+  signal pas_10_OBUF_299 : STD_LOGIC; 
+  signal pas_11_OBUF_300 : STD_LOGIC; 
+  signal pas_12_OBUF_301 : STD_LOGIC; 
+  signal pas_13_OBUF_302 : STD_LOGIC; 
+  signal pas_14_OBUF_303 : STD_LOGIC; 
+  signal pas_15_OBUF_304 : STD_LOGIC; 
+  signal pas_1_OBUF_305 : STD_LOGIC; 
+  signal pas_2_OBUF_306 : STD_LOGIC; 
+  signal pas_3_OBUF_307 : STD_LOGIC; 
+  signal pas_4_OBUF_308 : STD_LOGIC; 
+  signal pas_5_OBUF_309 : STD_LOGIC; 
+  signal pas_6_OBUF_310 : STD_LOGIC; 
+  signal pas_7_OBUF_311 : STD_LOGIC; 
+  signal pas_8_OBUF_312 : STD_LOGIC; 
+  signal pas_9_OBUF_313 : STD_LOGIC; 
   signal pb3_active_interrupt : STD_LOGIC; 
   signal pb3_arith_carry : STD_LOGIC; 
   signal pb3_arith_carry_in : STD_LOGIC; 
@@ -237,6 +264,18 @@ architecture Structure of main is
   signal pb3_zero_carry : STD_LOGIC; 
   signal pb3_zero_fast_route : STD_LOGIC; 
   signal pb3_zero_flag : STD_LOGIC; 
+  signal sin_0_OBUF_607 : STD_LOGIC; 
+  signal sin_10_OBUF_608 : STD_LOGIC; 
+  signal sin_11_OBUF_609 : STD_LOGIC; 
+  signal sin_1_OBUF_610 : STD_LOGIC; 
+  signal sin_2_OBUF_611 : STD_LOGIC; 
+  signal sin_3_OBUF_612 : STD_LOGIC; 
+  signal sin_4_OBUF_613 : STD_LOGIC; 
+  signal sin_5_OBUF_614 : STD_LOGIC; 
+  signal sin_6_OBUF_615 : STD_LOGIC; 
+  signal sin_7_OBUF_616 : STD_LOGIC; 
+  signal sin_8_OBUF_617 : STD_LOGIC; 
+  signal sin_9_OBUF_618 : STD_LOGIC; 
   signal wrtstrobe : STD_LOGIC; 
   signal wrtstrobe1 : STD_LOGIC; 
   signal NLW_rom_Mrom_rdata_DOP_0_UNCONNECTED : STD_LOGIC; 
@@ -4892,6 +4931,146 @@ begin
       I => N1,
       O => prom
     );
+  sin_11_OBUF : OBUF
+    port map (
+      I => sin_11_OBUF_609,
+      O => sin(11)
+    );
+  sin_10_OBUF : OBUF
+    port map (
+      I => sin_10_OBUF_608,
+      O => sin(10)
+    );
+  sin_9_OBUF : OBUF
+    port map (
+      I => sin_9_OBUF_618,
+      O => sin(9)
+    );
+  sin_8_OBUF : OBUF
+    port map (
+      I => sin_8_OBUF_617,
+      O => sin(8)
+    );
+  sin_7_OBUF : OBUF
+    port map (
+      I => sin_7_OBUF_616,
+      O => sin(7)
+    );
+  sin_6_OBUF : OBUF
+    port map (
+      I => sin_6_OBUF_615,
+      O => sin(6)
+    );
+  sin_5_OBUF : OBUF
+    port map (
+      I => sin_5_OBUF_614,
+      O => sin(5)
+    );
+  sin_4_OBUF : OBUF
+    port map (
+      I => sin_4_OBUF_613,
+      O => sin(4)
+    );
+  sin_3_OBUF : OBUF
+    port map (
+      I => sin_3_OBUF_612,
+      O => sin(3)
+    );
+  sin_2_OBUF : OBUF
+    port map (
+      I => sin_2_OBUF_611,
+      O => sin(2)
+    );
+  sin_1_OBUF : OBUF
+    port map (
+      I => sin_1_OBUF_610,
+      O => sin(1)
+    );
+  sin_0_OBUF : OBUF
+    port map (
+      I => sin_0_OBUF_607,
+      O => sin(0)
+    );
+  pas_15_OBUF : OBUF
+    port map (
+      I => pas_15_OBUF_304,
+      O => pas(15)
+    );
+  pas_14_OBUF : OBUF
+    port map (
+      I => pas_14_OBUF_303,
+      O => pas(14)
+    );
+  pas_13_OBUF : OBUF
+    port map (
+      I => pas_13_OBUF_302,
+      O => pas(13)
+    );
+  pas_12_OBUF : OBUF
+    port map (
+      I => pas_12_OBUF_301,
+      O => pas(12)
+    );
+  pas_11_OBUF : OBUF
+    port map (
+      I => pas_11_OBUF_300,
+      O => pas(11)
+    );
+  pas_10_OBUF : OBUF
+    port map (
+      I => pas_10_OBUF_299,
+      O => pas(10)
+    );
+  pas_9_OBUF : OBUF
+    port map (
+      I => pas_9_OBUF_313,
+      O => pas(9)
+    );
+  pas_8_OBUF : OBUF
+    port map (
+      I => pas_8_OBUF_312,
+      O => pas(8)
+    );
+  pas_7_OBUF : OBUF
+    port map (
+      I => pas_7_OBUF_311,
+      O => pas(7)
+    );
+  pas_6_OBUF : OBUF
+    port map (
+      I => pas_6_OBUF_310,
+      O => pas(6)
+    );
+  pas_5_OBUF : OBUF
+    port map (
+      I => pas_5_OBUF_309,
+      O => pas(5)
+    );
+  pas_4_OBUF : OBUF
+    port map (
+      I => pas_4_OBUF_308,
+      O => pas(4)
+    );
+  pas_3_OBUF : OBUF
+    port map (
+      I => pas_3_OBUF_307,
+      O => pas(3)
+    );
+  pas_2_OBUF : OBUF
+    port map (
+      I => pas_2_OBUF_306,
+      O => pas(2)
+    );
+  pas_1_OBUF : OBUF
+    port map (
+      I => pas_1_OBUF_305,
+      O => pas(1)
+    );
+  pas_0_OBUF : OBUF
+    port map (
+      I => pas_0_OBUF_298,
+      O => pas(0)
+    );
   LCD_7_OBUF : OBUF
     port map (
       I => op_output_01(7),
@@ -5264,13 +5443,13 @@ begin
   rom_Mrom_rdata : RAMB16_S9
     generic map(
       WRITE_MODE => "WRITE_FIRST",
-      INIT_06 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_00 => X"0000000000000000000000000000000000000000000000000000FF522D203203",
-      INIT_01 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_02 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_03 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_04 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_05 => X"0000000000000000000000000000000000000000000000000000000000000000",
+      INIT_06 => X"00000000000000000000000000000000000000000000000050569050E04A3045",
+      INIT_00 => X"B0A620A3509F309BE0965092808D80886083107EA0781073606DB067F061205C",
+      INIT_01 => X"D0B1C0B360B5B0B690B720B850B820B890B7B0B660B5C0B3D0B180AFE0ACF0A9",
+      INIT_02 => X"606D1073A078107E60838088808D5092E096309B509F20A3B0A6F0A9E0AC80AF",
+      INIT_03 => X"F018101D6021F025C02AC02FE034303AA03F3045E04A90505056205CF061B067",
+      INIT_04 => X"002E001A000B000200000002000B001A002E00480067008C00B600E590112015",
+      INIT_05 => X"A03F303AE034C02FC02AF0256021101DF0182015901100E500B6008C00670048",
       INIT_07 => X"0000000000000000000000000000000000000000000000000000000000000000"
     )
     port map (
@@ -5310,26 +5489,26 @@ begin
     );
   progmem_rom_1024_x_18 : RAMB16_S18
     generic map(
-      INIT_3F => X"406A000000000000000000000000000000000000000000000000000000000000",
+      INIT_3F => X"4079000000000000000000000000000000000000000000000000000000000000",
       INIT => X"00000",
-      INITP_00 => X"0000022223FB8BCF2A8002FCF3CF3CF3CF3CF3FCF38B8A38EDCB72DCB72DCB4F",
-      INITP_01 => X"000000000000000000000000000000000000000000000000000033F23524A000",
+      INITP_00 => X"23FEE2F3CAA000BF3CF3CF3CF3CF3CFF3CE2E28E3B72DCB72DCB72DCB72DCB4F",
+      INITP_01 => X"0000000000000000000000000000000000000000000000000000033C8D492A22",
       INITP_02 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_03 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_04 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_05 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_06 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_07 => X"C000000000000000000000000000000000000000000000000000000000000000",
-      INIT_00 => X"A000540CC20100060219A0005407C10100020128A0005403C001000B4091C001",
-      INIT_01 => X"0002A000541BC40100150432A0005416C301000B0314A0005411C2010006027D",
-      INIT_02 => X"0010002605030015C5010500A000001FC501A5DFA000C501E5400002C501E540",
-      INIT_03 => X"0026050800020026050200060026050200060026050300060006000600260503",
-      INIT_04 => X"00020026050000060026050600020026050000060026050C0002002605000006",
-      INIT_05 => X"1650060E060E060E060EE720E620A7F0A60F17501650A000000B000B00260501",
-      INIT_06 => X"18A0C80008F08001006D0087A000001FC501C520A00000060026175000020026",
-      INIT_07 => X"18801880188018801880188018801880188018801880C8000800C80018B0C800",
-      INIT_08 => X"09005490491089014B00C90289014A00C902A000188018801880188018801880",
-      INIT_09 => X"00000000000000000000000000000000000040951FF0006D008700020900A000",
+      INIT_00 => X"A000540CC10100020108A0005407C10100020107A0005403C001000B4090C001",
+      INIT_01 => X"027DA000541BC20100150219A0005416C10100020128A0005416C10100020119",
+      INIT_02 => X"E5400002A000542AC40100240432A0005425C301001A0314A0005420C2010015",
+      INIT_03 => X"0503001F003505030024C5010500A000002EC501A5DFA000C501E5400002C501",
+      INIT_04 => X"0015003505080002003505020015003505020015003505030015001500150035",
+      INIT_05 => X"050100020035050000150035050600020035050000150035050C000200350500",
+      INIT_06 => X"00351650060E060E060E060EE720E620A7F0A60F17501650A000001A001A0035",
+      INIT_07 => X"18A0C80018B08001007D00860006A000002EC501C520A0000015003517500002",
+      INIT_08 => X"A0000900548F49C889014B00C90289014A00C902A000C8000800C8000832C800",
+      INIT_09 => X"0000000000000000000000000000000000000000000040931FF0007D00860900",
       INIT_0A => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_0B => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_0C => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -5438,6 +5617,39 @@ begin
       DOP(1) => XLXN_39(17),
       DOP(0) => XLXN_39(16)
     );
+  XLXI_23 : dss
+    port map (
+      clk => CLK_IBUF_1,
+      phase_out(15) => pas_15_OBUF_304,
+      phase_out(14) => pas_14_OBUF_303,
+      phase_out(13) => pas_13_OBUF_302,
+      phase_out(12) => pas_12_OBUF_301,
+      phase_out(11) => pas_11_OBUF_300,
+      phase_out(10) => pas_10_OBUF_299,
+      phase_out(9) => pas_9_OBUF_313,
+      phase_out(8) => pas_8_OBUF_312,
+      phase_out(7) => pas_7_OBUF_311,
+      phase_out(6) => pas_6_OBUF_310,
+      phase_out(5) => pas_5_OBUF_309,
+      phase_out(4) => pas_4_OBUF_308,
+      phase_out(3) => pas_3_OBUF_307,
+      phase_out(2) => pas_2_OBUF_306,
+      phase_out(1) => pas_1_OBUF_305,
+      phase_out(0) => pas_0_OBUF_298,
+      sine(11) => sin_11_OBUF_609,
+      sine(10) => sin_10_OBUF_608,
+      sine(9) => sin_9_OBUF_618,
+      sine(8) => sin_8_OBUF_617,
+      sine(7) => sin_7_OBUF_616,
+      sine(6) => sin_6_OBUF_615,
+      sine(5) => sin_5_OBUF_614,
+      sine(4) => sin_4_OBUF_613,
+      sine(3) => sin_3_OBUF_612,
+      sine(2) => sin_2_OBUF_611,
+      sine(1) => sin_1_OBUF_610,
+      sine(0) => sin_0_OBUF_607
+    );
 
 end Structure;
 
+-- synthesis translate_on

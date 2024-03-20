@@ -16,8 +16,8 @@ Parsing VHDL file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/practica
 Parsing VHDL file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/practica_1/main.vhf" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 116804 KB
-Fuse CPU Usage: 1230 ms
+Fuse Memory Usage: 114632 KB
+Fuse CPU Usage: 890 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -59,9 +59,8 @@ Compiling architecture behavioral of entity SPI_main [spi_main_default]
 Compiling architecture behavioral of entity INT_HANDLER [int_handler_default]
 Compiling architecture behavioral of entity main
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
 Compiled 133 VHDL Units
 Built simulation executable /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/practica_1/main_isim_beh.exe
-Fuse Memory Usage: 1755676 KB
-Fuse CPU Usage: 1620 ms
-GCC CPU Usage: 3640 ms
+Fuse Memory Usage: 1753612 KB
+Fuse CPU Usage: 1160 ms
+GCC CPU Usage: 2230 ms

@@ -1,6 +1,6 @@
 enable interrupt
 
-CONSTANT n_points, FF
+CONSTANT n_points, C8 ;100 8bit pairs makes 200 data points
 
 CONSTANT spi_port, 00
 CONSTANT rom_oport, 02
@@ -12,11 +12,10 @@ namereg sA, high_rom
 namereg sB, low_rom
 
 
-
 JUMP MAIN
 
 INCLUDE "../utils/lcd.asm" ;LCD PORT 01
-;IMPORTANTE: USEN s8-sF
+;IMPORTANTE: USEN sB-sF
 
 
 
@@ -25,7 +24,7 @@ spi_done_isr:
   jump spi_done_isr     ; Assemble instruction at interrupt vector location
   address spi_done_isr  ; Resume assembly at address previously captured in "spi_done_isr"
   ;TODO
-  CALL delay_8us
+  CALL delay_7us
   CALL next_16bit_rom
   CALL spi_send
 
@@ -43,26 +42,6 @@ spi_send: LOAD s8, low_rom
           LOAD s8, 00
           OUTPUT s8, spi_port
 
-          ;32 clock cycles
-          load s8,s8
-          load s8,s8
-          load s8,s8
-          load s8,s8
-          load s8,s8
-          load s8,s8
-          load s8,s8
-          load s8,s8
-          load s8,s8
-          load s8,s8
-          load s8,s8
-          load s8,s8
-          load s8,s8
-          load s8,s8
-          load s8,s8
-          load s8,s8
-          
-          load s8,s8
-          ;OUTPUT s8, spi_port ;end
           return
 
 next_16bit_rom:
@@ -90,15 +69,152 @@ MAIN:       LOAD point, 00
             CALL delay_1s
       	    CALL LCD_INIT
 
-            LOAD s5, 04 ;high nibble 0x28
+            LOAD s5, 05 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 03 ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 06 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 05 ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 06 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 0E ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 06 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 0F ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 06 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 09 ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 06 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 04 ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 06 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 01 ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 06 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 0C ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 03 ;high nibble 0x28
             CALL LCD_CHARA
             CALL delay_1us
             LOAD s5, 0A ;lower nibble 0x28
             CALL LCD_CHARA
             CALL delay_40us
 
-
+            LOAD s5, 03 ;high nibble 0x28
+            CALL LCD_CHARA
             CALL delay_1us
+            LOAD s5, 01 ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 04 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 0B ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 04 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 08 ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 07 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 0A ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 02 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 00 ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 06 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 03 ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 06 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 0F ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 06 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 0E ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 02 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 00 ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 03 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 01 ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 02 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 08 ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
+
+            LOAD s5, 05 ;high nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_1us
+            LOAD s5, 06 ;lower nibble 0x28
+            CALL LCD_CHARA
+            CALL delay_40us
 
             CALL next_16bit_rom
             CALL spi_send

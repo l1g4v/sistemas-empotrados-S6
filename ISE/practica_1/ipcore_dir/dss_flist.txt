@@ -1,0 +1,15 @@
+# Output products list for <dss>
+_xmsgs/pn_parser.xmsgs
+dss/doc/dds_compiler_v4_0_vinfo.html
+dss/doc/dds_ds558.pdf
+dss.asy
+dss.gise
+dss.ngc
+dss.sym
+dss.vhd
+dss.vho
+dss.xco
+dss.xise
+dss_flist.txt
+dss_readme.txt
+dss_xmdf.tcl

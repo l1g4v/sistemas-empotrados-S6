@@ -20,35 +20,24 @@
         <signal name="prom" />
         <signal name="XLXN_29(31:0)" />
         <signal name="XLXN_32(7:0)" />
-        <signal name="XLXN_33" />
         <signal name="XLXN_34" />
         <signal name="XLXN_35(7:0)" />
         <signal name="XLXN_38(7:0)" />
         <signal name="XLXN_39(17:0)" />
         <signal name="XLXN_40(9:0)" />
-        <signal name="XLXN_51" />
         <signal name="wrtstrobe" />
         <signal name="aux_strobe" />
-        <signal name="XLXN_54" />
-        <signal name="XLXN_55" />
-        <signal name="XLXN_56" />
-        <signal name="XLXN_59" />
-        <signal name="XLXN_60" />
-        <signal name="XLXN_64" />
         <signal name="DAC_RST" />
         <signal name="DAC_MOSI" />
         <signal name="DAC_SCLK" />
         <signal name="DAC_CS" />
         <signal name="XLXN_73" />
         <signal name="XLXN_74" />
-        <signal name="XLXN_75" />
         <signal name="XLXN_76" />
         <signal name="XLXN_77" />
         <signal name="XLXN_79" />
-        <signal name="XLXN_80" />
         <signal name="XLXN_81" />
         <signal name="XLXN_82" />
-        <signal name="XLXN_83" />
         <port polarity="Input" name="CLK" />
         <port polarity="Input" name="RST" />
         <port polarity="Output" name="LCD(7:0)" />

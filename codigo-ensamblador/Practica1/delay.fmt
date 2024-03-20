@@ -9,10 +9,16 @@
                       jump NZ, wait_1us
                       return
 
+           delay_7us: load s1, 07                    ;7 x 1us = 7us
+            wait_7us: call delay_1us
+                      sub s1, 01
+                      jump NZ, wait_7us
+                      return
+
            delay_8us: load s1, 08                    ;8 x 1us = 8us
             wait_8us: call delay_1us
                       sub s1, 01
-                      jump NZ, wait_40us
+                      jump NZ, wait_8us
                       return
 
           delay_25us: load s1, 19                    ;25 x 1us = 25us

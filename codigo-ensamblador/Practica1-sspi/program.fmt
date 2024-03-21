@@ -1,0 +1,186 @@
+                      constant spi_oport, 00
+
+                      ;use s8 to sF
+
+
+                      jump MAIN
+                      include "../utils/lcd.asm"     ;LCD PORT 01
+
+                      ;TIME: 12.84us per transmision
+       SPI_dac_tx_rx: load s8, 20                    ;32-bits to transmit and receive
+                      load s9, 00                    ; CS low (bit0)
+    next_SPI_dac_bit: output s9, spi_oport           ;output data bit ready to be used on rising edge
+                      xor s9, 02                     ;clock High (bit1)
+                      output s9, spi_oport           ;drive clock high (bit1)
+                      xor s9, 02                     ;prepare clock Low (bit1)
+                      input sa, 00                   ;read input bit
+                      and s9, 03                     ;set mosi to zero (bit2)
+                      or s9, sa                      ;output stays the same if the input is zero, set to one otherwise
+                      output s9, spi_oport           ;drive clock low
+                      sub s8, 01                     ;count bits
+                      jump NZ, next_SPI_dac_bit      ;repeat until finished
+                      load s9, 01
+                      output s9, spi_oport
+                      return
+
+                MAIN: load s9, 01                    ; CS high
+                      output s9, spi_oport
+
+                      load s5, 80
+                      output s5, LCD_PORT
+                      call delay_1s
+                      call LCD_INIT
+
+                      load s5, 05                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 03                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 05                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 0E                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 0F                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 09                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 04                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 01                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 0C                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 03                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 0A                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 03                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 01                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 04                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 0B                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 04                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 08                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 07                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 0A                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 02                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 00                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 03                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 0F                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 0E                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 02                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 00                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 03                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 01                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 02                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 08                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 05                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 06                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                wave:
+                      call delay_37us
+                      ;call delay_1us
+                      call SPI_dac_tx_rx
+                      jump wave
+

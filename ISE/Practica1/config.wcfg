@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/pb3-tarea4/todo_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="textio" />
+            <top_module name="todo" />
+            <top_module name="vcomponents" />
+            <top_module name="vital_primitives" />
+            <top_module name="vital_timing" />
+            <top_module name="vpkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="/todo/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/int" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">int</obj_property>
+      <obj_property name="ObjectShortName">int</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/dac_cs" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dac_cs</obj_property>
+      <obj_property name="ObjectShortName">dac_cs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/dac_mosi" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dac_mosi</obj_property>
+      <obj_property name="ObjectShortName">dac_mosi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/dac_rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dac_rst</obj_property>
+      <obj_property name="ObjectShortName">dac_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/dac_sclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dac_sclk</obj_property>
+      <obj_property name="ObjectShortName">dac_sclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/wrtstrobe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wrtstrobe</obj_property>
+      <obj_property name="ObjectShortName">wrtstrobe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_13" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_13[7:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_13[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_14" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_14[17:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_14[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_15" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_15[9:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_15[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_16" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_16[7:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_16[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_18" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_18</obj_property>
+      <obj_property name="ObjectShortName">xlxn_18</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_19" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_19[7:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_19[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_42" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_42[31:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_42[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxn_43" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_43</obj_property>
+      <obj_property name="ObjectShortName">xlxn_43</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/xlxi_8_input_v_opensignal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxi_8_input_v_opensignal[7:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxi_8_input_v_opensignal[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/XLXI_15/tx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tx[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tx[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/todo/XLXI_15/enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+</wave_config>

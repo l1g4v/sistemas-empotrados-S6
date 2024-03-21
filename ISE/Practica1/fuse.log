@@ -1,0 +1,44 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/Practica1/todo_isim_par.exe -prj /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/Practica1/todo_par.prj work.todo 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/Practica1/netgen/par/todo_timesim.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 147308 KB
+Fuse CPU Usage: 1200 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package textio
+Compiling package vital_timing
+Compiling package vcomponents
+Compiling package vital_primitives
+Compiling package vpackage
+Compiling architecture x_buf_v of entity X_BUF [\X_BUF(true,true,"UNPLACED",(0,0...]
+Compiling architecture x_lut4_v of entity X_LUT4 [\X_LUT4(true,true,"UNPLACED",(0,...]
+Compiling architecture x_inv_v of entity X_INV [\X_INV(true,true,"SLICE_X50Y57",...]
+Compiling architecture x_sff_v of entity X_SFF [\X_SFF(true,true,true,"UNPLACED"...]
+Compiling architecture x_xor2_v of entity X_XOR2 [\X_XOR2(true,true,"UNPLACED",(0,...]
+Compiling architecture x_ff_v of entity X_FF [\X_FF(true,true,true,"UNPLACED",...]
+Compiling architecture x_mux2_v of entity X_MUX2 [\X_MUX2(true,true,"UNPLACED",(0,...]
+Compiling architecture x_zero_v of entity X_ZERO [\X_ZERO("UNPLACED")(1,8)\]
+Compiling architecture x_and2_v of entity X_AND2 [\X_AND2(true,true,"UNPLACED",(0,...]
+Compiling architecture x_pd_v of entity X_PD [\X_PD(true,true,"UNPLACED")(1,8)...]
+Compiling architecture x_obuf_v of entity X_OBUF [\X_OBUF(true,true,"DONT_CARE",12...]
+Compiling architecture x_bufgmux_v of entity X_BUFGMUX [\X_BUFGMUX(true,"*",true,false,"...]
+Compiling architecture x_ramb16_s18_v of entity X_RAMB16_S18 [\X_RAMB16_S18(true,true,true,"UN...]
+Compiling architecture x_ramd16_v of entity X_RAMD16 [\X_RAMD16(true,true,true,"UNPLAC...]
+Compiling architecture x_and3_v of entity X_AND3 [\X_AND3(true,true,"UNPLACED",(0,...]
+Compiling architecture x_one_v of entity X_ONE [\X_ONE("UNPLACED")(1,8)\]
+Compiling architecture x_inv_v of entity X_INV [\X_INV(true,true,"UNPLACED",(0,0...]
+Compiling architecture x_roc_v of entity X_ROC [\X_ROC("UNPLACED",100000,"*")(1,...]
+Compiling architecture x_toc_v of entity X_TOC [\X_TOC("UNPLACED",0,"*")(1,8,1,1...]
+Compiling architecture structure of entity todo
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 1476 VHDL Units
+Built simulation executable /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/Practica1/todo_isim_par.exe
+Fuse Memory Usage: 1782220 KB
+Fuse CPU Usage: 2000 ms
+GCC CPU Usage: 3050 ms

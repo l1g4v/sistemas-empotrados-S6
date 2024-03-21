@@ -1,0 +1,9 @@
+[Inputs]
+enable
+rst
+=input_v[7:0]=
+=port_id[7:0]=
+[Outputs]
+=output_00[7:0]=
+=output_01[7:0]=
+[BiDir]

@@ -233,6 +233,7 @@
     <transform xil_pn:end_ts="1708956325" xil_pn:in_ck="7771342387063203902" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="1315148840827392792" xil_pn:start_ts="1708956310">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="todo.bld"/>
@@ -242,6 +243,8 @@
     <transform xil_pn:end_ts="1708956342" xil_pn:in_ck="7771343793471822143" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1708956325">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
@@ -257,6 +260,8 @@
     <transform xil_pn:end_ts="1708956385" xil_pn:in_ck="-5846856560457128744" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1708956342">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="todo.ncd"/>
       <outfile xil_pn:name="todo.pad"/>
@@ -271,6 +276,7 @@
     <transform xil_pn:end_ts="1708956406" xil_pn:in_ck="5091139282681" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1708956385">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="todo.bgn"/>
       <outfile xil_pn:name="todo.bit"/>
@@ -283,6 +289,7 @@
     <transform xil_pn:end_ts="1708957118" xil_pn:in_ck="5091139269827" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="1890673188639090495" xil_pn:start_ts="1708957118">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_impact.cmd"/>
@@ -291,6 +298,7 @@
     <transform xil_pn:end_ts="1708956385" xil_pn:in_ck="7771158147534214331" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1708956376">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="todo.twr"/>
       <outfile xil_pn:name="todo.twx"/>

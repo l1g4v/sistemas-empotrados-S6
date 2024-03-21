@@ -1,0 +1,25 @@
+add instance fd 2768 752 R0 -sn=1
+select figure at 2908 808 8 -branches -sn=1
+delete selection -sn=1
+undo
+select figure at 2794 781 8 -branches -sn=1
+delete selection -sn=1
+select figure at 2933 571 8 -branches -sn=1
+move instance at 2768 752 to 2576 768 R0 -keepConn -sn=1
+move instance at 2576 768 to 2640 1056 R0 -keepConn -sn=1
+select figure at 3165 979 8 -branches -sn=1
+select figure at 2864 797 8 -branches -sn=1
+move branchpt at 2864 800 to 3008 800 -keepConn -sn=1
+select figure at 3037 858 8 -branches -sn=1
+select figure at 3008 801 8 -branches -sn=1
+select figure at 3008 801 8 -branches -all -sn=1
+select figure at 3099 911 8 -branches -sn=1
+select figure at 3010 801 8 -branches -sn=1
+move branchpt at 3008 800 to 3024 800 -keepConn -sn=1
+select figure at 3062 824 8 -branches -sn=1
+select figure at 1988 933 8 -branches -sn=1
+move branchpt at 1984 928 to 2624 928 -keepConn -sn=1
+move branchpt at 2624 928 to 2640 928 -keepConn -sn=1
+select figure at 2657 804 8 -branches -sn=1
+select figure at 2591 799 8 -branches -sn=1
+delete selection -sn=1

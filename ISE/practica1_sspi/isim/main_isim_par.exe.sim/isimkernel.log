@@ -1,0 +1,31 @@
+Command line:
+   main_isim_par.exe
+     -simmode  gui
+     -sdfmax  /main/=netgen/par/main_timesim.sdf
+     -sdfroot  /
+     -simrunnum  0
+     -socket  35489
+
+Wed Mar 20 23:44:08 2024
+
+
+ Elaboration Time: 0.18 sec
+
+ Current Memory Usage: 248.717 Meg
+
+ Total Signals          : 14277
+ Total Nets             : 9589
+ Total Signal Drivers   : 8425
+ Total Blocks           : 4156
+ Total Primitive Blocks : 2205
+ Total Processes        : 8425
+ Total Traceable Variables  : 20845
+ Total Scalar Nets and Variables : 85967
+Total Line Count : 29786
+
+ Total Simulation Time: 8.2 sec
+
+ Current Memory Usage: 324.301 Meg
+
+Wed Mar 20 23:46:15 2024
+

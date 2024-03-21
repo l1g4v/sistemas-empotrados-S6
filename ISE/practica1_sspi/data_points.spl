@@ -1,0 +1,6 @@
+[Inputs]
+clk
+rst
+[Outputs]
+=value[7:0]=
+[BiDir]

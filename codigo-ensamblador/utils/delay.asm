@@ -25,6 +25,11 @@ delay_25us: LOAD s1, 19 ;25 x 1us = 25us
             SUB s1, 01
             JUMP NZ, wait_40us
             RETURN
+delay_37us: LOAD s1, 25 ;37 x 1us = 37us
+ wait_37us: CALL delay_1us
+            SUB s1, 01
+            JUMP NZ, wait_37us
+            RETURN
 
 delay_40us: LOAD s1, 28 ;40 x 1us = 40us
  wait_40us: CALL delay_1us

@@ -1,0 +1,12 @@
+Command line:
+   todo_isim_par.exe
+     -simmode  gui
+     -sdfmax  /todo/=netgen/par/todo_timesim.sdf
+     -sdfroot  /
+     -simrunnum  0
+     -socket  47199
+
+Wed Mar 20 17:19:26 2024
+
+
+ Elaboration Time: 0.16 sec

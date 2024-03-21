@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/Practica1/todo_isim_par.exe" -prj "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/Practica1/todo_par.prj" "work.todo" 

@@ -1,0 +1,588 @@
+                      constant spi_port, 00
+
+                      constant spi_eport, 04
+
+                      constant spi_rport, 03
+
+
+
+                      jump MAIN
+                      include "../utils/lcd.asm"     ;LCD PORT 01
+
+            spi_wait: load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      load s0, s0
+                      ;load s0,s0
+                      ;load s0,00
+                      ;OUTPUT s0, 00
+                      ;OUTPUT s0, 00 ;disable SPI
+                      return
+
+
+                MAIN: call delay_1us
+
+                      load s5, 80
+                      output s5, LCD_PORT
+                      call delay_1s
+                      call LCD_INIT
+
+                      load s5, 05                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 03                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 05                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 0E                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 0F                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 09                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 04                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 01                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 0C                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 03                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 0A                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 03                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 01                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 04                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 0B                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 04                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 08                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 07                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 0A                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 02                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 00                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 03                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 0F                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 06                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 0E                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 02                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 00                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 03                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 01                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 02                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 08                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                      load s5, 05                    ;high nibble 0x28
+                      call LCD_CHARA
+                      call delay_1us
+                      load s5, 06                    ;lower nibble 0x28
+                      call LCD_CHARA
+                      call delay_40us
+
+                wave: output s5, 03
+                      load s8, 20
+                      output s8, spi_port
+
+                      load s8, 5C
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, A0
+                      output s8, spi_port
+
+                      load s8, 78
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, 50
+                      output s8, spi_port
+
+                      load s8, 92
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, B0
+                      output s8, spi_port
+
+                      load s8, A6
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, C0
+                      output s8, spi_port
+
+                      load s8, B3
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, 50
+                      output s8, spi_port
+
+                      load s8, B8
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, C0
+                      output s8, spi_port
+
+                      load s8, B3
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, B0
+                      output s8, spi_port
+
+                      load s8, A6
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, 50
+                      output s8, spi_port
+
+                      load s8, 92
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, A0
+                      output s8, spi_port
+
+                      load s8, 78
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, 20
+                      output s8, spi_port
+
+                      load s8, 5C
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, A0
+                      output s8, spi_port
+
+                      load s8, 3F
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, F0
+                      output s8, spi_port
+
+                      load s8, 25
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, 90
+                      output s8, spi_port
+
+                      load s8, 11
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, 0
+                      output s8, spi_port
+
+                      load s8, 48
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, 0
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, 0
+                      output s8, spi_port
+
+                      load s8, 48
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, 90
+                      output s8, spi_port
+
+                      load s8, 11
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, F0
+                      output s8, spi_port
+
+                      load s8, 25
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+
+                      load s8, A0
+                      output s8, spi_port
+
+                      load s8, 3F
+                      output s8, spi_port
+
+                      load s8, 32
+                      output s8, spi_port
+
+                      load s8, 00
+                      output s8, spi_port
+
+                      output s5, 04
+                      call spi_wait
+                      output s5, 04
+                      output s5, 03
+
+                      call delay_25us
+                      call delay_25us
+                      jump wave
+

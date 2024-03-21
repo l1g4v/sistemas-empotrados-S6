@@ -5,11 +5,13 @@ def f(t):
     return 0.9*math.sin(2000*math.pi*t)+0.9
 
 
-points = range(0,100)
-p=0.00001#0.000008
+points = range(0,20)
+p=0.000050#0.000008
 t = []
 k = []
 a = []
+c = []
+b = []
 for i in points:
     dec = int(8192*f(i*p)/5)
     if dec<1:
@@ -19,6 +21,7 @@ for i in points:
     t.append(p*i)
     k.append(dec)
     t.append((p*(i+1))-0.000000001)
+    b.append(f'0000000000110010{dec:012b}0000')
     hex=f'{dec:0>2X}0'
     
     high_byte = hex[:2]
@@ -26,6 +29,29 @@ for i in points:
 
     a.append(f'x"{high_byte}",')
     a.append(f'x"{low_byte}",')
+
+    code = f'''
+          LOAD s8, {low_byte}
+          OUTPUT s8, spi_port
+
+          LOAD s8, {high_byte}
+          OUTPUT s8, spi_port
+
+          LOAD s8, 32
+          OUTPUT s8, spi_port
+
+          LOAD s8, 00
+          OUTPUT s8, spi_port
+         
+          OUTPUT s5, 04
+          CALL spi_wait
+          OUTPUT s5, 04
+          OUTPUT s5, 03
+
+          CALL delay_25us
+          CALL delay_25us
+    '''
+    c.append(code)
 
 print(a)
 print(len(a))
@@ -70,3 +96,6 @@ begin
 end syn;'''
 
 print(rom)
+print(''.join(c))
+print(''.join(b))
+print(len(''.join(b)))

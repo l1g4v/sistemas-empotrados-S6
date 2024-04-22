@@ -1,0 +1,6 @@
+09:58:27.632 INFO  - Processing command line option -hwspec /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/lab2/SDK/SDK_Export/hw/system.xml. 
+10:02:54.533 INFO  - Successfully generated /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/lab2/workspace/TestProject/src/lscript.ld. 
+10:02:54.534 INFO  - Applying linker script to all configurations of project TestProject. 
+10:02:54.534 INFO  - Setting rebuild state to true for all configurations of project TestProject. 
+10:03:08.778 INFO  - FPGA configured successfully with bitstream "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/lab2/workspace/lab2_hw_platform/download.bit" 
+10:04:53.934 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

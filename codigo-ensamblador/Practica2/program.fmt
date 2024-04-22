@@ -1,0 +1,34 @@
+                      disable interrupt
+                      jump MAIN
+                      include "../utils/delay100.asm"
+
+          delay_60us: load s1, 3C                    ;60 x 1us = 60us
+           wait_60us: call delay_1us
+                      sub s1, 01
+                      jump NZ, wait_60us
+                      return
+
+                 PWM:
+                      ;mandar pulso a alto insta
+                      outputk 01, 0
+                      call delay_1ms
+                      compare s5, 00
+                      jump Z, .end
+              .cycle: ; 180°/15 = 12°
+                      ; como se van a usar 4 switches para cada servo solo se pueden dar pasos de 12°
+                      ; dado el calculo del pwm de 1ms a 1.9ms el paso es de 5us por grado
+                      ; 12*5us da 60us por cada 12°
+                      call delay_60us
+                      sub s5, 01
+                      jump NZ, .cycle
+                      ;mandar pulso a bajo insta
+                .end:
+                      outputk 00, 0
+                      return
+
+                MAIN:
+                      input s5, 00
+                      call delay_20ms                ; bajo por 20ms
+                      call PWM
+                      jump MAIN
+

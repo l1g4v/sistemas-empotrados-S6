@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/lab3/workspace/TestApp/Debug/TestApp.elf" key="lab3_hw_platform-microblaze_0-initElf"/>
+	<item value="system_bd.bmm" key="lab3_hw_platform-bmmFile"/>
+	<item value="system.bit" key="lab3_hw_platform-bitFile"/>
+</section>

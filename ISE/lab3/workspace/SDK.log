@@ -1,0 +1,4 @@
+15:00:44.473 INFO  - Processing command line option -hwspec /home/leon/Documents/Code/sistemas-empotrados-S6/xps/lab3/SDK/SDK_Export/hw/system.xml. 
+15:03:29.752 INFO  - Successfully generated /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/lab3/workspace/TestApp/src/lscript.ld. 
+15:03:29.753 INFO  - Applying linker script to all configurations of project TestApp. 
+15:03:29.753 INFO  - Setting rebuild state to true for all configurations of project TestApp. 

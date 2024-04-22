@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/Practica2/main_isim_beh.exe" -prj "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/Practica2/main_beh.prj" "work.main" 

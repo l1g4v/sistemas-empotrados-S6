@@ -1,0 +1,5 @@
+[Inputs]
+=in_vec[3:0]=
+[Outputs]
+=out_byte[7:0]=
+[BiDir]

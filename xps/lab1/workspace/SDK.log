@@ -1,0 +1,4 @@
+09:02:31.060 INFO  - Processing command line option -hwspec /home/leon/Documents/Code/sistemas-empotrados-S6/ISE/lab1/SDK/SDK_Export/hw/system.xml. 
+09:07:57.301 INFO  - FPGA configured successfully with bitstream "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/lab1/workspace/lab1_hw_platform/download.bit" 
+09:08:39.691 INFO  - FPGA configured successfully with bitstream "/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/lab1/workspace/lab1_hw_platform/download.bit" 
+09:25:29.469 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/leon/Documents/Code/sistemas-empotrados-S6/ISE/Practica2/main_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="jtag_loader_pkg" />
+            <top_module name="main" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
+            <top_module name="std_logic_textio" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="textio" />
+            <top_module name="vcomponents" />
+            <top_module name="vital_primitives" />
+            <top_module name="vital_timing" />
+            <top_module name="vpkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/main/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/input" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">input[7:0]</obj_property>
+      <obj_property name="ObjectShortName">input[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/servo_0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">servo_0</obj_property>
+      <obj_property name="ObjectShortName">servo_0</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff0000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/servo_1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">servo_1</obj_property>
+      <obj_property name="ObjectShortName">servo_1</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/mo0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mo0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mo0[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/mo1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mo1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mo1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/output0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">output0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">output0[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/output1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">output1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">output1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/port0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">port0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port0[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/port1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">port1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">port1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/xlxn_6" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_6[7:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_6[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/xlxn_7" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_7[7:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_7[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/xlxn_9" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_9[3:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_9[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/xlxn_10" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_10[3:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_10[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/xlxn_35" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_35</obj_property>
+      <obj_property name="ObjectShortName">xlxn_35</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/xlxn_38" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_38</obj_property>
+      <obj_property name="ObjectShortName">xlxn_38</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/xlxn_39" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_39</obj_property>
+      <obj_property name="ObjectShortName">xlxn_39</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/xlxn_101" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_101[17:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_101[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/xlxn_102" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_102[11:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_102[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/xlxn_103" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_103</obj_property>
+      <obj_property name="ObjectShortName">xlxn_103</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/xlxn_105" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_105[11:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_105[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/xlxn_106" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_106</obj_property>
+      <obj_property name="ObjectShortName">xlxn_106</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main/xlxn_107" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxn_107[17:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxn_107[17:0]</obj_property>
+   </wvobject>
+</wave_config>

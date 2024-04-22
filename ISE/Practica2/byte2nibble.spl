@@ -1,0 +1,6 @@
+[Inputs]
+=in_vec[7:0]=
+[Outputs]
+=msn[3:0]=
+=lsn[3:0]=
+[BiDir]

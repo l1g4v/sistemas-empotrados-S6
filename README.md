@@ -1,3 +1,3 @@
 # sistemas-empotrados-S6
 
-repo de mierda :like:
+repo de mierda :+1:
